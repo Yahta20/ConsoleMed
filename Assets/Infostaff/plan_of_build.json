@@ -9,11 +9,10 @@
           "point": [
             {
               "name": "pos0",
-              "skyBox": "Indor",
+              "skyBox": "11_3f",
               "conects": [
                 {
                   "name": [
-                    
                     "pos1"
                   ],
                   "pos": [
@@ -27,13 +26,12 @@
                 },
                 {
                   "name": [
-                      "Corridor",
-                      "pos0"
+                   "pos2"
                   ],
                   "pos": [
-                    -8.18,
+                    -9.89,
                     0,
-                    -1.21
+                    0.39
                   ],
                   "drawTo": [
                     "pos1"
@@ -43,13 +41,11 @@
             },
             {
               "name": "pos1",
-              "skyBox": "_univ1",
+              "skyBox": "12_3f",
               "conects": [
                 {
                   "name": [
-                      
-                      "Corridor",
-                      "pos0"
+                    "pos0"
                   ],
                   "pos": [
                     8.18,
@@ -61,6 +57,39 @@
                   ]
                 }
               ]
+            },
+            {
+              "name": "pos2",
+              "skyBox": "10_3f",
+              "conects": [
+                {
+                  "name": [
+                    "pos0"
+                  ],
+                  "pos": [
+                    1,
+                    0,
+                    9
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                },
+                {
+                  "name": [
+                    "Corridor",
+                    "pos0"
+                  ],
+                  "pos": [
+                    1.6,
+                    0,
+                    -9
+                  ],
+                  "drawTo": [
+                    "pos1"
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -69,12 +98,12 @@
           "point": [
             {
               "name": "pos0",
-              "skyBox": "_univ2",
+              "skyBox": "8_3f",
               "conects": [
                 {
                   "name": [
                       "Hall",
-                      "pos1"
+                      "pos2"
                   ],
                   "pos": [
                     -8.16,
