@@ -1,0 +1,95 @@
+{
+  "Building": [
+    {
+      "Name": "Main",
+      "Floor": "1",
+      "Rooms": [
+        {
+          "name": "Hall",
+          "point": [
+            {
+              "name": "pos0",
+              "skyBox": "Indor",
+              "conects": [
+                {
+                  "name": [
+                    
+                    "pos1"
+                  ],
+                  "pos": [
+                    8.18,
+                    0,
+                    0.21
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                },
+                {
+                  "name": [
+                      "Corridor",
+                      "pos0"
+                  ],
+                  "pos": [
+                    -8.18,
+                    0,
+                    -1.21
+                  ],
+                  "drawTo": [
+                    "pos1"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "pos1",
+              "skyBox": "_univ1",
+              "conects": [
+                {
+                  "name": [
+                      
+                      "Corridor",
+                      "pos0"
+                  ],
+                  "pos": [
+                    8.18,
+                    0,
+                    0.21
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Corridor",
+          "point": [
+            {
+              "name": "pos0",
+              "skyBox": "_univ2",
+              "conects": [
+                {
+                  "name": [
+                      "Hall",
+                      "pos1"
+                  ],
+                  "pos": [
+                    -8.16,
+                    0,
+                    -3.59
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
