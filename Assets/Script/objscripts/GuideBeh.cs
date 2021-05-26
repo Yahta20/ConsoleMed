@@ -138,7 +138,7 @@ public class GuideBeh : MonoBehaviour
             Points2Draw.Add(go);
             go.transform.position = p.getPos();
         }
-        gMapbeh.changePlace(new string[4] {CurrentBuild,CurrentFloor.ToString(),CurrentRoom,CurrentPos });
+        //gMapbeh.changePlace(new string[4] {CurrentBuild,CurrentFloor.ToString(),CurrentRoom,CurrentPos });
     }
 
     public void Moving(string[] args) {

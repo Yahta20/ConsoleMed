@@ -56,12 +56,6 @@ public class GuideMapBeh : MonoBehaviour
     }
 
 
-
-
-
-            
-
-
     public TextAsset jsonInstruction;
     public SpriteAtlas atlasMap;
     public Sprite currentPlace;
@@ -121,8 +115,9 @@ public class GuideMapBeh : MonoBehaviour
     public void changePlace(string[] args) {
 
         position = args;
-
-        mapObj.SetMapBackground(atlasMap.GetSprite($"{args[0]}_{args[1]}"));
+        //if (mapObj!=null) { 
+        //    mapObj.SetMapBackground(atlasMap.GetSprite($"{args[0]}_{args[1]}"));
+        //}
 
         //print(atlasMap.GetSprite($"{args[0]}_{args[1]}").rect);
         //CurrentBacground.sprite = atlasMap.GetSprite($"{args[0]}_{args[1]}");
@@ -163,6 +158,7 @@ public class GuideMapBeh : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //print($"rt.sizeDelta:{rt} \n MCUI.Instance:{MCUI.Instance}");
         if (rt.sizeDelta != MCUI.Instance.getCanvasSize() * 0.32f) {
             rt.sizeDelta = MCUI.Instance.getCanvasSize() * 0.32f;
         }

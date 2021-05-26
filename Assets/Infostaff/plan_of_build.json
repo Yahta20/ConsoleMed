@@ -26,7 +26,7 @@
                 },
                 {
                   "name": [
-                   "pos2"
+                    "pos2"
                   ],
                   "pos": [
                     -9.89,
@@ -48,9 +48,23 @@
                     "pos0"
                   ],
                   "pos": [
-                    8.18,
+                    0.1,
                     0,
-                    0.21
+                    -7.59
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                },
+                {
+                  "name": [
+                    "Kafedra",
+                    "pos0"
+                  ],
+                  "pos": [
+                    0.1,
+                    0,
+                    7.59
                   ],
                   "drawTo": [
                     "it"
@@ -98,17 +112,343 @@
           "point": [
             {
               "name": "pos0",
+              "skyBox": "9_3f",
+              "conects": [
+                {
+                  "name": [
+                    "Hall",
+                    "pos2"
+                  ],
+                  "pos": [
+                    -0.36,
+                    0,
+                    -8.81
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                },
+                {
+                  "name": [
+                    "pos1"
+                  ],
+                  "pos": [
+                    0.78,
+                    0,
+                    11.6
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "pos1",
               "skyBox": "8_3f",
               "conects": [
                 {
                   "name": [
-                      "Hall",
-                      "pos2"
+                    "pos0"
                   ],
                   "pos": [
-                    -8.16,
+                    0.7,
                     0,
-                    -3.59
+                    -16.2
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                },
+                {
+                  "name": [
+                    "pos5"
+                  ],
+                  "pos": [
+                    0.4,
+                    0,
+                    19.6
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "pos2",
+              "skyBox": "3_3f",
+              "conects": [
+                {
+                  "name": [
+                    "pos3"
+                  ],
+                  "pos": [
+                    -16.2,
+                    0,
+                    0.7
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                },
+                {
+                  "name": [
+                    "pos5"
+                  ],
+                  "pos": [
+                    -8.2,
+                    0,
+                    4.5
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                },
+                {
+                  "name": [
+                    "pos4"
+                  ],
+                  "pos": [
+                    11.69,
+                    0,
+                    0.4
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "pos3",
+              "skyBox": "4_3f",
+              "conects": [
+                {
+                  "name": [
+                    "pos2"
+                  ],
+                  "pos": [
+                    12.61,
+                    0,
+                    -1.4
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                },
+                {
+                  "name": [
+                    "pos1"
+                  ],
+                  "pos": [
+                    7.9,
+                    0,
+                    1.6
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                },
+                {
+                  "name": [
+                    "pos4"
+                  ],
+                  "pos": [
+                    -8.7,
+                    0,
+                    1.4
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "pos4",
+              "skyBox": "5_3f",
+              "conects": [
+                {
+                  "name": [
+                    "pos3"
+                  ],
+                  "pos": [
+                    120,
+                    0,
+                    0
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "pos5",
+              "skyBox": "7_3f",
+              "conects": [
+                {
+                  "name": [
+                    "pos1"
+                  ],
+                  "pos": [
+                    -0.47,
+                    0,
+                    -16.2
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                },
+                {
+                  "name": [
+                    "pos2"
+                  ],
+                  "pos": [
+                    0.5,
+                    0,
+                    5.83
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Kafedra",
+          "point": [
+            {
+              "name": "pos0",
+              "skyBox": "2_3f",
+              "conects": [
+                {
+                  "name": [
+                    "Hall",
+                    "pos1"
+                  ],
+                  "pos": [
+                    0,
+                    0,
+                    -12.21
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                },
+                {
+                  "name": [
+                    "pos1"
+                  ],
+                  "pos": [
+                    0,
+                    0,
+                    10
+                  ],
+                  "drawTo": [
+                    "pos1"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "pos1",
+              "skyBox": "13_3f",
+              "conects": [
+                {
+                  "name": [
+                    "pos0"
+                  ],
+                  "pos": [
+                    -0.56,
+                    0,
+                    -8.43
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                },
+                {
+                  "name": [
+                    "pos2"
+                  ],
+                  "pos": [
+                    0.69,
+                    0,
+                    8.43
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "pos2",
+              "skyBox": "14_3f",
+              "conects": [
+                {
+                  "name": [
+                    "pos3"
+                  ],
+                  "pos": [
+                    0.1,
+                    0,
+                    9
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                },
+                {
+                  "name": [
+                    "pos1"
+                  ],
+                  "pos": [
+                    0.25,
+                    0,
+                    -9
+                  ],
+                  "drawTo": [
+                    "pos1"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "pos3",
+              "skyBox": "15_3f",
+              "conects": [
+                {
+                  "name": [
+                    "pos2"
+                  ],
+                  "pos": [
+                    0.1,
+                    0,
+                    -7.59
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "pos4",
+              "skyBox": "15_3f",
+              "conects": [
+                {
+                  "name": [
+                    "pos2"
+                  ],
+                  "pos": [
+                    0.1,
+                    0,
+                    -7.59
                   ],
                   "drawTo": [
                     "it"
