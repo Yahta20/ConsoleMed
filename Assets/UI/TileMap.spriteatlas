@@ -42,6 +42,6 @@ SpriteAtlas:
   - pointPlace
   - Main_1
   - point
-  - Main_2
+  - Main_3
   m_Tag: TileMap
   m_IsVariant: 0

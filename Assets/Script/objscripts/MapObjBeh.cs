@@ -89,7 +89,6 @@ public class MapObjBeh : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
         }
         
         if (aspectP>=1) {
-
             if (Psizex >= sizex)
             {
                 scale = Psizex / sizex;
@@ -102,10 +101,8 @@ public class MapObjBeh : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
                 }
             }
         }
-
         if (aspectP<1)
         {
-
             if (Psizey >= sizey) { 
             scale = Psizey/sizey;
             }
@@ -117,23 +114,10 @@ public class MapObjBeh : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
                  }
             }
         }
-
-
-        
-        
         curerentRT.sizeDelta *= scale;
         curerentRT.anchoredPosition = new Vector2(ancorsx,ancorsy);
-
     }
-    
-
-
-
-
-           
-
-
-      
+  
     public void CleearChildObj() {
         for (int i = 0; i < transform.childCount; i++)
         {
@@ -150,11 +134,12 @@ public class MapObjBeh : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
     }
         
     public void AddPoint(Sprite sprite,Vector2 v2) {
+
         var go = Instantiate(pointToShow);
         go.GetComponent<Image>().sprite = sprite;
         go.GetComponent<Image>().rectTransform.anchoredPosition = v2;
         go.GetComponent<RectTransform>().SetParent(this.GetComponent<RectTransform>());
-        //pointList.Add(go);
+        
     }
     
     public void OnPointerDown(PointerEventData eventData)

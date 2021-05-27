@@ -189,7 +189,7 @@ MonoBehaviour:
   gMapbeh: {fileID: 1281147959}
   Points2Draw: []
   CurrentBuild: Main
-  CurrentFloor: 1
+  CurrentFloor: 3
   CurrentRoom: Hall
   CurrentPos: pos0
   prefabPoint: {fileID: 2328661972649949537, guid: 00c3080e162596647b0e11a4358d4c0f,
@@ -760,7 +760,7 @@ PrefabInstance:
     - target: {fileID: 8351313067520882712, guid: 3ff852b45df68b549a205c6481d52972,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8351313068035185392, guid: 3ff852b45df68b549a205c6481d52972,
         type: 3}

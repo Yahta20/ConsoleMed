@@ -28,7 +28,7 @@ public class GuideMapBeh : MonoBehaviour
         public posList GetPosLists(string room, string pos) {
             for (int i = 0; i < PosList.Length; i++)
             {
-                if (room == PosList[i].name[0]& pos == PosList[i].name[1]) {
+                if (room == PosList[i].name[0]&pos == PosList[i].name[1]) {
                     return PosList[i];
                 }
             }
@@ -91,17 +91,13 @@ public class GuideMapBeh : MonoBehaviour
 
     private void OnEnable()
     {
+
     }
-        
-
-
     void Start()
     {
-        //rt.sizeDelta = MCUI.Instance.getCanvasSize() * 0.32f;
-        //rt.sizeDelta = new Vector2(p.y,p.x);
+        rt.sizeDelta = MCUI.Instance.getCanvasSize() * 0.32f;
         updateMap();
     }
-
     private void updateMap()
     {
         foreach (var item in pointsInRoom)
@@ -109,24 +105,19 @@ public class GuideMapBeh : MonoBehaviour
             Destroy(item);
         }
         pointsInRoom = new List<Image>();
-
     }
 
     public void changePlace(string[] args) {
-
-        position = args;
-        //if (mapObj!=null) { 
-        //    mapObj.SetMapBackground(atlasMap.GetSprite($"{args[0]}_{args[1]}"));
-        //}
-
-        //print(atlasMap.GetSprite($"{args[0]}_{args[1]}").rect);
+        //position = args;
         //CurrentBacground.sprite = atlasMap.GetSprite($"{args[0]}_{args[1]}");
+
+        
+        mapObj.SetMapBackground(atlasMap.GetSprite($"{args[0]}_{args[1]}"));
         
         var floor = currentMap.getFloorInBuildByName(args[0],args[1]);
-
+                    
         for (int i = 0; i < floor.PosList.Length; i++)
         {
-            
             if (floor.PosList[i].name[0] == args[0] & floor.PosList[i].name[1] == args[1])
             {
                 mapObj.
@@ -139,12 +130,8 @@ public class GuideMapBeh : MonoBehaviour
                     AddPoint(otherPlace, floor.PosList[i].GetPointPos());
                 //NewImage.sprite = otherPlace;
             }
-            
         }
-    
     }
-
-    
 
     public void AddPoint(Sprite sprite, Vector2 v2)
     {
@@ -152,17 +139,12 @@ public class GuideMapBeh : MonoBehaviour
         go.GetComponent<Image>().sprite = sprite;
         go.GetComponent<Image>().rectTransform.anchoredPosition = v2;
         go.transform.SetParent(this.mapObj.GetComponent<RectTransform>());
-        //pointList.Add(go);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        //print($"rt.sizeDelta:{rt} \n MCUI.Instance:{MCUI.Instance}");
-       if (rt.sizeDelta != MCUI.Instance.getCanvasSize() * 0.32f) {
-           rt.sizeDelta = MCUI.Instance.getCanvasSize() * 0.32f;
-       }
     }
-
-
+        
 }
