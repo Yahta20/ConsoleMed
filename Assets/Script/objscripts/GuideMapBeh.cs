@@ -131,6 +131,7 @@ public class GuideMapBeh : MonoBehaviour
                 //NewImage.sprite = otherPlace;
             }
         }
+       // mapObj.Parenting();
     }
 
     public void AddPoint(Sprite sprite, Vector2 v2)
@@ -138,8 +139,7 @@ public class GuideMapBeh : MonoBehaviour
         var go = Instantiate(pointToShow);
         go.GetComponent<Image>().sprite = sprite;
         go.GetComponent<Image>().rectTransform.anchoredPosition = v2;
-        go.transform.SetParent(this.mapObj.GetComponent<RectTransform>());
-        
+        go.transform.SetParent(transform);
     }
 
     // Update is called once per frame

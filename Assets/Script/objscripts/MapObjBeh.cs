@@ -136,9 +136,10 @@ public class MapObjBeh : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
     public void AddPoint(Sprite sprite,Vector2 v2) {
 
         var go = Instantiate(pointToShow);
+        pointList.Add(go);
         go.GetComponent<Image>().sprite = sprite;
         go.GetComponent<Image>().rectTransform.anchoredPosition = v2;
-        go.GetComponent<RectTransform>().SetParent(this.GetComponent<RectTransform>());
+        go.transform.SetParent(transform);
         
     }
     
@@ -169,7 +170,12 @@ public class MapObjBeh : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
       mouseOn = false;
     }
 
-
+    public void Parenting() {
+        foreach (var item in pointList)
+        {
+            item.transform.SetParent(gameObject.transform);
+        }
+    }
 
 
        
