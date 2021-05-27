@@ -313,6 +313,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad8806ff1f985f644b0ed3dbed77a474, type: 3}
+--- !u!114 &473581190 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6026720527697544918, guid: ad8806ff1f985f644b0ed3dbed77a474,
+    type: 3}
+  m_PrefabInstance: {fileID: 473581189}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf21c7e805edcdc4298859d43bf3c234, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &736011962 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1427025233592697820, guid: 0152e00fe202de34fa638b8d21671b9a,
@@ -897,6 +909,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8351313068035185396, guid: 3ff852b45df68b549a205c6481d52972,
+        type: 3}
+      propertyPath: mapObj
+      value: 
+      objectReference: {fileID: 473581190}
     - target: {fileID: 8351313068035185399, guid: 3ff852b45df68b549a205c6481d52972,
         type: 3}
       propertyPath: m_Pivot.x

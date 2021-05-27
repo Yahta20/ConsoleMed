@@ -138,7 +138,8 @@ public class MapObjBeh : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
         var go = Instantiate(pointToShow);
         pointList.Add(go);
         go.GetComponent<Image>().sprite = sprite;
-        go.GetComponent<Image>().rectTransform.anchoredPosition = v2;
+        go.GetComponent<PointBeh>().SetProportion(v2);
+        //go.GetComponent<Image>().rectTransform.anchoredPosition = v2;
         go.transform.SetParent(transform);
         
     }

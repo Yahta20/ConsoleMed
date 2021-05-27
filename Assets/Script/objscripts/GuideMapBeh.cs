@@ -140,6 +140,7 @@ public class GuideMapBeh : MonoBehaviour
         go.GetComponent<Image>().sprite = sprite;
         go.GetComponent<Image>().rectTransform.anchoredPosition = v2;
         go.transform.SetParent(transform);
+
     }
 
     // Update is called once per frame
