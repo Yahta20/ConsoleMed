@@ -33,7 +33,7 @@ public class MapObjBeh : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
     {
         var scale = parentRT.sizeDelta.x / curerentRT.sizeDelta.x;
         curerentRT.sizeDelta *= scale;
-        print($"{curerentRT.sizeDelta}-{scale}-{parentRT.sizeDelta}");
+        //print($"{curerentRT.sizeDelta}-{scale}-{parentRT.sizeDelta}");
         CleearChildObj();
     }
 

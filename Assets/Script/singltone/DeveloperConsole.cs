@@ -39,6 +39,8 @@ namespace Consoleum
         public Text consoleText;
         public Text inputText;
         public InputField consoleInput;
+        private List<string> InputComands = new List<string>();
+        private int commandLine;
 
 
         public float scaleTime;
@@ -74,6 +76,7 @@ namespace Consoleum
             CommandUIParenting.CreateCommand();
             CommandSky.CreateCommand();
             CommandPlayOn.CreateCommand();
+            CommandMCUI.CreateCommand();
             //ParseInput("play");
         }
 
@@ -122,6 +125,7 @@ namespace Consoleum
                 }
 
                 Commands[_input[0]].RunCommand(args.ToArray());
+
             }
               
 
@@ -136,6 +140,7 @@ namespace Consoleum
             Commands = new Dictionary<string, ConsoleCommand>();
             DontDestroyOnLoad(this.gameObject);
             CreateCommands();
+            commandLine = 0;
         }
             
         
@@ -169,12 +174,43 @@ namespace Consoleum
                     if (inputText.text != "") {
                         AddMessageToConsole(inputText.text);
                         ParseInput(inputText.text);
+                        InputComands.Add(inputText.text);
                         consoleInput.text = "";
                         consoleInput.ActivateInputField();
                     }
                 }
             }
-    }
+            if (InputComands.Count>10) {
+                InputComands.RemoveAt(0);
+            }
+
+            if (InputComands.Count>0)
+            {
+                if (Input.GetKeyDown(KeyCode.UpArrow))
+                {
+                    consoleInput.text = InputComands[commandLine].ToString();
+                    //inputText.text = "rty";
+                    consoleInput.ActivateInputField();
+                    commandLine--;
+                    if (commandLine < 0) {
+                        commandLine = InputComands.Count()-1;
+                    }
+                }
+                if (Input.GetKeyDown(KeyCode.DownArrow))
+                {
+                    consoleInput.text = InputComands[commandLine];
+                    //inputText.text = "rty3";
+                    consoleInput.ActivateInputField();
+                    commandLine++;
+                    if (commandLine > InputComands.Count()-1)
+                    {
+                        commandLine = 0;
+                    }
+                }
+            }
+
+
+        }
 
 
 

@@ -124,6 +124,8 @@ public class MCUI : MonoBehaviour
         UIObject = new List<GameObject>();
         canvas = GetComponent<Canvas>();
         cScaler= GetComponent<CanvasScaler>();
+        cScaler.uiScaleMode = CanvasScaler.ScaleMode.ConstantPixelSize;
+        cScaler.screenMatchMode = CanvasScaler.ScreenMatchMode.Expand;
         cScaler.referenceResolution = new Vector2(Screen.width, Screen.height);
         cScaler.referencePixelsPerUnit = 100;
     }

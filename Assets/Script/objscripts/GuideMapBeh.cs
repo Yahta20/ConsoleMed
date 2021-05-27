@@ -97,7 +97,7 @@ public class GuideMapBeh : MonoBehaviour
 
     void Start()
     {
-        rt.sizeDelta = MCUI.Instance.getCanvasSize() * 0.32f;
+        //rt.sizeDelta = MCUI.Instance.getCanvasSize() * 0.32f;
         //rt.sizeDelta = new Vector2(p.y,p.x);
         updateMap();
     }
@@ -159,9 +159,9 @@ public class GuideMapBeh : MonoBehaviour
     void Update()
     {
         //print($"rt.sizeDelta:{rt} \n MCUI.Instance:{MCUI.Instance}");
-        if (rt.sizeDelta != MCUI.Instance.getCanvasSize() * 0.32f) {
-            rt.sizeDelta = MCUI.Instance.getCanvasSize() * 0.32f;
-        }
+       if (rt.sizeDelta != MCUI.Instance.getCanvasSize() * 0.32f) {
+           rt.sizeDelta = MCUI.Instance.getCanvasSize() * 0.32f;
+       }
     }
 
 
