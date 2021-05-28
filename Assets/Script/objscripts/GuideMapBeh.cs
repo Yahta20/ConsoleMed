@@ -64,18 +64,15 @@ public class GuideMapBeh : MonoBehaviour
     [Space]
     public MapObjBeh mapObj;
     public Image CurrentBacground;
-    public GameObject pointToShow;
+    //public GameObject pointToShow;
     [Space]
     public Map currentMap = new Map();
     public List<Image> pointsInRoom;
     public string[] position;
     
-
     private RectTransform rt;
     private Vector2 posit;
 
-
-    // Start is called before the first frame update
     void Awake()
     {
         currentMap = JsonUtility.FromJson<Map>(jsonInstruction.text);
@@ -93,11 +90,13 @@ public class GuideMapBeh : MonoBehaviour
     {
 
     }
+
     void Start()
     {
         rt.sizeDelta = MCUI.Instance.getCanvasSize() * 0.32f;
         updateMap();
     }
+    
     private void updateMap()
     {
         foreach (var item in pointsInRoom)
@@ -111,14 +110,14 @@ public class GuideMapBeh : MonoBehaviour
         //position = args;
         //CurrentBacground.sprite = atlasMap.GetSprite($"{args[0]}_{args[1]}");
 
-        
+        mapObj.CleearChildObj();
         mapObj.SetMapBackground(atlasMap.GetSprite($"{args[0]}_{args[1]}"));
         
         var floor = currentMap.getFloorInBuildByName(args[0],args[1]);
                     
         for (int i = 0; i < floor.PosList.Length; i++)
         {
-            if (floor.PosList[i].name[0] == args[0] & floor.PosList[i].name[1] == args[1])
+            if (floor.PosList[i].name[0] == args[2] & floor.PosList[i].name[1] == args[3])
             {
                 mapObj.
                     AddPoint(currentPlace, floor.PosList[i].GetPointPos());
@@ -134,14 +133,14 @@ public class GuideMapBeh : MonoBehaviour
        // mapObj.Parenting();
     }
 
-    public void AddPoint(Sprite sprite, Vector2 v2)
-    {
-        var go = Instantiate(pointToShow);
-        go.GetComponent<Image>().sprite = sprite;
-        go.GetComponent<Image>().rectTransform.anchoredPosition = v2;
-        go.transform.SetParent(transform);
-
-    }
+    //public void AddPoint(Sprite sprite, Vector2 v2)
+    //{
+    //    var go = Instantiate(pointToShow);
+    //    go.GetComponent<Image>().sprite = sprite;
+    //    go.GetComponent<Image>().rectTransform.anchoredPosition = v2;
+    //    go.transform.SetParent(transform);
+    //
+    //}
 
     // Update is called once per frame
     void Update()

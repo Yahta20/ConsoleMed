@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8351313068035185399}
   - component: {fileID: 8351313068035185397}
-  - component: {fileID: 8351313068035185396}
   - component: {fileID: 8351313068035185398}
   - component: {fileID: 8351313068035185403}
+  - component: {fileID: 8351313068035185396}
   m_Layer: 5
-  m_Name: Guides Map
+  m_Name: GuidesMap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,33 +47,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8351313068035185392}
   m_CullTransparentMesh: 0
---- !u!114 &8351313068035185396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8351313068035185392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 379bd7e942e43d444923abcaf7d3bf45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jsonInstruction: {fileID: 4900000, guid: 3ccd562a47f7698458f7849949a27960, type: 3}
-  atlasMap: {fileID: 4343727234628468602, guid: dbf64bd8103701947b7348aa629fbd1e,
-    type: 2}
-  currentPlace: {fileID: 5684556862931261298, guid: 469abd09dba5041438ac19aaf6e46742,
-    type: 3}
-  otherPlace: {fileID: -901219912910290159, guid: 469abd09dba5041438ac19aaf6e46742,
-    type: 3}
-  mapObj: {fileID: 0}
-  CurrentBacground: {fileID: 0}
-  pointToShow: {fileID: 2429612949181453281, guid: 6b3032c3e1399b44d9326d3b1771d42c,
-    type: 3}
-  currentMap:
-    FloorMap: []
-  pointsInRoom: []
-  position: []
 --- !u!114 &8351313068035185398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,3 +90,28 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8351313068035185396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8351313068035185392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379bd7e942e43d444923abcaf7d3bf45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jsonInstruction: {fileID: 4900000, guid: 3ccd562a47f7698458f7849949a27960, type: 3}
+  atlasMap: {fileID: 4343727234628468602, guid: dbf64bd8103701947b7348aa629fbd1e,
+    type: 2}
+  currentPlace: {fileID: 5684556862931261298, guid: 469abd09dba5041438ac19aaf6e46742,
+    type: 3}
+  otherPlace: {fileID: -901219912910290159, guid: 469abd09dba5041438ac19aaf6e46742,
+    type: 3}
+  mapObj: {fileID: 0}
+  CurrentBacground: {fileID: 0}
+  currentMap:
+    FloorMap: []
+  pointsInRoom: []
+  position: []
