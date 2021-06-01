@@ -17,7 +17,6 @@ public class GuideMapBeh : MonoBehaviour
             return new Vector2(cordin[0], cordin[1]);
         }
     }
-
     [System.Serializable]
     public class floorMap
     {
@@ -35,7 +34,6 @@ public class GuideMapBeh : MonoBehaviour
             return null;
         }
     }
-    
     [System.Serializable]
     public class Map {
     
@@ -55,6 +53,7 @@ public class GuideMapBeh : MonoBehaviour
         
     }
 
+    public GuideBeh MasterGuide;
 
     public TextAsset jsonInstruction;
     public SpriteAtlas atlasMap;
@@ -64,12 +63,12 @@ public class GuideMapBeh : MonoBehaviour
     [Space]
     public MapObjBeh mapObj;
     public Image CurrentBacground;
-    //public GameObject pointToShow;
+    public GameObject pointToShow;
+
     [Space]
     public Map currentMap = new Map();
     public List<Image> pointsInRoom;
     public string[] position;
-    
     private RectTransform rt;
     private Vector2 posit;
 
@@ -85,18 +84,11 @@ public class GuideMapBeh : MonoBehaviour
         otherPlace   = atlasMap.GetSprite("point");
         CurrentBacground = GetComponent<Image>();
     }
-
-    private void OnEnable()
-    {
-
-    }
-
     void Start()
     {
         rt.sizeDelta = MCUI.Instance.getCanvasSize() * 0.32f;
         updateMap();
     }
-    
     private void updateMap()
     {
         foreach (var item in pointsInRoom)
@@ -106,45 +98,28 @@ public class GuideMapBeh : MonoBehaviour
         pointsInRoom = new List<Image>();
     }
 
-    public void changePlace(string[] args) {
-        //position = args;
-        //CurrentBacground.sprite = atlasMap.GetSprite($"{args[0]}_{args[1]}");
+    public void changePlace(string[] args, GuideBeh.building build) {
 
         mapObj.CleearChildObj();
         mapObj.SetMapBackground(atlasMap.GetSprite($"{args[0]}_{args[1]}"));
-        
-        var floor = currentMap.getFloorInBuildByName(args[0],args[1]);
-                    
-        for (int i = 0; i < floor.PosList.Length; i++)
+
+        for (int i = 0; i < build.Rooms.Length; i++)
         {
-            if (floor.PosList[i].name[0] == args[2] & floor.PosList[i].name[1] == args[3])
+            var roomName = build.Rooms[i].name;
+            for (int j = 0; j < build.Rooms[i].point.Length; j++)
             {
-                mapObj.
-                    AddPoint(currentPlace, floor.PosList[i].GetPointPos());
                 
-                //NewImage.sprite = currentPlace; //Set the Sprite of the Image Component on the new GameObject
-            }
-            else {
-                mapObj.
-                    AddPoint(otherPlace, floor.PosList[i].GetPointPos());
-                //NewImage.sprite = otherPlace;
+                var pointName = build.Rooms[i].point[j].name;
+                var go = Instantiate(pointToShow);
+                var pb = go.GetComponent<PointBeh>();
+                if (roomName == args[2] & pointName == args[3]) {
+                    go.GetComponent<Image>().sprite = currentPlace;
+                }
+                pb.MasterGuide = MasterGuide;
+                pb.statement = new string[4] {args[0],args[1],roomName,pointName };
+                pb.SetProportion (build.Rooms[i].point[j].GetCordin());
+                mapObj.AddPoint(go);
             }
         }
-       // mapObj.Parenting();
     }
-
-    //public void AddPoint(Sprite sprite, Vector2 v2)
-    //{
-    //    var go = Instantiate(pointToShow);
-    //    go.GetComponent<Image>().sprite = sprite;
-    //    go.GetComponent<Image>().rectTransform.anchoredPosition = v2;
-    //    go.transform.SetParent(transform);
-    //
-    //}
-
-    // Update is called once per frame
-    void Update()
-    {
-    }
-        
 }

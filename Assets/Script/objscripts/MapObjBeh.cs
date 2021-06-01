@@ -26,6 +26,7 @@ public class MapObjBeh : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
         var pt      = transform.parent;
         var gop     = pt.gameObject;
         parentRT    = gop.GetComponent<RectTransform>();
+
     }
 
 
@@ -134,16 +135,24 @@ public class MapObjBeh : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
     }
         
     public void AddPoint(Sprite sprite,Vector2 v2) {
-
         var go = Instantiate(pointToShow);
         pointList.Add(go);
         go.GetComponent<Image>().sprite = sprite;
         go.GetComponent<PointBeh>().SetProportion(v2);
         //go.GetComponent<Image>().rectTransform.anchoredPosition = v2;
         go.transform.SetParent(transform);
-        
     }
-    
+
+    public void AddPoint(GameObject go)
+    {
+        pointList.Add(go);
+        go.transform.SetParent(transform);
+        //var go = Instantiate(pointToShow);
+        //go.GetComponent<Image>().sprite = sprite;
+        //go.GetComponent<PointBeh>().SetProportion(v2);
+        //go.GetComponent<Image>().rectTransform.anchoredPosition = v2;
+    }
+
     public void OnPointerDown(PointerEventData eventData)
     {
         positPres = Input.mousePosition;

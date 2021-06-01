@@ -10,30 +10,30 @@ public class GuideBeh : MonoBehaviour
         public string[] name;
         public float[] pos;
         public string[] drawTo;
-
-
+     
         public Vector3 getPos() {
             return new Vector3(pos[0], pos[1], pos[2]);
         }
         public int Hierarchy() {
             return name.Length;
         }
-
     }
-
     [System.Serializable]
     public class Point {
         public string name;
         public string skyBox;
+        public float[] cordin;
         public Conects[] conects;
+
+        public Vector2 GetCordin() {
+            return new Vector2(cordin[0], cordin[1]);
+        }
     }
-    
     [System.Serializable]
     public class rooms {
-
         public string name;
         public Point[] point;
-
+     
         public Point getPointByName(string nam) {
             for (int i = 0; i < point.Length; i++)
             {
@@ -45,7 +45,6 @@ public class GuideBeh : MonoBehaviour
             return null;
         } 
     }
-
     [System.Serializable]
     public class building {
         public string Name;
@@ -62,11 +61,10 @@ public class GuideBeh : MonoBehaviour
             return null;
         }
     }
-
     [System.Serializable]
-    public class BuldingList { 
+    public class BuldingList {
         public building[] Building;
-        
+
         public building getBuildByName(string name) {
             for (int i = 0; i < Building.Length; i++)
             {
@@ -77,17 +75,31 @@ public class GuideBeh : MonoBehaviour
             }
             return null;
         }
-
         public building getFloorInBuildByName(string name, int floor)
         {
             for (int i = 0; i < Building.Length; i++)
             {
-                if (name == Building[i].Name & Building[i].Floor==floor)
+                if (name == Building[i].Name & Building[i].Floor == floor)
                 {
                     return Building[i];
                 }
             }
             return null;
+        }
+        public Vector2[] ListPointsOfMap(string name, int floor) {
+
+            List<Vector2> listVector = new List<Vector2>();
+            var build  = getFloorInBuildByName(name, floor);
+
+            foreach (var room in build.Rooms)
+            {
+                foreach (var point in room.point)
+                {
+                    listVector.Add(point.GetCordin());
+                }
+            }
+
+            return listVector.ToArray();
         }
     }
 
@@ -116,8 +128,11 @@ public class GuideBeh : MonoBehaviour
 
     private void Start()
     {
+        //gMapbeh.MasterGuide = this;
         updateEmbient();
     }
+
+
         
     private void updateEmbient()
     {
@@ -126,8 +141,11 @@ public class GuideBeh : MonoBehaviour
             Destroy(item);
         }
         Points2Draw = new List<GameObject>();
-        var point = currentBuid.getFloorInBuildByName(CurrentBuild, CurrentFloor).getRoomByName(CurrentRoom).getPointByName(CurrentPos);
+        var build = currentBuid.getFloorInBuildByName(CurrentBuild, CurrentFloor);
+        var point = build.getRoomByName(CurrentRoom)
+                         .getPointByName(CurrentPos);
         Consoleum.DeveloperConsole.Instance.ParseInput($"sky {point.skyBox}");
+        
         foreach (var p in point.conects)
         {
             var go = Instantiate(prefabPoint);
@@ -138,9 +156,9 @@ public class GuideBeh : MonoBehaviour
             Points2Draw.Add(go);
             go.transform.position = p.getPos();
         }
-        gMapbeh.changePlace(new string[4] {CurrentBuild,CurrentFloor.ToString(),CurrentRoom,CurrentPos });
+        gMapbeh.changePlace(new string[4] {CurrentBuild,CurrentFloor.ToString(),CurrentRoom,CurrentPos }, build);
     }
-
+        
     public void Moving(string[] args) {
         if (args.Length==1) {
             CurrentPos      = args[0];
@@ -165,4 +183,5 @@ public class GuideBeh : MonoBehaviour
         }
         updateEmbient();
     }
+
 }

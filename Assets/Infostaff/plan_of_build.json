@@ -10,6 +10,10 @@
             {
               "name": "pos0",
               "skyBox": "11_3f",
+              "cordin": [
+                0.4,
+                0.1
+              ],
               "conects": [
                 {
                   "name": [
@@ -42,6 +46,10 @@
             {
               "name": "pos1",
               "skyBox": "12_3f",
+              "cordin": [
+                0.6,
+                0.5
+              ],
               "conects": [
                 {
                   "name": [
@@ -75,6 +83,10 @@
             {
               "name": "pos2",
               "skyBox": "10_3f",
+              "cordin": [
+                0.1,
+                0.1
+              ],
               "conects": [
                 {
                   "name": [
@@ -113,6 +125,10 @@
             {
               "name": "pos0",
               "skyBox": "9_3f",
+              "cordin": [
+                0.2,
+                0.2
+              ],
               "conects": [
                 {
                   "name": [
@@ -146,6 +162,10 @@
             {
               "name": "pos1",
               "skyBox": "8_3f",
+              "cordin": [
+                0.2,
+                0.4
+              ],
               "conects": [
                 {
                   "name": [
@@ -178,6 +198,10 @@
             {
               "name": "pos2",
               "skyBox": "3_3f",
+              "cordin": [
+                0.5,
+                0.3
+              ],
               "conects": [
                 {
                   "name": [
@@ -223,6 +247,10 @@
             {
               "name": "pos3",
               "skyBox": "4_3f",
+              "cordin": [
+                0.3,
+                0.1
+              ],
               "conects": [
                 {
                   "name": [
@@ -268,6 +296,10 @@
             {
               "name": "pos4",
               "skyBox": "5_3f",
+              "cordin": [
+                0.3,
+                0.9
+              ],
               "conects": [
                 {
                   "name": [
@@ -287,6 +319,10 @@
             {
               "name": "pos5",
               "skyBox": "7_3f",
+              "cordin": [
+                0.8,
+                0.9
+              ],
               "conects": [
                 {
                   "name": [
@@ -324,6 +360,10 @@
             {
               "name": "pos0",
               "skyBox": "2_3f",
+              "cordin": [
+                0.5,
+                0.4
+              ],
               "conects": [
                 {
                   "name": [
@@ -357,6 +397,10 @@
             {
               "name": "pos1",
               "skyBox": "13_3f",
+              "cordin": [
+                0.7,
+                0.1
+              ],
               "conects": [
                 {
                   "name": [
@@ -389,6 +433,10 @@
             {
               "name": "pos2",
               "skyBox": "14_3f",
+              "cordin": [
+                0.7,
+                0.4
+              ],
               "conects": [
                 {
                   "name": [
@@ -421,6 +469,10 @@
             {
               "name": "pos3",
               "skyBox": "15_3f",
+              "cordin": [
+                0.4,
+                0.7
+              ],
               "conects": [
                 {
                   "name": [
@@ -440,6 +492,10 @@
             {
               "name": "pos4",
               "skyBox": "15_3f",
+              "cordin": [
+                0.4,
+                0.7
+              ],
               "conects": [
                 {
                   "name": [
