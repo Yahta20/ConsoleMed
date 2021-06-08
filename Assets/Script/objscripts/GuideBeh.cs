@@ -18,6 +18,7 @@ public class GuideBeh : MonoBehaviour
             return name.Length;
         }
     }
+    
     [System.Serializable]
     public class Point {
         public string name;
@@ -29,6 +30,7 @@ public class GuideBeh : MonoBehaviour
             return new Vector2(cordin[0], cordin[1]);
         }
     }
+    
     [System.Serializable]
     public class rooms {
         public string name;
@@ -45,6 +47,7 @@ public class GuideBeh : MonoBehaviour
             return null;
         } 
     }
+    
     [System.Serializable]
     public class building {
         public string Name;
@@ -61,6 +64,7 @@ public class GuideBeh : MonoBehaviour
             return null;
         }
     }
+
     [System.Serializable]
     public class BuldingList {
         public building[] Building;
