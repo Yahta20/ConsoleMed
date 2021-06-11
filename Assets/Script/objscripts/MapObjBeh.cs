@@ -127,11 +127,17 @@ public class MapObjBeh : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
     }
 
     public void SetMapBackground(Sprite s) {
+        if (currentImage != null)
+        {
+
+
+
         currentImage.sprite = s;
         currentImage.rectTransform.sizeDelta = new Vector2(s.rect.width, s.rect.height);
         var scale = parentRT.sizeDelta.x / curerentRT.sizeDelta.x;
         curerentRT.sizeDelta *= scale;
         curerentRT.anchoredPosition = Vector2.zero;
+        }
     }
         
     public void AddPoint(Sprite sprite,Vector2 v2) {

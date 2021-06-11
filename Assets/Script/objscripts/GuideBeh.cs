@@ -1,19 +1,50 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine;
 
 public class GuideBeh : MonoBehaviour
 {
     [System.Serializable]
+    public class Interactiv {
+
+        public string name;
+
+        public float[]  pos;
+
+        public float[]  rot;
+
+        public float[]  scl;
+
+        public Vector3 getPos()
+        {
+            return new Vector3(pos[0], pos[1], pos[2]);
+        }
+        public Vector3 getScl()
+        {
+            return new Vector3(scl[0], scl[1], scl[2]);
+        }
+        public Quaternion getRot()
+        {
+            return new Quaternion(rot[0], rot[1], rot[2], rot[3]);
+        }
+    }
+
+    [System.Serializable]
     public class Conects {
+
         public string[] name;
+
         public float[] pos;
+
         public string[] drawTo;
      
         public Vector3 getPos() {
             return new Vector3(pos[0], pos[1], pos[2]);
         }
+
         public int Hierarchy() {
             return name.Length;
         }
@@ -21,19 +52,46 @@ public class GuideBeh : MonoBehaviour
     
     [System.Serializable]
     public class Point {
+
         public string name;
+
         public string skyBox;
+
         public float[] cordin;
+
         public Conects[] conects;
+
+        public Interactiv[] interactiv;
+
+        public int GetInteractivCount() {
+            return interactiv.Length;
+        }
 
         public Vector2 GetCordin() {
             return new Vector2(cordin[0], cordin[1]);
+        }
+
+        public Interactiv GetObjByName(string name) {
+            foreach (var item in interactiv)
+            {
+                if (
+                item.name==name
+                    )
+                {
+                    return item;
+                }
+
+            }
+
+            return null;
         }
     }
     
     [System.Serializable]
     public class rooms {
+
         public string name;
+
         public Point[] point;
      
         public Point getPointByName(string nam) {
@@ -46,12 +104,16 @@ public class GuideBeh : MonoBehaviour
             }
             return null;
         } 
+
     }
     
     [System.Serializable]
     public class building {
+
         public string Name;
+
         public int Floor;
+
         public rooms[] Rooms;
         
         public rooms getRoomByName(string name) {
@@ -67,6 +129,7 @@ public class GuideBeh : MonoBehaviour
 
     [System.Serializable]
     public class BuldingList {
+
         public building[] Building;
 
         public building getBuildByName(string name) {
@@ -79,6 +142,7 @@ public class GuideBeh : MonoBehaviour
             }
             return null;
         }
+
         public building getFloorInBuildByName(string name, int floor)
         {
             for (int i = 0; i < Building.Length; i++)
@@ -90,6 +154,7 @@ public class GuideBeh : MonoBehaviour
             }
             return null;
         }
+        
         public Vector2[] ListPointsOfMap(string name, int floor) {
 
             List<Vector2> listVector = new List<Vector2>();
@@ -112,32 +177,71 @@ public class GuideBeh : MonoBehaviour
     //public Material skybox;
     public GuideMapBeh gMapbeh;
     public List<GameObject> Points2Draw;
+    public List<GameObject> IntObj;
     public string CurrentBuild = "Main";
     public int CurrentFloor = 1;
     public string CurrentRoom = "Hall";
     public string CurrentPos = "pos0";
     [Space]
+
     //написать загрузку с адресабле
     public GameObject prefabPoint;
 
+    private bool InteraktiveErect;
+
     private void Awake()
     {
+        InteraktiveErect = false;
         //var sw = new System.Diagnostics.Stopwatch();
         //sw.Start();
         currentBuid = JsonUtility.FromJson<BuldingList>(jsonInstruction.text);
         //sw.Stop();
         //print($"{sw.ElapsedTicks}/{sw.ElapsedMilliseconds}");
         Points2Draw = new List<GameObject>();
+        IntObj = new List<GameObject>();
     }
 
     private void Start()
     {
         //gMapbeh.MasterGuide = this;
         updateEmbient();
+        updateEnvironment();
     }
 
-
+    private void Update()
+    {
         
+        var point = currentBuid
+                    .getFloorInBuildByName(CurrentBuild, CurrentFloor)
+                    .getRoomByName(CurrentRoom)
+                    .getPointByName(CurrentPos);
+        if (point.GetInteractivCount() == IntObj.Count & !InteraktiveErect)
+        {
+            InteraktiveErect = true;
+            //print($"ok {IntObj.Count}");
+            spawnInteraction();
+        }
+    }
+
+    private void spawnInteraction()
+    {
+        var point = currentBuid
+            .getFloorInBuildByName(CurrentBuild, CurrentFloor)
+            .getRoomByName(CurrentRoom)
+            .getPointByName(CurrentPos);
+        for (int i = 0; i < IntObj.Count; i++)
+        {
+            IntObj[i] = Instantiate(IntObj[i]);
+            IntObj[i].name = IntObj[i].name.Replace("(Clone)", "");
+            var intobj = point.GetObjByName(IntObj[i].name);
+            IntObj[i].transform.position = intobj.getPos();
+            IntObj[i].transform.rotation = intobj.getRot();
+            IntObj[i].transform.localScale = intobj.getScl();
+            IntObj[i].transform.SetParent(transform);
+        }
+
+    }
+
     private void updateEmbient()
     {
         foreach (var item in Points2Draw)
@@ -161,9 +265,14 @@ public class GuideBeh : MonoBehaviour
             go.transform.position = p.getPos();
         }
         gMapbeh.changePlace(new string[4] {CurrentBuild,CurrentFloor.ToString(),CurrentRoom,CurrentPos }, build);
-    }
         
+
+    }
+    /*
+   
+     */
     public void Moving(string[] args) {
+        InteraktiveErect = false;
         if (args.Length==1) {
             CurrentPos      = args[0];
         }
@@ -186,6 +295,44 @@ public class GuideBeh : MonoBehaviour
             CurrentPos      = args[3];
         }
         updateEmbient();
+        updateEnvironment();
     }
 
+    private void updateEnvironment()
+    {
+        if (IntObj.Count > 0) { 
+            foreach (var item in IntObj)
+            {
+                Destroy(item);
+            }
+        }
+        IntObj = new List<GameObject>();
+        var build = currentBuid.getFloorInBuildByName(CurrentBuild, CurrentFloor);
+        var point = build.getRoomByName(CurrentRoom)
+                         .getPointByName(CurrentPos);
+        if (point.GetInteractivCount()>0) {
+            foreach (var item in point.interactiv)
+            {
+                Addressables.LoadAssetAsync<GameObject>(item.name).Completed += OnLoadAsset;
+            }
+        }
+
+
+    }
+
+    void OnLoadAsset(AsyncOperationHandle<GameObject> handle)
+    {
+        if (handle.Status == AsyncOperationStatus.Succeeded)
+        {
+            var gerbObject = handle.Result;
+            var w   = gerbObject.name.Replace("(Clone)","");
+            gerbObject.name = w; 
+            IntObj.Add(gerbObject);
+            }
+        if (handle.Status == AsyncOperationStatus.Failed)
+        {
+            Debug.LogWarning("Spawn object faild");
+        }
+
+    }
 }

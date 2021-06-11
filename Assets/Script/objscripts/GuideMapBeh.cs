@@ -101,7 +101,11 @@ public class GuideMapBeh : MonoBehaviour
     public void changePlace(string[] args, GuideBeh.building build) {
 
         mapObj.CleearChildObj();
+        if (atlasMap.GetSprite($"{args[0]}_{args[1]}")!=null)
+        {
+
         mapObj.SetMapBackground(atlasMap.GetSprite($"{args[0]}_{args[1]}"));
+        }
 
         for (int i = 0; i < build.Rooms.Length; i++)
         {
