@@ -18,19 +18,26 @@ public class GuideBeh : MonoBehaviour
 
         public float[]  scl;
 
+        public string link;
+
         public Vector3 getPos()
         {
             return new Vector3(pos[0], pos[1], pos[2]);
         }
+
         public Vector3 getScl()
         {
             return new Vector3(scl[0], scl[1], scl[2]);
         }
+        
         public Quaternion getRot()
         {
             return new Quaternion(rot[0], rot[1], rot[2], rot[3]);
         }
     }
+
+        
+
 
     [System.Serializable]
     public class Conects {
@@ -85,6 +92,21 @@ public class GuideBeh : MonoBehaviour
 
             return null;
         }
+
+        public Interactiv[] GetArrayByName(string name) {
+            var l2r = new List<Interactiv>();
+            foreach (var item in interactiv)
+            {
+                if (item.name==name)
+                {
+                    l2r.Add(item);
+                }
+            }
+
+            return l2r.ToArray();
+        }
+
+
     }
     
     [System.Serializable]
@@ -176,6 +198,7 @@ public class GuideBeh : MonoBehaviour
     public TextAsset jsonInstruction;
     //public Material skybox;
     public GuideMapBeh gMapbeh;
+    public UniversalScreenBeh usBeh;
     public List<GameObject> Points2Draw;
     public List<GameObject> IntObj;
     public string CurrentBuild = "Main";
@@ -192,21 +215,17 @@ public class GuideBeh : MonoBehaviour
     private void Awake()
     {
         InteraktiveErect = false;
-        //var sw = new System.Diagnostics.Stopwatch();
-        //sw.Start();
         currentBuid = JsonUtility.FromJson<BuldingList>(jsonInstruction.text);
-        //sw.Stop();
-        //print($"{sw.ElapsedTicks}/{sw.ElapsedMilliseconds}");
         Points2Draw = new List<GameObject>();
         IntObj = new List<GameObject>();
     }
 
     private void Start()
     {
-        //gMapbeh.MasterGuide = this;
         updateEmbient();
         updateEnvironment();
     }
+
 
     private void Update()
     {
@@ -215,12 +234,26 @@ public class GuideBeh : MonoBehaviour
                     .getFloorInBuildByName(CurrentBuild, CurrentFloor)
                     .getRoomByName(CurrentRoom)
                     .getPointByName(CurrentPos);
+
+        if (RenderSettings.skybox.name == point.skyBox)
+        {
+            if (gMapbeh.isCorect())
+            {
+                usBeh.SetState(StateOfLoadScreen.Look);
+            }
+            else {
+                updateEmbient();
+            }
+            
+        }
+
         if (point.GetInteractivCount() == IntObj.Count & !InteraktiveErect)
         {
             InteraktiveErect = true;
-            //print($"ok {IntObj.Count}");
             spawnInteraction();
         }
+
+
     }
 
     private void spawnInteraction()
@@ -229,15 +262,45 @@ public class GuideBeh : MonoBehaviour
             .getFloorInBuildByName(CurrentBuild, CurrentFloor)
             .getRoomByName(CurrentRoom)
             .getPointByName(CurrentPos);
+        var cheker = new Dictionary<string,bool>();
+
         for (int i = 0; i < IntObj.Count; i++)
         {
             IntObj[i] = Instantiate(IntObj[i]);
             IntObj[i].name = IntObj[i].name.Replace("(Clone)", "");
+
+            var objName = IntObj[i].name;
             var intobj = point.GetObjByName(IntObj[i].name);
-            IntObj[i].transform.position = intobj.getPos();
-            IntObj[i].transform.rotation = intobj.getRot();
-            IntObj[i].transform.localScale = intobj.getScl();
-            IntObj[i].transform.SetParent(transform);
+
+            for (int j = 0; j < point.interactiv.Length; j++)
+            {
+                if (!cheker.ContainsKey(point.interactiv[j].link) &
+                    point.interactiv[j].name == IntObj[i].name
+                    ) { 
+                    switch (objName)
+                    {
+                        case "InfoTableMovi":
+                            var osV = IntObj[i].GetComponent<InfoTableMoviBeh>();
+                            osV.Link = point.interactiv[j].link;
+
+
+                            break;
+                        case "InfoTableImage":
+                            var osI = IntObj[i].GetComponent<InfoTableImageBeh>();
+                            osI.Link = point.interactiv[j].link;
+
+                            break;
+                        
+                    }
+                    cheker.Add(point.interactiv[j].link,true);
+                    IntObj[i].transform.position    = point.interactiv[j].getPos();
+                    IntObj[i].transform.rotation    = point.interactiv[j].getRot();
+                    IntObj[i].transform.localScale  = point.interactiv[j].getScl();
+                    IntObj[i].transform.SetParent(transform);
+                    break;
+                }
+            }
+
         }
 
     }
@@ -252,8 +315,10 @@ public class GuideBeh : MonoBehaviour
         var build = currentBuid.getFloorInBuildByName(CurrentBuild, CurrentFloor);
         var point = build.getRoomByName(CurrentRoom)
                          .getPointByName(CurrentPos);
+
         Consoleum.DeveloperConsole.Instance.ParseInput($"sky {point.skyBox}");
-        
+        usBeh.SetState(StateOfLoadScreen.Loading);
+
         foreach (var p in point.conects)
         {
             var go = Instantiate(prefabPoint);
@@ -264,13 +329,11 @@ public class GuideBeh : MonoBehaviour
             Points2Draw.Add(go);
             go.transform.position = p.getPos();
         }
-        gMapbeh.changePlace(new string[4] {CurrentBuild,CurrentFloor.ToString(),CurrentRoom,CurrentPos }, build);
-        
 
+        gMapbeh.changePlace(new string[4] {CurrentBuild,CurrentFloor.ToString(),
+                                CurrentRoom,CurrentPos }, build);
     }
-    /*
-   
-     */
+
     public void Moving(string[] args) {
         InteraktiveErect = false;
         if (args.Length==1) {
@@ -328,7 +391,8 @@ public class GuideBeh : MonoBehaviour
             var w   = gerbObject.name.Replace("(Clone)","");
             gerbObject.name = w; 
             IntObj.Add(gerbObject);
-            }
+        }
+
         if (handle.Status == AsyncOperationStatus.Failed)
         {
             Debug.LogWarning("Spawn object faild");

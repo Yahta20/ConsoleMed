@@ -49,6 +49,22 @@ MonoBehaviour:
       type: 3}
     m_TargetAsset: {fileID: 5319218644109752599, guid: 17be3cdd353e2734580256d725879e61,
       type: 3}
+  - m_GUID: 0ac575522280b734187e7c4640e35d00
+    m_Address: InfoTableMovi
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 6986756354631118540, guid: 0ac575522280b734187e7c4640e35d00,
+      type: 3}
+    m_TargetAsset: {fileID: 6986756354631118540, guid: 0ac575522280b734187e7c4640e35d00,
+      type: 3}
+  - m_GUID: d837868d46225c1479b30535e90d0e36
+    m_Address: InfoTableImage
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 7424019815366833353, guid: d837868d46225c1479b30535e90d0e36,
+      type: 3}
+    m_TargetAsset: {fileID: 7424019815366833353, guid: d837868d46225c1479b30535e90d0e36,
+      type: 3}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 9bf7d226e31a680439dd96d6c63517e8, type: 2}
   m_SchemaSet:

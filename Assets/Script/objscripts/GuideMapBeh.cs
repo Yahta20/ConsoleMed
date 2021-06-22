@@ -71,6 +71,7 @@ public class GuideMapBeh : MonoBehaviour
     public string[] position;
     private RectTransform rt;
     private Vector2 posit;
+    public int pointOnFloar;
 
     void Awake()
     {
@@ -83,12 +84,19 @@ public class GuideMapBeh : MonoBehaviour
         currentPlace = atlasMap.GetSprite("pointPlace");
         otherPlace   = atlasMap.GetSprite("point");
         CurrentBacground = GetComponent<Image>();
+        pointOnFloar = 0;
     }
     void Start()
     {
         rt.sizeDelta = MCUI.Instance.getCanvasSize() * 0.32f;
         updateMap();
     }
+
+    public bool isCorect() {
+        return pointOnFloar == mapObj.pointList.Count;
+    }
+
+
     private void updateMap()
     {
         foreach (var item in pointsInRoom)
@@ -100,19 +108,19 @@ public class GuideMapBeh : MonoBehaviour
 
     public void changePlace(string[] args, GuideBeh.building build) {
 
+        pointOnFloar = 0;
         mapObj.CleearChildObj();
         if (atlasMap.GetSprite($"{args[0]}_{args[1]}")!=null)
         {
-
-        mapObj.SetMapBackground(atlasMap.GetSprite($"{args[0]}_{args[1]}"));
+             mapObj.SetMapBackground(atlasMap.GetSprite($"{args[0]}_{args[1]}"));
         }
 
         for (int i = 0; i < build.Rooms.Length; i++)
         {
             var roomName = build.Rooms[i].name;
+
             for (int j = 0; j < build.Rooms[i].point.Length; j++)
             {
-                
                 var pointName = build.Rooms[i].point[j].name;
                 var go = Instantiate(pointToShow);
                 var pb = go.GetComponent<PointBeh>();
@@ -123,7 +131,12 @@ public class GuideMapBeh : MonoBehaviour
                 pb.statement = new string[4] {args[0],args[1],roomName,pointName };
                 pb.SetProportion (build.Rooms[i].point[j].GetCordin());
                 mapObj.AddPoint(go);
+                pointOnFloar+=1;
             }
+
         }
+       
+
+
     }
 }

@@ -21,16 +21,14 @@ MonoBehaviour:
     m_Address: startList
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 4900000, guid: e8380073ba543354f839b322a0ab8bb8, type: 3}
-    m_TargetAsset: {fileID: 4900000, guid: e8380073ba543354f839b322a0ab8bb8, type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: dbf64bd8103701947b7348aa629fbd1e
     m_Address: TileMap
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 4343727234628468602, guid: dbf64bd8103701947b7348aa629fbd1e,
-      type: 2}
-    m_TargetAsset: {fileID: 4343727234628468602, guid: dbf64bd8103701947b7348aa629fbd1e,
-      type: 2}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 9bf7d226e31a680439dd96d6c63517e8, type: 2}
   m_SchemaSet:

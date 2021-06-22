@@ -37,6 +37,8 @@ namespace Consoleum
             }
             Addressables.LoadAssetAsync<Material>(args[0]).Completed += OnLoadAsset;
         }
+
+
         void OnLoadAsset(AsyncOperationHandle<Material> handle)
         {
             if (handle.Status == AsyncOperationStatus.Succeeded)
