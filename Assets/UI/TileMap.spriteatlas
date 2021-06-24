@@ -35,12 +35,10 @@ SpriteAtlas:
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: c1442e364a05966489030fc2b9b1b20c, type: 3}
-  - {fileID: 21300000, guid: 5b1fa3a966ee96d45ade39f9a752b3fa, type: 3}
   - {fileID: 21300000, guid: 002e5ccee1ea4764f8d5bf0551b09952, type: 3}
   - {fileID: 21300000, guid: 891f3b9f5505ccb40ae467046ec7208a, type: 3}
   m_PackedSpriteNamesToIndex:
   - pointPlace
-  - Main_1
   - point
   - Main_3
   m_Tag: TileMap

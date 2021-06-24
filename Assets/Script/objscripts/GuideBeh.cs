@@ -211,10 +211,12 @@ public class GuideBeh : MonoBehaviour
     public GameObject prefabPoint;
 
     private bool InteraktiveErect;
+    
 
     private void Awake()
     {
         InteraktiveErect = false;
+        
         currentBuid = JsonUtility.FromJson<BuldingList>(jsonInstruction.text);
         Points2Draw = new List<GameObject>();
         IntObj = new List<GameObject>();
@@ -239,7 +241,11 @@ public class GuideBeh : MonoBehaviour
         {
             if (gMapbeh.isCorect())
             {
-                usBeh.SetState(StateOfLoadScreen.Look);
+                if (usBeh.currState !=StateOfLoadScreen.Moving)
+                {
+                    usBeh.SetState(StateOfLoadScreen.Look);
+
+                }
             }
             else {
                 updateEmbient();
@@ -255,6 +261,10 @@ public class GuideBeh : MonoBehaviour
 
 
     }
+
+                        
+
+
 
     private void spawnInteraction()
     {
@@ -282,15 +292,11 @@ public class GuideBeh : MonoBehaviour
                         case "InfoTableMovi":
                             var osV = IntObj[i].GetComponent<InfoTableMoviBeh>();
                             osV.Link = point.interactiv[j].link;
-
-
                             break;
                         case "InfoTableImage":
                             var osI = IntObj[i].GetComponent<InfoTableImageBeh>();
                             osI.Link = point.interactiv[j].link;
-
                             break;
-                        
                     }
                     cheker.Add(point.interactiv[j].link,true);
                     IntObj[i].transform.position    = point.interactiv[j].getPos();
@@ -302,6 +308,7 @@ public class GuideBeh : MonoBehaviour
             }
 
         }
+        
 
     }
 
@@ -311,6 +318,7 @@ public class GuideBeh : MonoBehaviour
         {
             Destroy(item);
         }
+
         Points2Draw = new List<GameObject>();
         var build = currentBuid.getFloorInBuildByName(CurrentBuild, CurrentFloor);
         var point = build.getRoomByName(CurrentRoom)
@@ -332,6 +340,7 @@ public class GuideBeh : MonoBehaviour
 
         gMapbeh.changePlace(new string[4] {CurrentBuild,CurrentFloor.ToString(),
                                 CurrentRoom,CurrentPos }, build);
+
     }
 
     public void Moving(string[] args) {

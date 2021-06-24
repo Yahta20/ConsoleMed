@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,11 +9,16 @@ public class VideoPlayerBeh : MonoBehaviour
 {
     public VideoPlayer  currentPlayer;
     public RawImage     currentScreen;
+    public AudioSource  currentAudio;
 
     void Awake()
     {
         currentPlayer = GetComponent<VideoPlayer>();
         currentScreen = GetComponent<RawImage>();
+        currentAudio =  GetComponent<AudioSource>();
+
+
+        StopVideo();
     }
     void Start()
     {
@@ -23,15 +29,21 @@ public class VideoPlayerBeh : MonoBehaviour
     {
         if (!currentPlayer.isPlaying)
         {
-            hideVideo();
+            StopVideo();
         }
     }
 
 
-    public void PlayVideo() { 
-        if (currentPlayer.isPrepared) { 
-            currentPlayer.Play();
-        }
+    public void PlayVideo() {
+        //currentPlayer.Prepare();
+        currentPlayer.audioOutputMode = VideoAudioOutputMode.AudioSource;
+        currentPlayer.SetTargetAudioSource(0, currentAudio);
+         
+
+        showVideo();
+        currentPlayer.Play();
+        print("play");
+        
     }
            
     public void LoadVideo(VideoClip vc) {
@@ -45,5 +57,17 @@ public class VideoPlayerBeh : MonoBehaviour
     public void hideVideo() {
         currentScreen.enabled = false;
     }
-    
+
+    public void StopVideo()
+    {
+        currentPlayer.Stop();
+        hideVideo();
+    }
+
+    public bool isPlaing()
+    {
+        return currentPlayer.isPlaying;
+    }
+
+
 }

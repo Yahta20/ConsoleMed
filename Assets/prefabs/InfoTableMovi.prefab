@@ -108,4 +108,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Link: 
-  Image2Show: {fileID: 0}
+  Movi2Show: {fileID: 0}

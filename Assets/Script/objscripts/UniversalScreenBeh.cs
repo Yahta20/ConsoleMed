@@ -8,11 +8,21 @@ public enum StateOfLoadScreen {
     Moving = 1,
     Look = 2,
     }
-    
+
+public enum StateOfMoving
+{
+
+    Image = 0,
+    Movi = 1,
+
+}
+
+
 
 public class UniversalScreenBeh : MonoBehaviour
 {
     public StateOfLoadScreen currState;
+    public StateOfMoving currMoviState;
 
     public Image curentImage;
 
@@ -27,10 +37,10 @@ public class UniversalScreenBeh : MonoBehaviour
     {
         //curentImage = GetComponent<Image>();
         currState = StateOfLoadScreen.Loading;
+        currMoviState = StateOfMoving.Image;
     }
     
 
-    // Start is called before the first frame update
     void Start()
     {
         
@@ -42,6 +52,7 @@ public class UniversalScreenBeh : MonoBehaviour
         
         switch (currState)
         {
+
             case StateOfLoadScreen.Loading:
                 LoadingState();
                 break;
@@ -51,15 +62,16 @@ public class UniversalScreenBeh : MonoBehaviour
             case StateOfLoadScreen.Look:
                 LookState();
             break;
+
         }
 
     }
 
     private void LookState()
     {
-        var alpha = curentImage.color.a >= 0 ? 0 : curentImage.color.a - Time.deltaTime;
+        var alpha = curentImage.color.a >= 0 ? curentImage.color.a - Time.deltaTime : 0;
         curentImage.color = new Color
-            (curentImage.color.r, curentImage.color.g, curentImage.color.b, alpha);
+            (curentImage.color.r, curentImage.color.g, curentImage.color.b, alpha/255);
         Loadimg.color = new Color
             (Loadimg.color.r, Loadimg.color.g, Loadimg.color.b, alpha);
         LoadText.color = new Color
@@ -69,9 +81,38 @@ public class UniversalScreenBeh : MonoBehaviour
     
     private void MovingState()
     {
-        curentPlayer.showVideo();
-        LoadingState();
+        switch (currMoviState)
+        {
+            case StateOfMoving.Image:
+                break;
+            case StateOfMoving.Movi:
+                if (!curentPlayer.isPlaing())
+                {
+                    curentImage.sprite = null;
+                    currState = StateOfLoadScreen.Look;
+                    curentPlayer.StopVideo();
+                }
+                break;
+        }
+                
+
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            curentImage.sprite = null;
+            currState = StateOfLoadScreen.Look;
+            curentPlayer.StopVideo();
+        }
+
+
+
+        var alpha = curentImage.color.a >= 255 ? 255 : curentImage.color.a + Time.deltaTime;
+
+        curentImage.color = new Color
+            (curentImage.color.r, curentImage.color.g, curentImage.color.b, alpha);
+
     }
+        
 
     private void LoadingState()
     {
@@ -86,15 +127,21 @@ public class UniversalScreenBeh : MonoBehaviour
     
     private void setLastChild()
     {
-        transform.SetSiblingIndex(MCUI.Instance.transform.childCount - 1);
-    }
+        if (currState != StateOfLoadScreen.Look)
+        {
+            transform.SetSiblingIndex(MCUI.Instance.transform.childCount - 1);
+        }
+        else {
+            transform.SetSiblingIndex(0);
+        }
+        
 
+    }
 
     public void SetColor(Color c) {
         var alpha = ImageVisible ? 255 : 0;
         curentImage.color = new Color (c.r,c.g,c.b,alpha);
     }
-
 
     public void SetSprate(Sprite s)
     {
@@ -102,6 +149,7 @@ public class UniversalScreenBeh : MonoBehaviour
     }
 
     public void SetState(StateOfLoadScreen s) {
+
         currState = s;
         switch (currState)
         {
@@ -117,5 +165,11 @@ public class UniversalScreenBeh : MonoBehaviour
 
 
     }
+
+    public void SetMovingState(StateOfMoving s) {
+        currMoviState = s;
+    }
+
+
 }
   

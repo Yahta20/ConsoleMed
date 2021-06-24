@@ -125,8 +125,11 @@ public class GuideMapBeh : MonoBehaviour
                 var go = Instantiate(pointToShow);
                 var pb = go.GetComponent<PointBeh>();
                 if (roomName == args[2] & pointName == args[3]) {
+
                     go.GetComponent<Image>().sprite = currentPlace;
+                    //pb.spriteLink(currentPlace);
                 }
+                
                 pb.MasterGuide = MasterGuide;
                 pb.statement = new string[4] {args[0],args[1],roomName,pointName };
                 pb.SetProportion (build.Rooms[i].point[j].GetCordin());
