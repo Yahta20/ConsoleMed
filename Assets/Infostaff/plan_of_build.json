@@ -451,23 +451,8 @@
                   "drawTo": [
                     "pos1"
                   ]
-                },
-                {
-                  "name": [
-                    "Main",
-                    "3",
-                    "Hall",
-                    "pos0"
-                  ],
-                  "pos": [
-                    0,
-                    1.75,
-                    6.6
-                  ],
-                  "drawTo": [
-                    "pos1"
-                  ]
                 }
+                
               ],
               "interactiv": [
                 {
@@ -479,8 +464,6 @@
                 }
               ]
             },
-
-
             {
               "name": "pos1",
               "skyBox": "1_1d",
@@ -523,7 +506,7 @@
                   "rot": [ 0.2120477, -0.2604599, -0.5946781, 0.730448 ],
                   "scl": [ 0.2, 1, 0.19 ],
                   "link": "3"
-                 
+
                 }
 
               ]
@@ -598,10 +581,857 @@
                   "drawTo": [
                     "pos1"
                   ]
+                },
+                {
+                  "name": [
+                    "Out",
+                    "pos5"
+                  ],
+                  "pos": [
+                    7.44,
+                    1.7,
+                    1.69
+                  ],
+                  "drawTo": [
+                    "pos1"
+                  ]
                 }
               ],
               "interactiv": []
             }
+          ]
+        },
+        {
+          "name": "Out",
+          "point": [
+            {
+              "name": "pos0",
+              "skyBox": "out_0",
+              "cordin": [
+                0.4,
+                0.1
+              ],
+              "conects": [
+                {
+                  "name": [
+                    "pos1"
+                  ],
+                  "pos": [
+                    -0.3,
+                    1.5,
+                    7.77
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ],
+              "interactiv": []
+            },
+            {
+              "name": "pos1",
+              "skyBox": "out_1",
+              "cordin": [
+                0.6,
+                0.5
+              ],
+              "conects": [
+                {
+                  "name": [
+                    "pos0"
+                  ],
+                  "pos": [
+                    0.0,
+                    1.55,
+                    -7.59
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                },
+                {
+                  "name": [
+                    "pos2"
+                  ],
+                  "pos": [
+                    0,
+                    1.55,
+                    7
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ],
+              "interactiv": []
+            },
+            {
+              "name": "pos2",
+              "skyBox": "out_2",
+              "cordin": [
+                0.1,
+                0.1
+              ],
+              "conects": [
+                {
+                  "name": [
+                    "pos1"
+                  ],
+                  "pos": [
+                    0.0,
+                    1.55,
+                    -7.59
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                },
+                {
+                  "name": [
+                    "pos3"
+                  ],
+                  "pos": [
+                    0,
+                    1.55,
+                    7
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ],
+              "interactiv": []
+            },
+            {
+              "name": "pos3",
+              "skyBox": "out_3",
+              "cordin": [
+                0.1,
+                0.1
+              ],
+              "conects": [
+                {
+                  "name": [
+                    "pos4"
+                  ],
+                  "pos": [
+                    1.13,
+                    1.14,
+                    5.65
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                },
+                {
+                  "name": [
+                    "pos3"
+                  ],
+                  "pos": [
+                    -1.13,
+                    1.14,
+                    -5.65
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ],
+              "interactiv": []
+            },
+            {
+              "name": "pos4",
+              "skyBox": "out_4",
+              "cordin": [
+                0.1,
+                0.1
+              ],
+              "conects": [
+                {
+                  "name": [
+                    "pos3"
+                  ],
+                  "pos": [
+                    0.85,
+                    1.14,
+                    -7.36
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                },
+                {
+                  "name": [
+                    "pos5"
+                  ],
+                  "pos": [
+                    -0.85,
+                    1.14,
+                    7.36
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+                
+
+              ],
+              "interactiv": []
+            },
+            {
+              "name": "pos5",
+              "skyBox": "out_5",
+              "cordin": [
+                0.1,
+                0.1
+              ],
+              "conects": [
+                {
+                  "name": [
+                    "pos4"
+                  ],
+                  "pos": [
+                    -4.6,
+                    1.14,
+                    -6.1
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                },
+                {
+                  "name": [
+                    "pos6"
+                  ],
+                  "pos": [
+                    -0.5,
+                    1.14,
+                    6.33
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                },
+                {
+                  "name": [
+                    "In",
+                    "pos3"
+                  ],
+                  "pos": [
+                    9.98,
+                    1.14,
+                    3.28
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ],
+              "interactiv": []
+            },
+            {
+              "name": "pos6",
+              "skyBox": "out_6",
+              "cordin": [
+                0.1,
+                0.1
+              ],
+              "conects": [
+                {
+                  "name": [
+                    "pos4"
+                  ],
+                  "pos": [
+                    0,
+                    1.14,
+                    -8.6
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                },
+                {
+                  "name": [
+                    "pos7"
+                  ],
+                  "pos": [
+                    -0.83,
+                    0.73,
+                    -5.37
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ],
+              "interactiv": []
+            },
+            {
+              "name": "pos7",
+              "skyBox": "out_7",
+              "cordin": [
+                0.1,
+                0.1
+              ],
+              "conects": [
+                {
+                  "name": [
+                    "pos6"
+                  ],
+                  "pos": [
+                    0,
+                    1.14,
+                    -7.13
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                },
+                {
+                  "name": [
+                    "pos8"
+                  ],
+                  "pos": [
+                    -0.86,
+                    -1.14,
+                    7
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ],
+              "interactiv": []
+            },
+            {
+              "name": "pos8",
+              "skyBox": "out_8",
+              "cordin": [
+                0.1,
+                0.1
+              ],
+              "conects": [
+                {
+                  "name": [
+                    "pos4"
+                  ],
+                  "pos": [
+                    -9.98,
+                    1.14,
+                    3.28
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ],
+              "interactiv": []
+            },
+            {
+              "name": "pos9",
+              "skyBox": "out_9",
+              "cordin": [
+                0.1,
+                0.1
+              ],
+              "conects": [
+                {
+                  "name": [
+                    "pos4"
+                  ],
+                  "pos": [
+                    -9.98,
+                    1.14,
+                    3.28
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ],
+              "interactiv": []
+            },
+            {
+              "name": "pos10",
+              "skyBox": "out_10",
+              "cordin": [
+                0.1,
+                0.1
+              ],
+              "conects": [
+                {
+                  "name": [
+                    "pos4"
+                  ],
+                  "pos": [
+                    -9.98,
+                    1.14,
+                    3.28
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ],
+              "interactiv": []
+            },
+            {
+              "name": "pos11",
+              "skyBox": "out_11",
+              "cordin": [
+                0.1,
+                0.1
+              ],
+              "conects": [
+                {
+                  "name": [
+                    "pos10"
+                  ],
+                  "pos": [
+                    -9.98,
+                    1.14,
+                    3.28
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ],
+              "interactiv": []
+            },
+            {
+              "name": "pos12",
+              "skyBox": "out_12",
+              "cordin": [
+                0.1,
+                0.1
+              ],
+              "conects": [
+                {
+                  "name": [
+                    "pos11"
+                  ],
+                  "pos": [
+                    -9.98,
+                    1.14,
+                    3.28
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ],
+              "interactiv": []
+            },
+            {
+              "name": "pos13",
+              "skyBox": "out_13",
+              "cordin": [
+                0.1,
+                0.1
+              ],
+              "conects": [
+                {
+                  "name": [
+                    "pos12"
+                  ],
+                  "pos": [
+                    -9.98,
+                    1.14,
+                    3.28
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ],
+              "interactiv": []
+            },
+            {
+              "name": "pos14",
+              "skyBox": "out_14",
+              "cordin": [
+                0.1,
+                0.1
+              ],
+              "conects": [
+                {
+                  "name": [
+                    "pos13"
+                  ],
+                  "pos": [
+                    -9.98,
+                    1.14,
+                    3.28
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ],
+              "interactiv": []
+            },
+            {
+              "name": "pos15",
+              "skyBox": "out_15",
+              "cordin": [
+                0.1,
+                0.1
+              ],
+              "conects": [
+                {
+                  "name": [
+                    "pos14"
+                  ],
+                  "pos": [
+                    -9.98,
+                    1.14,
+                    3.28
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ],
+              "interactiv": []
+            },
+            {
+              "name": "pos16",
+              "skyBox": "out_16",
+              "cordin": [
+                0.1,
+                0.1
+              ],
+              "conects": [
+                {
+                  "name": [
+                    "pos15"
+                  ],
+                  "pos": [
+                    -9.98,
+                    1.14,
+                    3.28
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ],
+              "interactiv": []
+            },
+            {
+              "name": "pos17",
+              "skyBox": "out_17",
+              "cordin": [
+                0.1,
+                0.1
+              ],
+              "conects": [
+                {
+                  "name": [
+                    "pos16"
+                  ],
+                  "pos": [
+                    -9.98,
+                    1.14,
+                    3.28
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ],
+              "interactiv": []
+            },
+            {
+              "name": "pos18",
+              "skyBox": "out_18",
+              "cordin": [
+                0.1,
+                0.1
+              ],
+              "conects": [
+                {
+                  "name": [
+                    "pos17"
+                  ],
+                  "pos": [
+                    -9.98,
+                    1.14,
+                    3.28
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ],
+              "interactiv": []
+            },
+            {
+              "name": "pos19",
+              "skyBox": "out_19",
+              "cordin": [
+                0.1,
+                0.1
+              ],
+              "conects": [
+                {
+                  "name": [
+                    "pos18"
+                  ],
+                  "pos": [
+                    -9.98,
+                    1.14,
+                    3.28
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ],
+              "interactiv": []
+            },
+            {
+              "name": "pos20",
+              "skyBox": "out_20",
+              "cordin": [
+                0.1,
+                0.1
+              ],
+              "conects": [
+                {
+                  "name": [
+                    "pos19"
+                  ],
+                  "pos": [
+                    -9.98,
+                    1.14,
+                    3.28
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ],
+              "interactiv": []
+            },
+            {
+              "name": "pos21",
+              "skyBox": "out_21",
+              "cordin": [
+                0.1,
+                0.1
+              ],
+              "conects": [
+                {
+                  "name": [
+                    "pos20"
+                  ],
+                  "pos": [
+                    -9.98,
+                    1.14,
+                    3.28
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ],
+              "interactiv": []
+            },
+            {
+              "name": "pos22",
+              "skyBox": "out_22",
+              "cordin": [
+                0.1,
+                0.1
+              ],
+              "conects": [
+                {
+                  "name": [
+                    "pos21"
+                  ],
+                  "pos": [
+                    -9.98,
+                    1.14,
+                    3.28
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ],
+              "interactiv": []
+            },
+            {
+              "name": "pos23",
+              "skyBox": "out_23",
+              "cordin": [
+                0.1,
+                0.1
+              ],
+              "conects": [
+                {
+                  "name": [
+                    "pos22"
+                  ],
+                  "pos": [
+                    -9.98,
+                    1.14,
+                    3.28
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ],
+              "interactiv": []
+            },
+            {
+              "name": "pos24",
+              "skyBox": "out_24",
+              "cordin": [
+                0.1,
+                0.1
+              ],
+              "conects": [
+                {
+                  "name": [
+                    "pos23"
+                  ],
+                  "pos": [
+                    -9.98,
+                    1.14,
+                    3.28
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ],
+              "interactiv": []
+            },
+            {
+              "name": "pos25",
+              "skyBox": "out_25",
+              "cordin": [
+                0.1,
+                0.1
+              ],
+              "conects": [
+                {
+                  "name": [
+                    "pos24"
+                  ],
+                  "pos": [
+                    -9.98,
+                    1.14,
+                    3.28
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ],
+              "interactiv": []
+            },
+            {
+              "name": "pos26",
+              "skyBox": "out_26",
+              "cordin": [
+                0.1,
+                0.1
+              ],
+              "conects": [
+                {
+                  "name": [
+                    "pos25"
+                  ],
+                  "pos": [
+                    -9.98,
+                    1.14,
+                    3.28
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ],
+              "interactiv": []
+            },
+            {
+              "name": "pos27",
+              "skyBox": "out_27",
+              "cordin": [
+                0.1,
+                0.1
+              ],
+              "conects": [
+                {
+                  "name": [
+                    "pos26"
+                  ],
+                  "pos": [
+                    -9.98,
+                    1.14,
+                    3.28
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ],
+              "interactiv": []
+            },
+            {
+              "name": "pos28",
+              "skyBox": "out_28",
+              "cordin": [
+                0.1,
+                0.1
+              ],
+              "conects": [
+                {
+                  "name": [
+                    "pos28"
+                  ],
+                  "pos": [
+                    -9.98,
+                    1.14,
+                    3.28
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ],
+              "interactiv": []
+            },
+            {
+              "name": "pos29",
+              "skyBox": "out_29",
+              "cordin": [
+                0.1,
+                0.1
+              ],
+              "conects": [
+                {
+                  "name": [
+                    "pos29"
+                  ],
+                  "pos": [
+                    -9.98,
+                    1.14,
+                    3.28
+                  ],
+                  "drawTo": [
+                    "it"
+                  ]
+                }
+              ],
+              "interactiv": []
+            }
+
           ]
         }
       ]

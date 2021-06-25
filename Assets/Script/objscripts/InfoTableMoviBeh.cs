@@ -20,7 +20,7 @@ public class InfoTableMoviBeh : MonoBehaviour
         if (usb != null & Movi2Show != null)
         {
             //
-            print($"Vides KLK {Link}");
+            //print($"Vides KLK {Link}");
             //
             //usb.SetSprate(Image2Show);
             usb.SetMovingState(StateOfMoving.Movi);

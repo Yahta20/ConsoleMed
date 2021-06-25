@@ -42,7 +42,7 @@ public class VideoPlayerBeh : MonoBehaviour
 
         showVideo();
         currentPlayer.Play();
-        print("play");
+        //print("play");
         
     }
            
