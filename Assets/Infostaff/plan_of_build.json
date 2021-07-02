@@ -10,6 +10,7 @@
             {
               "name": "pos0",
               "skyBox": "6_3f",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.5047,
                 0.4696
@@ -79,6 +80,7 @@
             {
               "name": "pos1",
               "skyBox": "8_3f",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.6404,
                 0.4835
@@ -118,13 +120,14 @@
                   "pos": [ 2.23, 1.52, 8.09 ],
                   "rot": [ -0.7071068, 0, 0, 0.7071068 ],
                   "scl": [ 0.09, 1, 0.13 ],
-                  "link": "mozg"
+                  "link": "kanev"
                 }
               ]
             },
             {
               "name": "pos2",
               "skyBox": "5_3f",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.4063,
                 0.4835
@@ -169,6 +172,7 @@
             {
               "name": "pos0",
               "skyBox": "4_3f",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.2409,
                 0.5216
@@ -207,6 +211,7 @@
             {
               "name": "pos1",
               "skyBox": "3_3f",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.1281,
                 0.5216
@@ -244,6 +249,7 @@
             {
               "name": "pos2",
               "skyBox": "1_3f",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.0638,
                 0.7383
@@ -268,6 +274,7 @@
             {
               "name": "pos5",
               "skyBox": "2_3f",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.0638,
                 0.3015
@@ -310,6 +317,7 @@
             {
               "name": "pos0",
               "skyBox": "9_3f",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.7393,
                 0.5199
@@ -348,6 +356,7 @@
             {
               "name": "pos1",
               "skyBox": "10_3f",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.8829,
                 0.5199
@@ -385,6 +394,7 @@
             {
               "name": "pos2",
               "skyBox": "11_3f",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.9494,
                 0.5199
@@ -421,6 +431,7 @@
             {
               "name": "pos0",
               "skyBox": "0_1d",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.4,
                 0.1
@@ -451,8 +462,24 @@
                   "drawTo": [
                     "pos1"
                   ]
+                },
+                {
+                  "name": [
+                    "Main",
+                    "3",
+                    "Hall",
+                    "pos0"
+                  ],
+                  "pos": [
+                    0,
+                    1.75,
+                    7
+                  ],
+                  "drawTo": [
+                    "pos1"
+                  ]
                 }
-                
+
               ],
               "interactiv": [
                 {
@@ -467,6 +494,7 @@
             {
               "name": "pos1",
               "skyBox": "1_1d",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.6,
                 0.5
@@ -514,6 +542,7 @@
             {
               "name": "pos2",
               "skyBox": "2_1d",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.1,
                 0.1
@@ -551,6 +580,7 @@
             {
               "name": "pos3",
               "skyBox": "3_1d",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.1,
                 0.1
@@ -577,20 +607,6 @@
                     3.65,
                     2.36,
                     9.51
-                  ],
-                  "drawTo": [
-                    "pos1"
-                  ]
-                },
-                {
-                  "name": [
-                    "Out",
-                    "pos5"
-                  ],
-                  "pos": [
-                    7.44,
-                    1.7,
-                    1.69
                   ],
                   "drawTo": [
                     "pos1"
@@ -631,6 +647,7 @@
             {
               "name": "pos1",
               "skyBox": "out_1",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.6,
                 0.5
@@ -668,6 +685,7 @@
             {
               "name": "pos2",
               "skyBox": "out_2",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.1,
                 0.1
@@ -705,6 +723,7 @@
             {
               "name": "pos3",
               "skyBox": "out_3",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.1,
                 0.1
@@ -742,6 +761,7 @@
             {
               "name": "pos4",
               "skyBox": "out_4",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.1,
                 0.1
@@ -773,7 +793,7 @@
                     "it"
                   ]
                 }
-                
+
 
               ],
               "interactiv": []
@@ -869,6 +889,7 @@
             {
               "name": "pos7",
               "skyBox": "out_7",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.1,
                 0.1
@@ -906,6 +927,7 @@
             {
               "name": "pos8",
               "skyBox": "out_8",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.1,
                 0.1
@@ -930,6 +952,7 @@
             {
               "name": "pos9",
               "skyBox": "out_9",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.1,
                 0.1
@@ -954,6 +977,7 @@
             {
               "name": "pos10",
               "skyBox": "out_10",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.1,
                 0.1
@@ -978,6 +1002,7 @@
             {
               "name": "pos11",
               "skyBox": "out_11",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.1,
                 0.1
@@ -1002,6 +1027,7 @@
             {
               "name": "pos12",
               "skyBox": "out_12",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.1,
                 0.1
@@ -1026,6 +1052,7 @@
             {
               "name": "pos13",
               "skyBox": "out_13",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.1,
                 0.1
@@ -1050,6 +1077,7 @@
             {
               "name": "pos14",
               "skyBox": "out_14",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.1,
                 0.1
@@ -1074,6 +1102,7 @@
             {
               "name": "pos15",
               "skyBox": "out_15",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.1,
                 0.1
@@ -1098,6 +1127,7 @@
             {
               "name": "pos16",
               "skyBox": "out_16",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.1,
                 0.1
@@ -1122,6 +1152,7 @@
             {
               "name": "pos17",
               "skyBox": "out_17",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.1,
                 0.1
@@ -1146,6 +1177,7 @@
             {
               "name": "pos18",
               "skyBox": "out_18",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.1,
                 0.1
@@ -1170,6 +1202,7 @@
             {
               "name": "pos19",
               "skyBox": "out_19",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.1,
                 0.1
@@ -1194,6 +1227,7 @@
             {
               "name": "pos20",
               "skyBox": "out_20",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.1,
                 0.1
@@ -1218,6 +1252,7 @@
             {
               "name": "pos21",
               "skyBox": "out_21",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.1,
                 0.1
@@ -1242,6 +1277,7 @@
             {
               "name": "pos22",
               "skyBox": "out_22",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.1,
                 0.1
@@ -1266,6 +1302,7 @@
             {
               "name": "pos23",
               "skyBox": "out_23",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.1,
                 0.1
@@ -1290,6 +1327,7 @@
             {
               "name": "pos24",
               "skyBox": "out_24",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.1,
                 0.1
@@ -1314,6 +1352,7 @@
             {
               "name": "pos25",
               "skyBox": "out_25",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.1,
                 0.1
@@ -1338,6 +1377,7 @@
             {
               "name": "pos26",
               "skyBox": "out_26",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.1,
                 0.1
@@ -1362,6 +1402,7 @@
             {
               "name": "pos27",
               "skyBox": "out_27",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.1,
                 0.1
@@ -1386,6 +1427,7 @@
             {
               "name": "pos28",
               "skyBox": "out_28",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.1,
                 0.1
@@ -1410,6 +1452,7 @@
             {
               "name": "pos29",
               "skyBox": "out_29",
+              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
               "cordin": [
                 0.1,
                 0.1

@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 3620855512
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e099d25626b1a777fc1c12adc4ceae5a
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 7ae03148ccc2d81279420f9cf5a52f48
+HashAppended: 0
+ClassTypes:
+- Class: 89
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Resources/3_floor/3_floor_6.JPG
+Dependencies: []

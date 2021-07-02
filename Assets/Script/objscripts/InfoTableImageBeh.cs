@@ -61,6 +61,7 @@ public class InfoTableImageBeh : MonoBehaviour
         if (handle.Status == AsyncOperationStatus.Failed)
         {
             Debug.LogWarning("Spawn object faild");
+            print(Link);
         }
 
     }

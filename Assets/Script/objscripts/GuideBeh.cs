@@ -64,6 +64,8 @@ public class GuideBeh : MonoBehaviour
 
         public string skyBox;
 
+        public string skyLink;
+
         public float[] cordin;
 
         public Conects[] conects;
@@ -199,8 +201,10 @@ public class GuideBeh : MonoBehaviour
     //public Material skybox;
     public GuideMapBeh gMapbeh;
     public UniversalScreenBeh usBeh;
+    //public URILoader iLoader;
     public List<GameObject> Points2Draw;
     public List<GameObject> IntObj;
+    [Space]
     public string CurrentBuild = "Main";
     public int CurrentFloor = 1;
     public string CurrentRoom = "Hall";
@@ -209,63 +213,58 @@ public class GuideBeh : MonoBehaviour
 
     //написать загрузку с адресабле
     public GameObject prefabPoint;
-
     private bool InteraktiveErect;
-    
 
+    
     private void Awake()
     {
         InteraktiveErect = false;
-        
         currentBuid = JsonUtility.FromJson<BuldingList>(jsonInstruction.text);
         Points2Draw = new List<GameObject>();
         IntObj = new List<GameObject>();
     }
-
+    
     private void Start()
     {
         updateEmbient();
         updateEnvironment();
     }
-
-
+    
     private void Update()
     {
-        
         var point = currentBuid
                     .getFloorInBuildByName(CurrentBuild, CurrentFloor)
                     .getRoomByName(CurrentRoom)
                     .getPointByName(CurrentPos);
 
+
         if (RenderSettings.skybox.name == point.skyBox)
         {
             if (gMapbeh.isCorect())
             {
-                if (usBeh.currState !=StateOfLoadScreen.Moving)
+                if (usBeh.currState != StateOfLoadScreen.Moving)
                 {
                     usBeh.SetState(StateOfLoadScreen.Look);
-
                 }
             }
-            else {
+            else
+            {
                 updateEmbient();
             }
-            
+
         }
+        //if((RenderSettings.skybox.name != point.skyBox) & iLoader.isComplet()) {
+        //    RenderSettings.skybox = iLoader.skybox;
+        //}
+
 
         if (point.GetInteractivCount() == IntObj.Count & !InteraktiveErect)
         {
             InteraktiveErect = true;
             spawnInteraction();
         }
-
-
     }
-
-                        
-
-
-
+     
     private void spawnInteraction()
     {
         var point = currentBuid
@@ -325,6 +324,8 @@ public class GuideBeh : MonoBehaviour
                          .getPointByName(CurrentPos);
 
         Consoleum.DeveloperConsole.Instance.ParseInput($"sky {point.skyBox}");
+        //iLoader.LoadAsset(point.skyLink,point.skyBox);
+
         usBeh.SetState(StateOfLoadScreen.Loading);
 
         foreach (var p in point.conects)

@@ -17,12 +17,12 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 10e0d943a64ae0b4ea3a6e8cc40dec6c
   m_SerializeEntries:
-  - m_GUID: b54f6dc175fa8ca41a8a4b8bb77736d0
+  - m_GUID: 111d92424bd396c49a9169eb260a1d3a
     m_Address: kanev
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    m_MainAsset: {fileID: 2800000, guid: 111d92424bd396c49a9169eb260a1d3a, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: 111d92424bd396c49a9169eb260a1d3a, type: 3}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 9bf7d226e31a680439dd96d6c63517e8, type: 2}
   m_SchemaSet:

@@ -70,7 +70,7 @@ public class GuideMapBeh : MonoBehaviour
     public List<Image> pointsInRoom;
     public string[] position;
     private RectTransform rt;
-    private Vector2 posit;
+    
     public int pointOnFloar;
 
     void Awake()

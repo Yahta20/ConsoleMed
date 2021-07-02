@@ -11,6 +11,8 @@ public class VideoPlayerBeh : MonoBehaviour
     public RawImage     currentScreen;
     public AudioSource  currentAudio;
 
+    //private bool isStart;
+
     void Awake()
     {
         currentPlayer = GetComponent<VideoPlayer>();
@@ -27,10 +29,10 @@ public class VideoPlayerBeh : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!currentPlayer.isPlaying)
-        {
-            StopVideo();
-        }
+        //if (!currentPlayer.isPlaying)
+        //{
+        //    StopVideo();
+        //}
     }
 
 
@@ -42,6 +44,7 @@ public class VideoPlayerBeh : MonoBehaviour
 
         showVideo();
         currentPlayer.Play();
+        //isStart = true;
         //print("play");
         
     }

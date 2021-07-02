@@ -86,12 +86,12 @@ public class UniversalScreenBeh : MonoBehaviour
             case StateOfMoving.Image:
                 break;
             case StateOfMoving.Movi:
-                if (!curentPlayer.isPlaing())
-                {
-                    curentImage.sprite = null;
-                    currState = StateOfLoadScreen.Look;
-                    curentPlayer.StopVideo();
-                }
+                //if (!curentPlayer.isPlaing())
+                //{
+                //    curentImage.sprite = null;
+                //    currState = StateOfLoadScreen.Look;
+                //    curentPlayer.StopVideo();
+                //}
                 break;
         }
                 

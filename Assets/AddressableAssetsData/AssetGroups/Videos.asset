@@ -21,14 +21,8 @@ MonoBehaviour:
     m_Address: mozg
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 32900000, guid: fcdbc69fd1cbb8e44ad068c60aa7599f, type: 3}
-    m_TargetAsset: {fileID: 32900000, guid: fcdbc69fd1cbb8e44ad068c60aa7599f, type: 3}
-  - m_GUID: 953346cc18b183d45a31ec8b86414cb9
-    m_Address: anim
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 32900000, guid: 953346cc18b183d45a31ec8b86414cb9, type: 3}
-    m_TargetAsset: {fileID: 32900000, guid: 953346cc18b183d45a31ec8b86414cb9, type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 9bf7d226e31a680439dd96d6c63517e8, type: 2}
   m_SchemaSet:

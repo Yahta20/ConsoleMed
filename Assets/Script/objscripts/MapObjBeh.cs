@@ -16,6 +16,7 @@ public class MapObjBeh : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
     private RectTransform parentRT;
     private RectTransform curerentRT;
     private bool mouseOn = false;
+    private Vector2 posit;
 
     public List<GameObject> pointList;
 
@@ -45,11 +46,23 @@ public class MapObjBeh : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
             float mw = Input.GetAxis("Mouse ScrollWheel");
             var def = curerentRT.sizeDelta * mw * (1-mw);
             curerentRT.sizeDelta += def;
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                positPres = Input.mousePosition;
+
+                MouseDrag();
+                
+            }
+
         }
+
+
     }
 
     private void Update()
     {
+        
         var aspectP = parentRT.sizeDelta.x / parentRT.sizeDelta.y;
         var aspectI = curerentRT.sizeDelta.x / curerentRT.sizeDelta.y;
 
@@ -117,6 +130,7 @@ public class MapObjBeh : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
         }
         curerentRT.sizeDelta *= scale;
         curerentRT.anchoredPosition = new Vector2(ancorsx,ancorsy);
+        posit=curerentRT.anchoredPosition;
     }
   
     public void CleearChildObj() {
@@ -136,8 +150,8 @@ public class MapObjBeh : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
         currentImage.rectTransform.sizeDelta = new Vector2(s.rect.width, s.rect.height);
         var scale = parentRT.sizeDelta.x / curerentRT.sizeDelta.x;
         curerentRT.sizeDelta *= scale;
-        curerentRT.anchoredPosition = Vector2.zero;
-
+        //curerentRT.anchoredPosition = Vector2.zero;
+            curerentRT.anchoredPosition = posit;
         }
     }
 
@@ -164,12 +178,16 @@ public class MapObjBeh : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        positPres = Input.mousePosition;
-        //print("x");
+        
+
+            positPres = Input.mousePosition;
     }
 
-    public void OnDrag(PointerEventData eventData)
-    {
+
+        //positPres = Input.mousePosition;
+        //print("x");
+
+    void MouseDrag() {
         var positPresNew = Input.mousePosition;
         var medx = positPres.x - positPresNew.x;
         var medy = positPres.y - positPresNew.y;
@@ -177,7 +195,16 @@ public class MapObjBeh : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
         curerentRT.anchoredPosition = new Vector3(
             curerentRT.anchoredPosition.x - medx, curerentRT.anchoredPosition.y - medy);
         positPres = Input.mousePosition;
+
     }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        if (eventData.button == PointerEventData.InputButton.Left)
+        {
+        MouseDrag();
+        }
+     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
