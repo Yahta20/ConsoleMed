@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_DefaultGroup: 80c9233699ae0ee41acbaa949ace034a
   m_OptimizeCatalogSize: 0
-  m_BuildRemoteCatalog: 0
+  m_BuildRemoteCatalog: 1
   m_BundleLocalCatalog: 0
   m_DisableCatalogUpdateOnStart: 0
   m_IgnoreUnsupportedFilesInBuild: 0
@@ -22,17 +22,19 @@ MonoBehaviour:
   m_maxConcurrentWebRequests: 500
   m_ContiguousBundles: 0
   m_RemoteCatalogBuildPath:
-    m_Id: 
+    m_Id: f5f22dc659d43114c80046a69093d2eb
   m_RemoteCatalogLoadPath:
-    m_Id: 
+    m_Id: 813a699f83162eb4d96e881378f4f6bb
   m_overridePlayerVersion: 
   m_GroupAssets:
   - {fileID: 11400000, guid: 298962f0e2d83b2458ce46fc73ce8262, type: 2}
   - {fileID: 11400000, guid: 3b0f5aaa6bf471b4d9a993b7194c63e0, type: 2}
   - {fileID: 11400000, guid: 140891e3c441e2546a9f35a65e8c5be4, type: 2}
+  - {fileID: 11400000, guid: 9cc3a11c64389fa4199a1a9f1f71efc0, type: 2}
   - {fileID: 11400000, guid: 8c0119678dc2e08459e9fe2ee94ca8ab, type: 2}
   - {fileID: 11400000, guid: 31fdeb8ae07dc294cadbff297318072e, type: 2}
   - {fileID: 11400000, guid: b2d326745d62edf4b8d4c1bc0ca4a031, type: 2}
+  - {fileID: 11400000, guid: bec7812debca59f46b1211f8b58c9811, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -43,6 +45,20 @@ MonoBehaviour:
     - m_InheritedParent: 
       m_Id: af3cf25aa2f436d45a711ace3bbfd0f0
       m_ProfileName: Default
+      m_Values:
+      - m_Id: 32733d3d5223fef4eb90d084e22ce6ae
+        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+      - m_Id: f5f22dc659d43114c80046a69093d2eb
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+      - m_Id: 813a699f83162eb4d96e881378f4f6bb
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_Id: f90df668102613b4da387f52cc3d130b
+        m_Value: ServerData/[BuildTarget]
+      - m_Id: 1846958c836fae34f91f4d1d225efc6c
+        m_Value: http://localhost/[BuildTarget]
+    - m_InheritedParent: 
+      m_Id: c35da15071af8014ba31aecc2435fdb6
+      m_ProfileName: GitHub
       m_Values:
       - m_Id: 32733d3d5223fef4eb90d084e22ce6ae
         m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
@@ -88,7 +104,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b962ea168d630854b935b6caf3bd5b72, type: 2}
   - {fileID: 11400000, guid: 05ca7162112b0994cba719cabc2b5633, type: 2}
   - {fileID: 11400000, guid: 55838e01dc33319479a919e802451961, type: 2}
-  m_ActiveProfileId: af3cf25aa2f436d45a711ace3bbfd0f0
+  m_ActiveProfileId: c35da15071af8014ba31aecc2435fdb6
   m_HostingServicesManager:
     m_HostingServiceInfos: []
     m_Settings: {fileID: 11400000}

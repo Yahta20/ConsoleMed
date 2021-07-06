@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: SkyboxDvor
+  m_EditorClassIdentifier: 
+  m_GroupName: SkyboxDvor
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 36544a25a96687e4b980fde39b95d0b9
+  m_SerializeEntries:
+  - m_GUID: 1612aa8f5c6a1b14397a59f5b6da152a
+    m_Address: 2_1d
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 2100000, guid: 1612aa8f5c6a1b14397a59f5b6da152a, type: 2}
+    m_TargetAsset: {fileID: 2100000, guid: 1612aa8f5c6a1b14397a59f5b6da152a, type: 2}
+  - m_GUID: c7300965a00a9c54eba25aa13f7433d7
+    m_Address: 0_1d
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 2100000, guid: c7300965a00a9c54eba25aa13f7433d7, type: 2}
+    m_TargetAsset: {fileID: 2100000, guid: c7300965a00a9c54eba25aa13f7433d7, type: 2}
+  - m_GUID: 9ce6a64761af63c40979fda4bd063f1c
+    m_Address: 1_1d
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 2100000, guid: 9ce6a64761af63c40979fda4bd063f1c, type: 2}
+    m_TargetAsset: {fileID: 2100000, guid: 9ce6a64761af63c40979fda4bd063f1c, type: 2}
+  - m_GUID: fd2ff9091a1cf744d8752f245f55a529
+    m_Address: 3_1d
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 2100000, guid: fd2ff9091a1cf744d8752f245f55a529, type: 2}
+    m_TargetAsset: {fileID: 2100000, guid: fd2ff9091a1cf744d8752f245f55a529, type: 2}
+  - m_GUID: e847ad86fea7c7b428ec3e85e79c0475
+    m_Address: 9_3f
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 2100000, guid: e847ad86fea7c7b428ec3e85e79c0475, type: 2}
+    m_TargetAsset: {fileID: 2100000, guid: e847ad86fea7c7b428ec3e85e79c0475, type: 2}
+  - m_GUID: 7b8eabc63fc871449a6d2af925141571
+    m_Address: 10_3f
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 2100000, guid: 7b8eabc63fc871449a6d2af925141571, type: 2}
+    m_TargetAsset: {fileID: 2100000, guid: 7b8eabc63fc871449a6d2af925141571, type: 2}
+  - m_GUID: 82e4bb764a1e08b45a7d6609cfcf711e
+    m_Address: 11_3f
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 2100000, guid: 82e4bb764a1e08b45a7d6609cfcf711e, type: 2}
+    m_TargetAsset: {fileID: 2100000, guid: 82e4bb764a1e08b45a7d6609cfcf711e, type: 2}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 9bf7d226e31a680439dd96d6c63517e8, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 6fa544eb46a07154589ed02bcc29644e, type: 2}
+    - {fileID: 11400000, guid: b6a780acdd377a84ba140534b713ca9b, type: 2}
