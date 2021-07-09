@@ -10,6 +10,7 @@ using UnityEngine.UI;
 public class MapObjBeh : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler, 
     IDragHandler, IPointerExitHandler
 {
+    public GuideMaster gm;
     private Image currentImage;
     public GameObject pointToShow;
     private Vector3 positPres;
@@ -37,6 +38,11 @@ public class MapObjBeh : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
         curerentRT.sizeDelta *= scale;
         //print($"{curerentRT.sizeDelta}-{scale}-{parentRT.sizeDelta}");
         CleearChildObj();
+    }
+
+    public void setGM(GuideMaster _gm)
+    {
+        gm = _gm;
     }
 
     private void FixedUpdate()
@@ -155,17 +161,6 @@ public class MapObjBeh : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
         }
     }
 
-
-        
-    public void AddPoint(Sprite sprite,Vector2 v2) {
-        var go = Instantiate(pointToShow);
-        pointList.Add(go);
-        go.GetComponent<Image>().sprite = sprite;
-        go.GetComponent<PointBeh>().SetProportion(v2);
-        //go.GetComponent<Image>().rectTransform.anchoredPosition = v2;
-        go.transform.SetParent(transform);
-    }
-
     public void AddPoint(GameObject go)
     {
         pointList.Add(go);
@@ -205,6 +200,10 @@ public class MapObjBeh : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
         MouseDrag();
         }
      }
+
+    public bool isOnPoint() {
+        return mouseOn;
+    }
 
     public void OnPointerEnter(PointerEventData eventData)
     {

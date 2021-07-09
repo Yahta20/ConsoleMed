@@ -10,7 +10,7 @@ public class InfoTableMoviBeh : MonoBehaviour
     public string Link = "";
 
     public VideoClip Movi2Show;
-    private bool isLoadet=false;
+    //private bool isLoadet=false;
 
 
     void OnMouseDown()

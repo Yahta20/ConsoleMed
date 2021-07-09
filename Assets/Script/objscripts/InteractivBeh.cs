@@ -11,6 +11,6 @@ public class InteractivBeh : MonoBehaviour
     {
         
         sound.Play();
-        print("dd");
+
     }
 }

@@ -5,9 +5,9 @@ using UnityEngine.EventSystems;
 
 public class ConnectBeh : MonoBehaviour//, IPointerClickHandler
 {
-    public GuideBeh.Conects statement;
-    public GuideBeh MasterGuide;
-
+    public Conects statement;
+    //public GuideBeh MasterGuide;
+    public GuideMaster MasterGuide;
 
 
     private void OnMouseDown()

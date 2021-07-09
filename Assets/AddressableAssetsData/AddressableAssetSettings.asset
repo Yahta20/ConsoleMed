@@ -56,20 +56,6 @@ MonoBehaviour:
         m_Value: ServerData/[BuildTarget]
       - m_Id: 1846958c836fae34f91f4d1d225efc6c
         m_Value: http://localhost/[BuildTarget]
-    - m_InheritedParent: 
-      m_Id: c35da15071af8014ba31aecc2435fdb6
-      m_ProfileName: GitHub
-      m_Values:
-      - m_Id: 32733d3d5223fef4eb90d084e22ce6ae
-        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
-      - m_Id: f5f22dc659d43114c80046a69093d2eb
-        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
-      - m_Id: 813a699f83162eb4d96e881378f4f6bb
-        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
-      - m_Id: f90df668102613b4da387f52cc3d130b
-        m_Value: ServerData/[BuildTarget]
-      - m_Id: 1846958c836fae34f91f4d1d225efc6c
-        m_Value: http://localhost/[BuildTarget]
     m_ProfileEntryNames:
     - m_Id: 32733d3d5223fef4eb90d084e22ce6ae
       m_Name: BuildTarget
@@ -104,9 +90,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b962ea168d630854b935b6caf3bd5b72, type: 2}
   - {fileID: 11400000, guid: 05ca7162112b0994cba719cabc2b5633, type: 2}
   - {fileID: 11400000, guid: 55838e01dc33319479a919e802451961, type: 2}
-  m_ActiveProfileId: c35da15071af8014ba31aecc2435fdb6
+  m_ActiveProfileId: af3cf25aa2f436d45a711ace3bbfd0f0
   m_HostingServicesManager:
     m_HostingServiceInfos: []
     m_Settings: {fileID: 11400000}
-    m_NextInstanceId: 0
-    m_RegisteredServiceTypeRefs: []
+    m_NextInstanceId: 1
+    m_RegisteredServiceTypeRefs:
+    - UnityEditor.AddressableAssets.HostingServices.HttpHostingService, Unity.Addressables.Editor

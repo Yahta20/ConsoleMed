@@ -52,15 +52,15 @@ public class URILoader : MonoBehaviour
         skybox = mBundle.LoadAsset<Material>(fName);
          var load = mBundle.LoadAllAssets();
         print(load.Length);
-        
         for (int i = 0; i < load.Length; i++)
         {
             loader.Add(load[i]);
             print(load[i].GetType());
         }
-
         complite = true;
     }
+        
+
 
     private IEnumerator GetBundle() {
         WWW req = WWW.LoadFromCacheOrDownload(uri,0);

@@ -1,1483 +1,1455 @@
 {
-  "Building": [
-    {
-      "Name":  "Main",
-      "Floor": "3",
-      "Rooms": [
+    "Building": [
         {
-          "name": "Hall",
-          "point": [
-            {
-              "name": "pos0",
-              "skyBox": "6_3f",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.5047,
-                0.4696
-              ],
-              "conects": [
+            "Name": "Main",
+            "Floor": 3,
+            "Rooms": [
                 {
-                  "name": [
-                    "pos2"
-                  ],
-                  "pos": [
-                    8.18,
-                    0,
-                    0.21
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
+                    "name": "Hall",
+                    "point": [
+                        {
+                            "name": "pos0",
+                            "skyBox": "6_3f",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.5047000050544739,
+                                0.46959999203681948
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos2"
+                                    ],
+                                    "pos": [
+                                        8.180000305175782,
+                                        0.4000000059604645,
+                                        0.20999999344348908
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                },
+                                {
+                                    "name": [
+                                        "pos1"
+                                    ],
+                                    "pos": [
+                                        -9.890000343322754,
+                                        0.0,
+                                        0.38999998569488528
+                                    ],
+                                    "drawTo": [
+                                        "pos1"
+                                    ]
+                                },
+                                {
+                                    "name": [
+                                        "Dvor",
+                                        "1",
+                                        "In",
+                                        "pos0"
+                                    ],
+                                    "pos": [
+                                        5.46999979019165,
+                                        0.0,
+                                        -6.389999866485596
+                                    ],
+                                    "drawTo": [
+                                        "pos1"
+                                    ]
+                                }
+                            ],
+                            "interactiv": [
+                                {
+                                    "name": "InfoTableMovi",
+                                    "pos": [
+                                        -2.2300000190734865,
+                                        1.5199999809265137,
+                                        8.09000015258789
+                                    ],
+                                    "rot": [
+                                        -0.7071068286895752,
+                                        0.0,
+                                        0.0,
+                                        0.7071068286895752
+                                    ],
+                                    "scl": [
+                                        0.09000000357627869,
+                                        1.000000238418579,
+                                        0.1300000250339508
+                                    ],
+                                    "link": "mozg"
+                                },
+                                {
+                                    "name": "InfoTableImage",
+                                    "pos": [
+                                        12.229999542236329,
+                                        1.5199999809265137,
+                                        -8.09000015258789
+                                    ],
+                                    "rot": [
+                                        -0.40441641211509707,
+                                        0.5800408720970154,
+                                        0.5800408720970154,
+                                        0.40441641211509707
+                                    ],
+                                    "scl": [
+                                        0.09000002592802048,
+                                        1.000000238418579,
+                                        0.18000002205371858
+                                    ],
+                                    "link": "kanev"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "pos1",
+                            "skyBox": "8_3f",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.6403999924659729,
+                                0.48350000381469729
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos0"
+                                    ],
+                                    "pos": [
+                                        7.139999866485596,
+                                        1.25,
+                                        -1.3200000524520875
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                },
+                                {
+                                    "name": [
+                                        "Kafedra",
+                                        "pos0"
+                                    ],
+                                    "pos": [
+                                        -7.25,
+                                        0.8199999928474426,
+                                        1.7599999904632569
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos2",
+                            "skyBox": "5_3f",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.40630000829696658,
+                                0.48350000381469729
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos0"
+                                    ],
+                                    "pos": [
+                                        2.680000066757202,
+                                        0.0,
+                                        9.0
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                },
+                                {
+                                    "name": [
+                                        "Corridor",
+                                        "pos0"
+                                    ],
+                                    "pos": [
+                                        1.2000000476837159,
+                                        1.0800000429153443,
+                                        -9.0
+                                    ],
+                                    "drawTo": [
+                                        "pos1"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        }
+                    ]
                 },
                 {
-                  "name": [
-                    "pos1"
-                  ],
-                  "pos": [
-                    -9.89,
-                    0,
-                    0.39
-                  ],
-                  "drawTo": [
-                    "pos1"
-                  ]
+                    "name": "Corridor",
+                    "point": [
+                        {
+                            "name": "pos0",
+                            "skyBox": "4_3f",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.24089999496936799,
+                                0.5216000080108643
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "Hall",
+                                        "pos2"
+                                    ],
+                                    "pos": [
+                                        0.0,
+                                        1.0,
+                                        -7.0
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                },
+                                {
+                                    "name": [
+                                        "pos1"
+                                    ],
+                                    "pos": [
+                                        0.07999999821186066,
+                                        1.0,
+                                        7.0
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos1",
+                            "skyBox": "3_3f",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.12809999287128449,
+                                0.5216000080108643
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos0"
+                                    ],
+                                    "pos": [
+                                        0.20999999344348908,
+                                        0.699999988079071,
+                                        -10.0
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                },
+                                {
+                                    "name": [
+                                        "pos5"
+                                    ],
+                                    "pos": [
+                                        0.0,
+                                        0.0,
+                                        8.0
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos2",
+                            "skyBox": "1_3f",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.06379999965429306,
+                                0.7383000254631043
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos5"
+                                    ],
+                                    "pos": [
+                                        0.699999988079071,
+                                        1.2999999523162842,
+                                        -10.0
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos5",
+                            "skyBox": "2_3f",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.06379999965429306,
+                                0.30149999260902407
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos1"
+                                    ],
+                                    "pos": [
+                                        -1.0,
+                                        0.0,
+                                        8.0
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                },
+                                {
+                                    "name": [
+                                        "pos2"
+                                    ],
+                                    "pos": [
+                                        2.0,
+                                        0.0,
+                                        18.0
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        }
+                    ]
                 },
                 {
-                  "name": [
-                    "Dvor",
-                    "1",
-                    "In",
-                    "pos0"
-                  ],
-                  "pos": [
-                    5.47,
-                    0,
-                    -6.39
-                  ],
-                  "drawTo": [
-                    "pos1"
-                  ]
+                    "name": "Kafedra",
+                    "point": [
+                        {
+                            "name": "pos0",
+                            "skyBox": "9_3f",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.739300012588501,
+                                0.5199000239372253
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "Hall",
+                                        "pos1"
+                                    ],
+                                    "pos": [
+                                        0.0,
+                                        1.399999976158142,
+                                        -7.550000190734863
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                },
+                                {
+                                    "name": [
+                                        "pos1"
+                                    ],
+                                    "pos": [
+                                        0.0,
+                                        0.0,
+                                        10.0
+                                    ],
+                                    "drawTo": [
+                                        "pos1"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos1",
+                            "skyBox": "10_3f",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.8828999996185303,
+                                0.5199000239372253
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos0"
+                                    ],
+                                    "pos": [
+                                        -0.3199999928474426,
+                                        0.9800000190734863,
+                                        -8.640000343322754
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                },
+                                {
+                                    "name": [
+                                        "pos2"
+                                    ],
+                                    "pos": [
+                                        0.4099999964237213,
+                                        0.4000000059604645,
+                                        8.510000228881836
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos2",
+                            "skyBox": "11_3f",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.949400007724762,
+                                0.5199000239372253
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos1"
+                                    ],
+                                    "pos": [
+                                        9.0,
+                                        0.0,
+                                        0.0
+                                    ],
+                                    "drawTo": [
+                                        "pos1"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        }
+                    ]
                 }
-
-              ],
-              "interactiv": [
-                {
-                  "name": "InfoTableMovi",
-                  "pos": [ -2.23, 1.52, 8.09 ],
-                  "rot": [ -0.7071068, 0, 0, 0.7071068 ],
-                  "scl": [ 0.09, 1, 0.13 ],
-                  "link": "mozg"
-                },
-                {
-                  "name": "InfoTableImage",
-                  "pos": [ 12.23, 1.52, -8.09 ],
-                  "rot": [ -0.4044164, 0.5800409, 0.5800409, 0.4044164 ],
-                  "scl": [ 0.09, 1, 0.18 ],
-                  "link": "kanev"
-                }
-              ]
-            },
-            {
-              "name": "pos1",
-              "skyBox": "8_3f",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.6404,
-                0.4835
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos0"
-                  ],
-                  "pos": [
-                    7.14,
-                    1.25,
-                    -1.32
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                },
-                {
-                  "name": [
-                    "Kafedra",
-                    "pos0"
-                  ],
-                  "pos": [
-                    -7.25,
-                    0.82,
-                    1.76
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": [
-                {
-                  "name": "InfoTableImage",
-                  "pos": [ 2.23, 1.52, 8.09 ],
-                  "rot": [ -0.7071068, 0, 0, 0.7071068 ],
-                  "scl": [ 0.09, 1, 0.13 ],
-                  "link": "kanev"
-                }
-              ]
-            },
-            {
-              "name": "pos2",
-              "skyBox": "5_3f",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.4063,
-                0.4835
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos0"
-                  ],
-                  "pos": [
-                    2.68,
-                    0,
-                    9
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                },
-                {
-                  "name": [
-                    "Corridor",
-                    "pos0"
-                  ],
-                  "pos": [
-                    1.2,
-                    1.08,
-                    -9
-                  ],
-                  "drawTo": [
-                    "pos1"
-                  ]
-                }
-              ],
-              "interactiv": []
-
-            }
-          ]
+            ]
         },
         {
-          "name": "Corridor",
-          "point": [
-            {
-              "name": "pos0",
-              "skyBox": "4_3f",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.2409,
-                0.5216
-              ],
-              "conects": [
+            "Name": "Dvor",
+            "Floor": 1,
+            "Rooms": [
                 {
-                  "name": [
-                    "Hall",
-                    "pos2"
-                  ],
-                  "pos": [
-                    0,
-                    1,
-                    -7
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
+                    "name": "In",
+                    "point": [
+                        {
+                            "name": "pos0",
+                            "skyBox": "0_1d",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.4000000059604645,
+                                0.10000000149011612
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos1"
+                                    ],
+                                    "pos": [
+                                        9.920000076293946,
+                                        1.8899999856948853,
+                                        -2.8299999237060549
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                },
+                                {
+                                    "name": [
+                                        "pos3"
+                                    ],
+                                    "pos": [
+                                        -9.359999656677246,
+                                        1.75,
+                                        4.599999904632568
+                                    ],
+                                    "drawTo": [
+                                        "pos1"
+                                    ]
+                                },
+                                {
+                                    "name": [
+                                        "Main",
+                                        "3",
+                                        "Hall",
+                                        "pos0"
+                                    ],
+                                    "pos": [
+                                        0.0,
+                                        1.75,
+                                        7.0
+                                    ],
+                                    "drawTo": [
+                                        "pos1"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos1",
+                            "skyBox": "1_1d",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.6000000238418579,
+                                0.5
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos0"
+                                    ],
+                                    "pos": [
+                                        -7.809999942779541,
+                                        1.5499999523162842,
+                                        -1.190000057220459
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                },
+                                {
+                                    "name": [
+                                        "pos2"
+                                    ],
+                                    "pos": [
+                                        7.389999866485596,
+                                        1.4900000095367432,
+                                        1.6299999952316285
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos2",
+                            "skyBox": "2_1d",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.10000000149011612,
+                                0.10000000149011612
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos0"
+                                    ],
+                                    "pos": [
+                                        0.0,
+                                        1.7799999713897706,
+                                        -9.0
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                },
+                                {
+                                    "name": [
+                                        "pos1"
+                                    ],
+                                    "pos": [
+                                        -4.010000228881836,
+                                        1.7799999713897706,
+                                        -7.929999828338623
+                                    ],
+                                    "drawTo": [
+                                        "pos1"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos3",
+                            "skyBox": "3_1d",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.10000000149011612,
+                                0.10000000149011612
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos0"
+                                    ],
+                                    "pos": [
+                                        -9.979999542236329,
+                                        1.1399999856948853,
+                                        3.2799999713897707
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                },
+                                {
+                                    "name": [
+                                        "pos2"
+                                    ],
+                                    "pos": [
+                                        3.6500000953674318,
+                                        2.359999895095825,
+                                        9.510000228881836
+                                    ],
+                                    "drawTo": [
+                                        "pos1"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        }
+                    ]
                 },
                 {
-                  "name": [
-                    "pos1"
-                  ],
-                  "pos": [
-                    0.08,
-                    1,
-                    7
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos1",
-              "skyBox": "3_3f",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.1281,
-                0.5216
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos0"
-                  ],
-                  "pos": [
-                    0.21,
-                    0.7,
-                    -10
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                },
-                {
-                  "name": [
-                    "pos5"
-                  ],
-                  "pos": [
-                    0,
-                    0,
-                    8
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos2",
-              "skyBox": "1_3f",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.0638,
-                0.7383
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos5"
-                  ],
-                  "pos": [
-                    0.7,
-                    1.3,
-                    -10
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos5",
-              "skyBox": "2_3f",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.0638,
-                0.3015
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos1"
-                  ],
-                  "pos": [
-                    -1,
-                    0,
-                    8
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                },
-                {
-                  "name": [
-                    "pos2"
-                  ],
-                  "pos": [
-                    2,
-                    0,
-                    18
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": []
-            }
-          ]
-        },
-        {
-          "name": "Kafedra",
-          "point": [
-            {
-              "name": "pos0",
-              "skyBox": "9_3f",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.7393,
-                0.5199
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "Hall",
-                    "pos1"
-                  ],
-                  "pos": [
-                    0,
-                    1.4,
-                    -7.55
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                },
-                {
-                  "name": [
-                    "pos1"
-                  ],
-                  "pos": [
-                    0,
-                    0,
-                    10
-                  ],
-                  "drawTo": [
-                    "pos1"
-                  ]
-                }
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos1",
-              "skyBox": "10_3f",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.8829,
-                0.5199
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos0"
-                  ],
-                  "pos": [
-                    -0.32,
-                    0.98,
-                    -8.64
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                },
-                {
-                  "name": [
-                    "pos2"
-                  ],
-                  "pos": [
-                    0.41,
-                    0.4,
-                    8.51
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos2",
-              "skyBox": "11_3f",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.9494,
-                0.5199
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos1"
-                  ],
-                  "pos": [
-                    9,
-                    0,
-                    0
-                  ],
-                  "drawTo": [
-                    "pos1"
-                  ]
-                }
-              ],
-              "interactiv": []
-            }
-            
-          ]
-        }
-      ]
-    },
-    {
-      "Name": "Dvor",
-      "Floor": "1",
-      "Rooms": [
-        {
-          "name": "In",
-          "point": [
-            {
-              "name": "pos0",
-              "skyBox": "0_1d",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.4,
-                0.1
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos1"
-                  ],
-                  "pos": [
-                    9.92,
-                    1.89,
-                    -2.83
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                },
-                {
-                  "name": [
-                    "pos3"
-                  ],
-                  "pos": [
-                    -9.36,
-                    1.75,
-                    4.6
-                  ],
-                  "drawTo": [
-                    "pos1"
-                  ]
-                },
-                {
-                  "name": [
-                    "Main",
-                    "3",
-                    "Hall",
-                    "pos0"
-                  ],
-                  "pos": [
-                    0,
-                    1.75,
-                    7
-                  ],
-                  "drawTo": [
-                    "pos1"
-                  ]
-                }
-
-              ],
-              "interactiv": [
-                {
-                  "name": "InteractivePlane",
-                  "pos": [ 2.23, 1.52, 8.09 ],
-                  "rot": [ -0.7071068, 0, 0, 0.7071068 ],
-                  "scl": [ 0.09, 1, 0.13 ],
-                  "link": "2"
-                }
-              ]
-            },
-            {
-              "name": "pos1",
-              "skyBox": "1_1d",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.6,
-                0.5
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos0"
-                  ],
-                  "pos": [
-                    -7.81,
-                    1.55,
-                    -1.19
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                },
-                {
-                  "name": [
-                    "pos2"
-                  ],
-                  "pos": [
-                    7.39,
-                    1.49,
-                    1.63
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": [
-                {
-                  "name": "InteractivePlane",
-                  "pos": [ -4.33, 0.82, -2.69 ],
-                  "rot": [ 0.2120477, -0.2604599, -0.5946781, 0.730448 ],
-                  "scl": [ 0.2, 1, 0.19 ],
-                  "link": "3"
-
-                }
-
-              ]
-            },
-            {
-              "name": "pos2",
-              "skyBox": "2_1d",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.1,
-                0.1
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos0"
-                  ],
-                  "pos": [
-                    0,
-                    1.78,
-                    -9
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                },
-                {
-                  "name": [
-                    "pos1"
-                  ],
-                  "pos": [
-                    -4.01,
-                    1.78,
-                    -7.93
-                  ],
-                  "drawTo": [
-                    "pos1"
-                  ]
-                }
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos3",
-              "skyBox": "3_1d",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.1,
-                0.1
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos0"
-                  ],
-                  "pos": [
-                    -9.98,
-                    1.14,
-                    3.28
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                },
-                {
-                  "name": [
-                    "pos2"
-                  ],
-                  "pos": [
-                    3.65,
-                    2.36,
-                    9.51
-                  ],
-                  "drawTo": [
-                    "pos1"
-                  ]
-                }
-              ],
-              "interactiv": []
-            }
-          ]
-        },
-        {
-          "name": "Out",
-          "point": [
-            {
-              "name": "pos0",
-              "skyBox": "out_0",
-              "cordin": [
-                0.4,
-                0.1
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos1"
-                  ],
-                  "pos": [
-                    -0.3,
-                    1.5,
-                    7.77
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos1",
-              "skyBox": "out_1",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.6,
-                0.5
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos0"
-                  ],
-                  "pos": [
-                    0.0,
-                    1.55,
-                    -7.59
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                },
-                {
-                  "name": [
-                    "pos2"
-                  ],
-                  "pos": [
-                    0,
-                    1.55,
-                    7
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos2",
-              "skyBox": "out_2",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.1,
-                0.1
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos1"
-                  ],
-                  "pos": [
-                    0.0,
-                    1.55,
-                    -7.59
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                },
-                {
-                  "name": [
-                    "pos3"
-                  ],
-                  "pos": [
-                    0,
-                    1.55,
-                    7
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos3",
-              "skyBox": "out_3",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.1,
-                0.1
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos4"
-                  ],
-                  "pos": [
-                    1.13,
-                    1.14,
-                    5.65
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                },
-                {
-                  "name": [
-                    "pos3"
-                  ],
-                  "pos": [
-                    -1.13,
-                    1.14,
-                    -5.65
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos4",
-              "skyBox": "out_4",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.1,
-                0.1
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos3"
-                  ],
-                  "pos": [
-                    0.85,
-                    1.14,
-                    -7.36
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                },
-                {
-                  "name": [
-                    "pos5"
-                  ],
-                  "pos": [
-                    -0.85,
-                    1.14,
-                    7.36
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-
-
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos5",
-              "skyBox": "out_5",
-              "cordin": [
-                0.1,
-                0.1
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos4"
-                  ],
-                  "pos": [
-                    -4.6,
-                    1.14,
-                    -6.1
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                },
-                {
-                  "name": [
-                    "pos6"
-                  ],
-                  "pos": [
-                    -0.5,
-                    1.14,
-                    6.33
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                },
-                {
-                  "name": [
-                    "In",
-                    "pos3"
-                  ],
-                  "pos": [
-                    9.98,
-                    1.14,
-                    3.28
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos6",
-              "skyBox": "out_6",
-              "cordin": [
-                0.1,
-                0.1
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos4"
-                  ],
-                  "pos": [
-                    0,
-                    1.14,
-                    -8.6
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                },
-                {
-                  "name": [
-                    "pos7"
-                  ],
-                  "pos": [
-                    -0.83,
-                    0.73,
-                    -5.37
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos7",
-              "skyBox": "out_7",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.1,
-                0.1
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos6"
-                  ],
-                  "pos": [
-                    0,
-                    1.14,
-                    -7.13
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                },
-                {
-                  "name": [
-                    "pos8"
-                  ],
-                  "pos": [
-                    -0.86,
-                    -1.14,
-                    7
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos8",
-              "skyBox": "out_8",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.1,
-                0.1
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos4"
-                  ],
-                  "pos": [
-                    -9.98,
-                    1.14,
-                    3.28
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos9",
-              "skyBox": "out_9",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.1,
-                0.1
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos4"
-                  ],
-                  "pos": [
-                    -9.98,
-                    1.14,
-                    3.28
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos10",
-              "skyBox": "out_10",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.1,
-                0.1
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos4"
-                  ],
-                  "pos": [
-                    -9.98,
-                    1.14,
-                    3.28
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos11",
-              "skyBox": "out_11",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.1,
-                0.1
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos10"
-                  ],
-                  "pos": [
-                    -9.98,
-                    1.14,
-                    3.28
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos12",
-              "skyBox": "out_12",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.1,
-                0.1
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos11"
-                  ],
-                  "pos": [
-                    -9.98,
-                    1.14,
-                    3.28
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos13",
-              "skyBox": "out_13",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.1,
-                0.1
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos12"
-                  ],
-                  "pos": [
-                    -9.98,
-                    1.14,
-                    3.28
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos14",
-              "skyBox": "out_14",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.1,
-                0.1
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos13"
-                  ],
-                  "pos": [
-                    -9.98,
-                    1.14,
-                    3.28
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos15",
-              "skyBox": "out_15",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.1,
-                0.1
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos14"
-                  ],
-                  "pos": [
-                    -9.98,
-                    1.14,
-                    3.28
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos16",
-              "skyBox": "out_16",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.1,
-                0.1
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos15"
-                  ],
-                  "pos": [
-                    -9.98,
-                    1.14,
-                    3.28
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos17",
-              "skyBox": "out_17",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.1,
-                0.1
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos16"
-                  ],
-                  "pos": [
-                    -9.98,
-                    1.14,
-                    3.28
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos18",
-              "skyBox": "out_18",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.1,
-                0.1
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos17"
-                  ],
-                  "pos": [
-                    -9.98,
-                    1.14,
-                    3.28
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos19",
-              "skyBox": "out_19",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.1,
-                0.1
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos18"
-                  ],
-                  "pos": [
-                    -9.98,
-                    1.14,
-                    3.28
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos20",
-              "skyBox": "out_20",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.1,
-                0.1
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos19"
-                  ],
-                  "pos": [
-                    -9.98,
-                    1.14,
-                    3.28
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos21",
-              "skyBox": "out_21",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.1,
-                0.1
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos20"
-                  ],
-                  "pos": [
-                    -9.98,
-                    1.14,
-                    3.28
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos22",
-              "skyBox": "out_22",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.1,
-                0.1
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos21"
-                  ],
-                  "pos": [
-                    -9.98,
-                    1.14,
-                    3.28
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos23",
-              "skyBox": "out_23",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.1,
-                0.1
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos22"
-                  ],
-                  "pos": [
-                    -9.98,
-                    1.14,
-                    3.28
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos24",
-              "skyBox": "out_24",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.1,
-                0.1
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos23"
-                  ],
-                  "pos": [
-                    -9.98,
-                    1.14,
-                    3.28
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos25",
-              "skyBox": "out_25",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.1,
-                0.1
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos24"
-                  ],
-                  "pos": [
-                    -9.98,
-                    1.14,
-                    3.28
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos26",
-              "skyBox": "out_26",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.1,
-                0.1
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos25"
-                  ],
-                  "pos": [
-                    -9.98,
-                    1.14,
-                    3.28
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos27",
-              "skyBox": "out_27",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.1,
-                0.1
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos26"
-                  ],
-                  "pos": [
-                    -9.98,
-                    1.14,
-                    3.28
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos28",
-              "skyBox": "out_28",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.1,
-                0.1
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos28"
-                  ],
-                  "pos": [
-                    -9.98,
-                    1.14,
-                    3.28
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": []
-            },
-            {
-              "name": "pos29",
-              "skyBox": "out_29",
-              "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
-              "cordin": [
-                0.1,
-                0.1
-              ],
-              "conects": [
-                {
-                  "name": [
-                    "pos29"
-                  ],
-                  "pos": [
-                    -9.98,
-                    1.14,
-                    3.28
-                  ],
-                  "drawTo": [
-                    "it"
-                  ]
-                }
-              ],
-              "interactiv": []
-            }
-
-          ]
-        }
-      ]
-    }
-  ]
-}
+                    "name": "Out",
+                    "point": [
+                        {
+                            "name": "pos0",
+                            "skyBox": "out_0",
+                            "skyLink": "",
+                            "cordin": [
+                                0.4000000059604645,
+                                0.10000000149011612
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos1"
+                                    ],
+                                    "pos": [
+                                        -0.30000001192092898,
+                                        1.5,
+                                        7.769999980926514
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos1",
+                            "skyBox": "out_1",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.6000000238418579,
+                                0.5
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos0"
+                                    ],
+                                    "pos": [
+                                        0.0,
+                                        1.5499999523162842,
+                                        -7.590000152587891
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                },
+                                {
+                                    "name": [
+                                        "pos2"
+                                    ],
+                                    "pos": [
+                                        0.0,
+                                        1.5499999523162842,
+                                        7.0
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos2",
+                            "skyBox": "out_2",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.10000000149011612,
+                                0.10000000149011612
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos1"
+                                    ],
+                                    "pos": [
+                                        0.0,
+                                        1.5499999523162842,
+                                        -7.590000152587891
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                },
+                                {
+                                    "name": [
+                                        "pos3"
+                                    ],
+                                    "pos": [
+                                        0.0,
+                                        1.5499999523162842,
+                                        7.0
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos3",
+                            "skyBox": "out_3",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.10000000149011612,
+                                0.10000000149011612
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos4"
+                                    ],
+                                    "pos": [
+                                        1.1299999952316285,
+                                        1.1399999856948853,
+                                        5.650000095367432
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                },
+                                {
+                                    "name": [
+                                        "pos3"
+                                    ],
+                                    "pos": [
+                                        -1.1299999952316285,
+                                        1.1399999856948853,
+                                        -5.650000095367432
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos4",
+                            "skyBox": "out_4",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.10000000149011612,
+                                0.10000000149011612
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos3"
+                                    ],
+                                    "pos": [
+                                        0.8500000238418579,
+                                        1.1399999856948853,
+                                        -7.360000133514404
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                },
+                                {
+                                    "name": [
+                                        "pos5"
+                                    ],
+                                    "pos": [
+                                        -0.8500000238418579,
+                                        1.1399999856948853,
+                                        7.360000133514404
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos5",
+                            "skyBox": "out_5",
+                            "skyLink": "",
+                            "cordin": [
+                                0.10000000149011612,
+                                0.10000000149011612
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos4"
+                                    ],
+                                    "pos": [
+                                        -4.599999904632568,
+                                        1.1399999856948853,
+                                        -6.099999904632568
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                },
+                                {
+                                    "name": [
+                                        "pos6"
+                                    ],
+                                    "pos": [
+                                        -0.5,
+                                        1.1399999856948853,
+                                        6.329999923706055
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                },
+                                {
+                                    "name": [
+                                        "In",
+                                        "pos3"
+                                    ],
+                                    "pos": [
+                                        9.979999542236329,
+                                        1.1399999856948853,
+                                        3.2799999713897707
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos6",
+                            "skyBox": "out_6",
+                            "skyLink": "",
+                            "cordin": [
+                                0.10000000149011612,
+                                0.10000000149011612
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos4"
+                                    ],
+                                    "pos": [
+                                        0.0,
+                                        1.1399999856948853,
+                                        -8.600000381469727
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                },
+                                {
+                                    "name": [
+                                        "pos7"
+                                    ],
+                                    "pos": [
+                                        -0.8299999833106995,
+                                        0.7300000190734863,
+                                        -5.369999885559082
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos7",
+                            "skyBox": "out_7",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.10000000149011612,
+                                0.10000000149011612
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos6"
+                                    ],
+                                    "pos": [
+                                        0.0,
+                                        1.1399999856948853,
+                                        -7.130000114440918
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                },
+                                {
+                                    "name": [
+                                        "pos8"
+                                    ],
+                                    "pos": [
+                                        -0.8600000143051148,
+                                        -1.1399999856948853,
+                                        7.0
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos8",
+                            "skyBox": "out_8",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.10000000149011612,
+                                0.10000000149011612
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos4"
+                                    ],
+                                    "pos": [
+                                        -9.979999542236329,
+                                        1.1399999856948853,
+                                        3.2799999713897707
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos9",
+                            "skyBox": "out_9",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.10000000149011612,
+                                0.10000000149011612
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos4"
+                                    ],
+                                    "pos": [
+                                        -9.979999542236329,
+                                        1.1399999856948853,
+                                        3.2799999713897707
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos10",
+                            "skyBox": "out_10",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.10000000149011612,
+                                0.10000000149011612
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos4"
+                                    ],
+                                    "pos": [
+                                        -9.979999542236329,
+                                        1.1399999856948853,
+                                        3.2799999713897707
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos11",
+                            "skyBox": "out_11",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.10000000149011612,
+                                0.10000000149011612
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos10"
+                                    ],
+                                    "pos": [
+                                        -9.979999542236329,
+                                        1.1399999856948853,
+                                        3.2799999713897707
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos12",
+                            "skyBox": "out_12",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.10000000149011612,
+                                0.10000000149011612
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos11"
+                                    ],
+                                    "pos": [
+                                        -9.979999542236329,
+                                        1.1399999856948853,
+                                        3.2799999713897707
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos13",
+                            "skyBox": "out_13",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.10000000149011612,
+                                0.10000000149011612
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos12"
+                                    ],
+                                    "pos": [
+                                        -9.979999542236329,
+                                        1.1399999856948853,
+                                        3.2799999713897707
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos14",
+                            "skyBox": "out_14",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.10000000149011612,
+                                0.10000000149011612
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos13"
+                                    ],
+                                    "pos": [
+                                        -9.979999542236329,
+                                        1.1399999856948853,
+                                        3.2799999713897707
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos15",
+                            "skyBox": "out_15",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.10000000149011612,
+                                0.10000000149011612
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos14"
+                                    ],
+                                    "pos": [
+                                        -9.979999542236329,
+                                        1.1399999856948853,
+                                        3.2799999713897707
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos16",
+                            "skyBox": "out_16",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.10000000149011612,
+                                0.10000000149011612
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos15"
+                                    ],
+                                    "pos": [
+                                        -9.979999542236329,
+                                        1.1399999856948853,
+                                        3.2799999713897707
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos17",
+                            "skyBox": "out_17",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.10000000149011612,
+                                0.10000000149011612
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos16"
+                                    ],
+                                    "pos": [
+                                        -9.979999542236329,
+                                        1.1399999856948853,
+                                        3.2799999713897707
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos18",
+                            "skyBox": "out_18",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.10000000149011612,
+                                0.10000000149011612
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos17"
+                                    ],
+                                    "pos": [
+                                        -9.979999542236329,
+                                        1.1399999856948853,
+                                        3.2799999713897707
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos19",
+                            "skyBox": "out_19",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.10000000149011612,
+                                0.10000000149011612
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos18"
+                                    ],
+                                    "pos": [
+                                        -9.979999542236329,
+                                        1.1399999856948853,
+                                        3.2799999713897707
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos20",
+                            "skyBox": "out_20",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.10000000149011612,
+                                0.10000000149011612
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos19"
+                                    ],
+                                    "pos": [
+                                        -9.979999542236329,
+                                        1.1399999856948853,
+                                        3.2799999713897707
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos21",
+                            "skyBox": "out_21",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.10000000149011612,
+                                0.10000000149011612
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos20"
+                                    ],
+                                    "pos": [
+                                        -9.979999542236329,
+                                        1.1399999856948853,
+                                        3.2799999713897707
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos22",
+                            "skyBox": "out_22",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.10000000149011612,
+                                0.10000000149011612
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos21"
+                                    ],
+                                    "pos": [
+                                        -9.979999542236329,
+                                        1.1399999856948853,
+                                        3.2799999713897707
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos23",
+                            "skyBox": "out_23",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.10000000149011612,
+                                0.10000000149011612
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos22"
+                                    ],
+                                    "pos": [
+                                        -9.979999542236329,
+                                        1.1399999856948853,
+                                        3.2799999713897707
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos24",
+                            "skyBox": "out_24",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.10000000149011612,
+                                0.10000000149011612
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos23"
+                                    ],
+                                    "pos": [
+                                        -9.979999542236329,
+                                        1.1399999856948853,
+                                        3.2799999713897707
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos25",
+                            "skyBox": "out_25",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.10000000149011612,
+                                0.10000000149011612
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos24"
+                                    ],
+                                    "pos": [
+                                        -9.979999542236329,
+                                        1.1399999856948853,
+                                        3.2799999713897707
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos26",
+                            "skyBox": "out_26",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.10000000149011612,
+                                0.10000000149011612
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos25"
+                                    ],
+                                    "pos": [
+                                        -9.979999542236329,
+                                        1.1399999856948853,
+                                        3.2799999713897707
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos27",
+                            "skyBox": "out_27",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.10000000149011612,
+                                0.10000000149011612
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos26"
+                                    ],
+                                    "pos": [
+                                        -9.979999542236329,
+                                        1.1399999856948853,
+                                        3.2799999713897707
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos28",
+                            "skyBox": "out_28",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.10000000149011612,
+                                0.10000000149011612
+                            ],
+                            "conects": [
+                                {
+                                    "name": [
+                                        "pos28"
+                                    ],
+                                    "pos": [
+                                        -9.979999542236329,
+                                        1.1399999856948853,
+                                        3.2799999713897707
+                                    ],
+                                    "drawTo": [
+                                        "it"
+                                    ]
+                                }
+                            ],
+                            "interactiv": []
+                        },
+                        {
+                            "name": "pos29",
+                            "skyBox": "out_29",
+                            "skyLink": "https://drive.google.com/uc?export=download&id=1LVp3w6hiGGL0EuhRohxZeMbQ2n8DJ5ny",
+                            "cordin": [
+                                0.10000000149011612,
+                   

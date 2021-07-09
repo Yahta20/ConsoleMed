@@ -8,51 +8,7 @@ using UnityEngine.UI;
 
 public class GuideMapBeh : MonoBehaviour
 {
-    [System.Serializable]
-    public class posList
-    {
-        public string[] name;
-        public float[] cordin;
-        public Vector2 GetPointPos() {
-            return new Vector2(cordin[0], cordin[1]);
-        }
-    }
-    [System.Serializable]
-    public class floorMap
-    {
-        public string Build;
-        public string Floor;
-        public posList[] PosList;
-
-        public posList GetPosLists(string room, string pos) {
-            for (int i = 0; i < PosList.Length; i++)
-            {
-                if (room == PosList[i].name[0]&pos == PosList[i].name[1]) {
-                    return PosList[i];
-                }
-            }
-            return null;
-        }
-    }
-    [System.Serializable]
-    public class Map {
-    
-        public floorMap[] FloorMap;
-
-        public floorMap getFloorInBuildByName(string name, string floor)
-        {
-            for (int i = 0; i < FloorMap.Length; i++)
-            {
-                if (name == FloorMap[i].Build & FloorMap[i].Floor == floor)
-                {
-                    return FloorMap[i];
-                }
-            }
-            return null;
-        }
-        
-    }
-
+    public GuideMaster gm;
     public GuideBeh MasterGuide;
 
     public TextAsset jsonInstruction;
@@ -66,36 +22,80 @@ public class GuideMapBeh : MonoBehaviour
     public GameObject pointToShow;
 
     [Space]
-    public Map currentMap = new Map();
+    //public Map currentMap = new Map();
     public List<Image> pointsInRoom;
     public string[] position;
+    bool isClose;
     private RectTransform rt;
-    
+
     public int pointOnFloar;
 
     void Awake()
     {
-        currentMap = JsonUtility.FromJson<Map>(jsonInstruction.text);
+        //currentMap = JsonUtility.FromJson<Map>(jsonInstruction.text);
         pointsInRoom = new List<Image>();
         rt = GetComponent<RectTransform>();
         //var p    = MCUI.Instance.getCanvasSize()*0.32f;
         //new Vector2(p.x,p.y);
         
+        isClose = true;
         currentPlace = atlasMap.GetSprite("pointPlace");
         otherPlace   = atlasMap.GetSprite("point");
         CurrentBacground = GetComponent<Image>();
         pointOnFloar = 0;
+        
     }
+
     void Start()
     {
         rt.sizeDelta = MCUI.Instance.getCanvasSize() * 0.32f;
         updateMap();
     }
 
+    private void LateUpdate()
+    {
+        if (rt.sizeDelta != MCUI.Instance.getCanvasSize() * 0.32f) {
+            rt.sizeDelta = MCUI.Instance.getCanvasSize() * 0.32f;
+        }
+        positionInSpace();
+    }
+
+    public void setGM(GuideMaster _gm)
+    {
+        gm = _gm;
+    }
+
+
     public bool isCorect() {
         return pointOnFloar == mapObj.pointList.Count;
     }
 
+    private void positionInSpace()
+    {
+        if (isClose)
+        {
+            rt.anchoredPosition = new Vector2(
+                Mathf.Lerp(rt.anchoredPosition.x, 0, Time.deltaTime*1.5f)
+                , Mathf.Lerp(rt.anchoredPosition.y, 0, Time.deltaTime * 1.5f)
+                );
+        }
+        else
+        {
+            rt.anchoredPosition = new Vector2(
+                Mathf.Lerp(rt.anchoredPosition.x, -rt.sizeDelta.x, Time.deltaTime * 1.5f)
+                , Mathf.Lerp(rt.anchoredPosition.y, 0, Time.deltaTime * 1.5f)
+                );
+        }
+    }
+
+    public void changeVisible()
+    {
+        isClose = isClose ? false : true;
+    }
+
+    public bool State() {
+        return isClose;
+    }
 
     private void updateMap()
     {
@@ -106,7 +106,7 @@ public class GuideMapBeh : MonoBehaviour
         pointsInRoom = new List<Image>();
     }
 
-    public void changePlace(string[] args, GuideBeh.building build) {
+    public void changePlace(string[] args, building build) {
 
         pointOnFloar = 0;
         mapObj.CleearChildObj();
@@ -125,21 +125,15 @@ public class GuideMapBeh : MonoBehaviour
                 var go = Instantiate(pointToShow);
                 var pb = go.GetComponent<PointBeh>();
                 if (roomName == args[2] & pointName == args[3]) {
-
                     go.GetComponent<Image>().sprite = currentPlace;
-                    //pb.spriteLink(currentPlace);
                 }
-                
-                pb.MasterGuide = MasterGuide;
+                //pb.MasterGuide = MasterGuide;
+                pb.MasterGuide = gm;
                 pb.statement = new string[4] {args[0],args[1],roomName,pointName };
                 pb.SetProportion (build.Rooms[i].point[j].GetCordin());
                 mapObj.AddPoint(go);
                 pointOnFloar+=1;
             }
-
         }
-       
-
-
     }
 }

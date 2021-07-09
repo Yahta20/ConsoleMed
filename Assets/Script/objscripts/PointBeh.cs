@@ -10,31 +10,25 @@ public class PointBeh : MonoBehaviour, IPointerDownHandler
     private RectTransform curRt;
     private RectTransform parRt;
     [Space]
-    
 
     public string[] statement;
-    public GuideBeh MasterGuide;
+    //public GuideBeh MasterGuide;
+    public GuideMaster MasterGuide;
 
     private void Start()
     {
         curRt = GetComponent<RectTransform>();
         parRt = transform.parent.gameObject.GetComponent<RectTransform>();
-        MasterGuide = FindObjectOfType<GuideBeh>();
-        
+        MasterGuide = FindObjectOfType<GuideMaster>();
     }
-    
+        
     private void LateUpdate()
     {
         setSize();
-
     }
     
     public void SetProportion(Vector2 v) {
         propPos = v;
-    }
-
-    private void OnMouseDown()
-    {
     }
     private void setSize() { 
     
@@ -46,14 +40,10 @@ public class PointBeh : MonoBehaviour, IPointerDownHandler
         curRt.sizeDelta = new Vector2( w , w );
         //
     }
-
+    
     public void OnPointerDown(PointerEventData eventData)
     {
         MasterGuide.Moving(statement);
     }
         
 }
-
-
-
-

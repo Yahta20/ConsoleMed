@@ -6,9 +6,13 @@ using UnityEngine;
 public class guideInput : MonoBehaviour
 {
     private Camera cam;
+    public MapObjBeh mob;
 
     [SerializeField]
-    public float speed = 2;
+    public float speedView = 2;
+    public float speedZoom = 2;
+    public float FOV;
+
     private Vector2 posit = Vector2.zero;
 
     private void Awake()
@@ -17,11 +21,11 @@ public class guideInput : MonoBehaviour
             cam = GetComponent<Camera>();
         }
         transform.eulerAngles = posit;
+        FOV = cam.fieldOfView;
     }
     void Start()
     {
-        //Cursor.lockState = CursorLockMode.Locked;
-        //Cursor.visible = false;
+
     }
 
 
@@ -30,14 +34,16 @@ public class guideInput : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Mouse1))
         {
-            posit += new Vector2(-speed*Input.GetAxis("Mouse Y"),speed * Input.GetAxis("Mouse X"));
+            posit += new Vector2(-speedView * Input.GetAxis("Mouse Y"), speedView * Input.GetAxis("Mouse X"));
             transform.eulerAngles = posit;
-        }
-        if (Input.GetKey(KeyCode.Mouse0))
+        }//Mouse ScrollWheel
+        if (Input.GetAxis("Mouse ScrollWheel") !=0 & !mob.isOnPoint())
         {
-            //print($"{transform.rotation}");
-
+            FOV += Input.GetAxis("Mouse ScrollWheel") * speedZoom;
+            FOV = FOV > 60 ? 60 : FOV;
+            FOV = FOV < 25 ? 25 : FOV;
         }
 
+        cam.fieldOfView = FOV;
     }
 }
