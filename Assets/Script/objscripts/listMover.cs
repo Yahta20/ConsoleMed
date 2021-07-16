@@ -6,9 +6,10 @@ using UnityEngine.EventSystems;
 
 public class listMover : MonoBehaviour, IPointerDownHandler
 {
+    public RectTransform anchor;
     public RectTransform onGuide;
     public RectTransform self;
-    //public GuideMapBeh guideBeh;
+    public listOfPlaces guideBeh;
 
     void Awake()
     {
@@ -22,7 +23,7 @@ public class listMover : MonoBehaviour, IPointerDownHandler
         self.pivot = onGuide.pivot;
         self.sizeDelta = new Vector2(50, 50);
         self.anchoredPosition = new Vector2(onGuide.sizeDelta.x, self.anchoredPosition.y);
-        //guideBeh = onGuide.gameObject.GetComponent<GuideMapBeh>();
+        guideBeh = onGuide.gameObject.GetComponent<listOfPlaces>();
     }
     void LateUpdate()
     {
@@ -31,8 +32,8 @@ public class listMover : MonoBehaviour, IPointerDownHandler
     }
     private void positionControl()
     {
-        self.anchoredPosition = new Vector2(onGuide.sizeDelta.x + onGuide.anchoredPosition.x-self.sizeDelta.x,
-            -(onGuide.sizeDelta.y + onGuide.anchoredPosition.y));
+        self.anchoredPosition = new Vector2(anchor.sizeDelta.x + anchor.anchoredPosition.x-self.sizeDelta.x,
+            -anchor.sizeDelta.y);
         /*
         if (guideBeh.State())
         {
@@ -42,7 +43,7 @@ public class listMover : MonoBehaviour, IPointerDownHandler
     }
     public void OnPointerDown(PointerEventData eventData)
     {
-        //guideBeh.changeVisible();
+        guideBeh.changeVisible();
 
     }
 }

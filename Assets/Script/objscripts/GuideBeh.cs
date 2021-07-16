@@ -16,6 +16,7 @@ public class GuideBeh : MonoBehaviour
     public GuideMapBeh gMapbeh;
     public UniversalScreenBeh usBeh;
     public AssetLoader iLoader;
+
     public List<GameObject> Points2Draw;
     public List<GameObject> IntObj;
     [Space]
@@ -36,17 +37,26 @@ public class GuideBeh : MonoBehaviour
         Points2Draw = new List<GameObject>();
         IntObj = new List<GameObject>();
     }
-        
-        
-    
+
     private void Start()
+    {
+        updateOfAll();
+    }
+
+    public void updateOfAll()
     {
         updateEmbient();
         updateEnvironment();
     }
-    
+
     private void Update()
     {
+
+        if (usBeh.currState == StateOfLoadScreen.Look)
+        {
+            chekigLists();
+        }
+
         var point = gm.GetPointInfo();
         /*
         currentBuid
@@ -78,10 +88,36 @@ public class GuideBeh : MonoBehaviour
             spawnInteraction();
         }
     }
+
+    private void chekigLists()
+    {
+        var newlist = new List<GameObject>();
+        for (int i = 0; i < Points2Draw.Count; i++)
+        {
+            if (Points2Draw[i]!=null) {
+                newlist.Add(Points2Draw[i]);
+            }
+        }
+        Points2Draw = newlist;
+        newlist = new List<GameObject>();
+        for (int i = 0; i < IntObj.Count; i++)
+        {
+            if (IntObj[i] != null)
+            {
+                newlist.Add(IntObj[i]);
+            }
+        }
+        IntObj = newlist;
+
+
+        //IntObj     
+    }
+
     public void setGM(GuideMaster _gm)
     {
         gm = _gm;
     }
+
     private void spawnInteraction()
     {
             /*
@@ -153,11 +189,15 @@ public class GuideBeh : MonoBehaviour
         {
             var go = Instantiate(prefabPoint);
             var cb = go.AddComponent<ConnectBeh>();
-            cb.MasterGuide = gm;//this;
-            cb.statement = p;
+            cb.MasterGuide  = gm;//this;
+            cb.statement    = p;
             go.transform.SetParent(gameObject.transform);
             Points2Draw.Add(go);
-            go.transform.position = p.getPos();
+            go.transform.position   = p.getPos();
+
+            go.transform.rotation   = p.getRot();
+            go.transform.localScale = p.getScl();
+
         }
 
         gMapbeh.changePlace(gm.GetCurrentPos(), gm.GetBuildInfo());

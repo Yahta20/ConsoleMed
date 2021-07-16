@@ -38,20 +38,17 @@ public class GuideMapBeh : MonoBehaviour
         //var p    = MCUI.Instance.getCanvasSize()*0.32f;
         //new Vector2(p.x,p.y);
         
-        isClose = true;
+        isClose = false;
         currentPlace = atlasMap.GetSprite("pointPlace");
         otherPlace   = atlasMap.GetSprite("point");
         CurrentBacground = GetComponent<Image>();
         pointOnFloar = 0;
-        
     }
-
     void Start()
     {
         rt.sizeDelta = MCUI.Instance.getCanvasSize() * 0.32f;
         updateMap();
     }
-
     private void LateUpdate()
     {
         if (rt.sizeDelta != MCUI.Instance.getCanvasSize() * 0.32f) {
@@ -64,8 +61,7 @@ public class GuideMapBeh : MonoBehaviour
     {
         gm = _gm;
     }
-
-
+        
     public bool isCorect() {
         return pointOnFloar == mapObj.pointList.Count;
     }
@@ -106,6 +102,10 @@ public class GuideMapBeh : MonoBehaviour
         pointsInRoom = new List<Image>();
     }
 
+
+
+
+
     public void changePlace(string[] args, building build) {
 
         pointOnFloar = 0;
@@ -135,5 +135,6 @@ public class GuideMapBeh : MonoBehaviour
                 pointOnFloar+=1;
             }
         }
+
     }
 }

@@ -9,9 +9,11 @@ public class guideInput : MonoBehaviour
     public MapObjBeh mob;
 
     [SerializeField]
-    public float speedView = 2;
-    public float speedZoom = 2;
-    public float FOV;
+    float speedView = 2;
+    float speedZoom = 2;
+    float FOV;
+
+
 
     private Vector2 posit = Vector2.zero;
 
@@ -23,13 +25,16 @@ public class guideInput : MonoBehaviour
         transform.eulerAngles = posit;
         FOV = cam.fieldOfView;
     }
-    void Start()
-    {
 
+    public void setViewSpeed(float t) {
+        speedView = t;
     }
+    public void setZoomSpeed(float t)
+    {
+        speedZoom = t;
+    }
+    
 
-
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.Mouse1))
@@ -39,9 +44,13 @@ public class guideInput : MonoBehaviour
         }//Mouse ScrollWheel
         if (Input.GetAxis("Mouse ScrollWheel") !=0 & !mob.isOnPoint())
         {
+            
             FOV += Input.GetAxis("Mouse ScrollWheel") * speedZoom;
+            
             FOV = FOV > 60 ? 60 : FOV;
+
             FOV = FOV < 25 ? 25 : FOV;
+        
         }
 
         cam.fieldOfView = FOV;

@@ -1,11 +1,22 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
 [System.Serializable]
 public class Interactiv
+
 {
+    public Interactiv()
+    {
+    }
+
+    public Interactiv(string n, string l) {
+        name = n;
+        link = l;
+    }
+
     public string name;
 
     public float[] pos;
@@ -36,21 +47,34 @@ public class Interactiv
         rot = new float[4] { t.rotation.x, t.rotation.y, t.rotation.z, t.rotation.w };
         scl = new float[3] { t.lossyScale.x, t.lossyScale.y, t.lossyScale.z };
     }
-
 }
 
 [System.Serializable]
 public class Conects
 {
+    public Conects(string[] args) {
+        name = args;
+
+        pos = new float[3] {1,2,3};
+    }   
 
     public string[] name;
 
     public float[] pos;
 
+    public float[] rot;
+
+    public float[] scl;
+
     public string[] drawTo;
 
+    public void setPos(Transform t) {
+        pos = new float[3] {t.position.x, t.position.y, t.position.z };
+    }
+    
     public Vector3 getPos()
     {
+        
         return new Vector3(pos[0], pos[1], pos[2]);
     }
 
@@ -59,14 +83,40 @@ public class Conects
         return name.Length;
     }
 
-    public void setPos(Transform t) {
-        pos = new float[3] {t.position.x, t.position.y, t.position.z };
+
+    public Vector3 getScl()
+    {
+        if (scl.Length==0)
+        {
+            return Vector3.one;
+        }
+        return new Vector3(scl[0], scl[1], scl[2]);
+    }
+
+    public Quaternion getRot()
+    {
+        if (rot.Length == 0)
+        {
+            return Quaternion.identity;
+        }
+        return new Quaternion(rot[0], rot[1], rot[2], rot[3]);
+    }
+
+    public void modTransform(Transform t)
+    {
+        pos = new float[3] { t.position.x, t.position.y, t.position.z };
+        rot = new float[4] { t.rotation.x, t.rotation.y, t.rotation.z, t.rotation.w };
+        scl = new float[3] { t.lossyScale.x, t.lossyScale.y, t.lossyScale.z };
     }
 }
 
 [System.Serializable]
 public class Point
 {
+    public Point(){
+        cordin = new float[2] { 0.35f, 0.3f, };
+    }
+
     public string name;
 
     public string skyBox;
@@ -118,11 +168,16 @@ public class Point
 
         return l2r.ToArray();
     }
+
+    public void setCordinate(float[] args) {
+        cordin = new float[2] { args[0], args[1] };
+    }
 }
 
 [System.Serializable]
 public class rooms
 {
+
     public string name;
 
     public Point[] point;
@@ -138,6 +193,7 @@ public class rooms
         }
         return null;
     }
+
 }
 
 [System.Serializable]
@@ -160,6 +216,7 @@ public class building
         }
         return null;
     }
+
 }
 
 [System.Serializable]
@@ -190,12 +247,10 @@ public class BuldingList
         }
         return null;
     }
-
     public Vector2[] ListPointsOfMap(string name, int floor)
     {
         List<Vector2> listVector = new List<Vector2>();
         var build = getFloorInBuildByName(name, floor);
- 
         foreach (var room in build.Rooms)
         {
             foreach (var point in room.point)
@@ -210,35 +265,31 @@ public class BuldingList
 public class GuideMaster : MonoBehaviour
 {
     public TextAsset jsonInstruction;
+    [Space]
     public BuldingList currentBuid = new BuldingList();
+   
     [Space]
     public string   CurrentBuild    = "Main";
     public int      CurrentFloor    = 1;
     public string   CurrentRoom     = "Hall";
     public string   CurrentPos      = "pos0";
+
     [Space]
     public GuideBeh     gb  ;
     public GuideMapBeh  gmb ;
     public MapObjBeh    mob ;
+    
     [Space]
     public string path;
 
     //public GuideBeh gb;
+
     private void Awake()
     {
         currentBuid = JsonUtility.FromJson<BuldingList>(jsonInstruction.text);
         gb.setGM(this);
         gmb.setGM(this);
         mob.setGM(this);
-    }
-
-    void Start()
-    {
-    }
-
-    void Update()
-    {
-        
     }
 
     public void Moving(string[] args)
@@ -274,39 +325,64 @@ public class GuideMaster : MonoBehaviour
             CurrentBuild,
             CurrentFloor.ToString(),
             CurrentRoom,
-            CurrentPos
-        };
+            CurrentPos};
+
         return posit;
     }
 
     public Point GetPointInfo() {
-        var build = GetBuildInfo();
-        var point = build.getRoomByName(CurrentRoom)
-                         .getPointByName(CurrentPos);
+        var room = GetRoomInfo();
+        var point = room.getPointByName(CurrentPos);
         return point;
+    }
+
+    public rooms GetRoomInfo() {
+        var build = GetBuildInfo();
+        var room = build.getRoomByName(CurrentRoom);
+        return room;
     }
     
     public building GetBuildInfo()
     {
         var build = currentBuid.getFloorInBuildByName(CurrentBuild, CurrentFloor);
         return build;
-        //var point = build.getRoomByName(CurrentRoom)
-        //                 .getPointByName(CurrentPos);
     }
-    
-    [ContextMenu("UpdateData")]
+
+    public Point GetSpecificPos(string[] args)
+    {
+        var build = currentBuid.getFloorInBuildByName(args[0], int.Parse(args[1])).
+                                getRoomByName(args[2]).getPointByName(args[3])
+                                ;
+        return build;
+    }
+
+    [ContextMenu("Update Data")]
     public void SavePos() {
         var p       = GetPointInfo();
         var Np2d    = gb.Points2Draw;
         var Nio     = gb.IntObj;
+        var npl     = mob.pointList;
+
+        
+        foreach (var item in npl)
+        {
+            var q = item.GetComponent<PointBeh>();
+            var tmpP = GetSpecificPos(q.statement);
+            tmpP.setCordinate(new float[2] { q.xpos, q.ypos });
+            //print($"{q.xpos} {q.ypos}");
+            //print($"{tmpP.cordin[0]} {tmpP.cordin[1]}");
+        }  
+
+
         List<Conects> NConect = new List<Conects>();
         foreach (var item in Np2d)
         {
             var iCon = item.GetComponent<ConnectBeh>();
             var conect = iCon.statement;
-            conect.setPos(item.transform);
+            conect.modTransform(item.transform);
             NConect.Add(conect);
         }
+
         List<Interactiv> NInteractive = new List<Interactiv>();
         foreach (var item in Nio)
         {
@@ -324,16 +400,100 @@ public class GuideMaster : MonoBehaviour
             }
             NInteractive.Add(interactiv);
         }
+
         p.interactiv = NInteractive.ToArray();       
         p.conects = NConect.ToArray();
     }
 
-    [ContextMenu("WriteToJson")]
+    [ContextMenu("Write To Json")]
     public void JsonWrite() {
         var njson = JsonUtility.ToJson(currentBuid,true);
-        StreamWriter stream = new StreamWriter(path);
-        stream.Write(njson);
+        try
+        {
+            //Pass the filepath and filename to the StreamWriter Constructor
+            StreamWriter stream = new StreamWriter(path,false);
+            stream.Write(njson);
+            stream.Close();
+        }
+        catch (Exception e)
+        {
+            print("Exception: " + e.Message);
+        }
+     
+        print("json is write");
+    }
+    [ContextMenu("Add Conection")]
+    public void AddConection()
+    {
+        var oldcon = new List<Conects>();
+        foreach (var item in GetPointInfo().conects)
+        {oldcon.Add(item);}
+        var args = new string[4] {
+        CurrentBuild,
+        CurrentFloor.ToString(),
+        CurrentRoom,
+        CurrentPos
+        };
+        oldcon.Add(new Conects(args));
+        GetPointInfo().conects = oldcon.ToArray();
+        gb.updateOfAll();
+
+    }
+    [ContextMenu("Add Position")]
+    public void AddPosition() {
+        var oldroom = new List<Point>();
+        foreach (var item in GetRoomInfo().point)
+        {oldroom.Add(item);}
+        oldroom.Add(new Point());
+        GetRoomInfo().point = oldroom.ToArray();
+        gb.updateOfAll();
+    }
+    [ContextMenu("Add Room")]
+    public void AddRoom()
+    {
+        var oldroom = new List<rooms>();
+        foreach (var item in GetBuildInfo().Rooms)
+        { oldroom.Add(item); }
+        oldroom.Add(new rooms());
+        GetBuildInfo().Rooms = oldroom.ToArray();
+        gb.updateOfAll();
+    }
+    [ContextMenu("Add flor & building")]
+    public void AddFB()
+    {
+        var oldfb = new List<building>();
+        foreach (var item in currentBuid.Building)
+        { oldfb.Add(item); }
+        oldfb.Add(new building());
+        currentBuid.Building = oldfb.ToArray();
+        /*
+         */
+        gb.updateOfAll();
+    }
+    [ContextMenu("Add InfoTableImage")]
+    public void AddInteractImage()
+    {
+        var oldcon = new List<Interactiv>();
+        foreach (var item in GetPointInfo().interactiv)
+        { oldcon.Add(item);}
+        oldcon.Add(new Interactiv("InfoTableImage", "kanev"));
+        GetPointInfo().interactiv = oldcon.ToArray();
+        gb.updateOfAll();
+        
+    }
+    [ContextMenu("Add InfoTableVideo")]
+    public void AddInteractVideo()
+    {
+        var oldcon = new List<Interactiv>();
+        foreach (var item in GetPointInfo().interactiv)
+        { oldcon.Add(item); }
+        oldcon.Add(new Interactiv("InfoTableMovi", "mozg"));
+        GetPointInfo().interactiv = oldcon.ToArray();
+        gb.updateOfAll();
+        
+        
     }
 
-
 }
+
+    

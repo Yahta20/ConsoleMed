@@ -28,8 +28,8 @@ public class MapObjBeh : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
         var pt      = transform.parent;
         var gop     = pt.gameObject;
         parentRT    = gop.GetComponent<RectTransform>();
-
     }
+
 
 
     void Start()
@@ -52,23 +52,16 @@ public class MapObjBeh : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
             float mw = Input.GetAxis("Mouse ScrollWheel");
             var def = curerentRT.sizeDelta * mw * (1-mw);
             curerentRT.sizeDelta += def;
-
             if (Input.GetMouseButtonDown(0))
             {
                 positPres = Input.mousePosition;
-
                 MouseDrag();
-                
             }
-
         }
-
-
     }
 
     private void Update()
-    {
-        
+    {  
         var aspectP = parentRT.sizeDelta.x / parentRT.sizeDelta.y;
         var aspectI = curerentRT.sizeDelta.x / curerentRT.sizeDelta.y;
 
@@ -144,14 +137,12 @@ public class MapObjBeh : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
         {
             Destroy(transform.GetChild(i).gameObject);
         }
-
         pointList = new List<GameObject>();
     }
 
     public void SetMapBackground(Sprite s) {
         if (currentImage != null)
         {
-
         currentImage.sprite = s;
         currentImage.rectTransform.sizeDelta = new Vector2(s.rect.width, s.rect.height);
         var scale = parentRT.sizeDelta.x / curerentRT.sizeDelta.x;
@@ -177,10 +168,6 @@ public class MapObjBeh : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
 
             positPres = Input.mousePosition;
     }
-
-
-        //positPres = Input.mousePosition;
-        //print("x");
 
     void MouseDrag() {
         var positPresNew = Input.mousePosition;
