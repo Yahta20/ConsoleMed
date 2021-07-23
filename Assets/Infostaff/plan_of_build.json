@@ -542,7 +542,7 @@
         },
         {
             "Name": "Dvor",
-            "Floor": 1,
+            "Floor": 0,
             "Rooms": [
                 {
                     "name": "In",

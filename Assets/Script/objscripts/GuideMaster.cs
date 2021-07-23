@@ -177,7 +177,6 @@ public class Point
 [System.Serializable]
 public class rooms
 {
-
     public string name;
 
     public Point[] point;
@@ -194,6 +193,15 @@ public class rooms
         return null;
     }
 
+    public string[] getAllPoint()
+    {
+        var rl = new List<string>();
+        foreach (var item in point)
+        {
+            rl.Add(item.name);
+        }
+        return rl.ToArray();
+    }
 }
 
 [System.Serializable]
@@ -217,6 +225,20 @@ public class building
         return null;
     }
 
+    public string[] getAllRooms() {
+        
+        var rl = new List<string>();
+        foreach (var item in Rooms)
+        {
+            rl.Add(item.name);
+        }
+        
+        return rl.ToArray();
+    }
+
+
+
+
 }
 
 [System.Serializable]
@@ -224,16 +246,17 @@ public class BuldingList
 {
     public building[] Building;
 
-    public building getBuildByName(string name)
+    public building[] getBuildByName(string name)
     {
+        var lb = new List<building>();
         for (int i = 0; i < Building.Length; i++)
         {
             if (name == Building[i].Name)
             {
-                return Building[i];
+               lb.Add(Building[i]);
             }
         }
-        return null;
+        return lb.ToArray();
     }
 
     public building getFloorInBuildByName(string name, int floor)
@@ -247,6 +270,7 @@ public class BuldingList
         }
         return null;
     }
+
     public Vector2[] ListPointsOfMap(string name, int floor)
     {
         List<Vector2> listVector = new List<Vector2>();
@@ -260,6 +284,39 @@ public class BuldingList
         }
         return listVector.ToArray();
     }
+
+    public string[] getAllBuilding() {
+        var returnList = new Dictionary<string,bool>();
+        var list4ret = new List<string>();
+        
+        for (int i = 0; i < Building.Length; i++)
+        {
+            if (!returnList.ContainsKey(Building[i].Name))
+            {
+                returnList.Add( Building[i].Name, false);
+            }
+        }
+
+        foreach (var item in returnList)
+        {
+            list4ret.Add(item.Key);
+        } 
+        
+        return list4ret.ToArray();
+    }
+
+    public string[] getAllFloarInBuilding(string build)
+    {
+        var bild = getBuildByName(build);
+        var list4ret = new List<string>();
+        foreach (var item in bild)
+        {
+            list4ret.Add(
+                item.Floor.ToString()
+                );
+        }
+        return list4ret.ToArray();
+    }
 }
 
 public class GuideMaster : MonoBehaviour
@@ -270,7 +327,7 @@ public class GuideMaster : MonoBehaviour
    
     [Space]
     public string   CurrentBuild    = "Main";
-    public int      CurrentFloor    = 1;
+    public int      CurrentFloor    = 1     ;
     public string   CurrentRoom     = "Hall";
     public string   CurrentPos      = "pos0";
 
@@ -290,6 +347,10 @@ public class GuideMaster : MonoBehaviour
         gb.setGM(this);
         gmb.setGM(this);
         mob.setGM(this);
+    }
+
+    private void Start()
+    {
     }
 
     public void Moving(string[] args)
@@ -326,7 +387,6 @@ public class GuideMaster : MonoBehaviour
             CurrentFloor.ToString(),
             CurrentRoom,
             CurrentPos};
-
         return posit;
     }
 
@@ -422,6 +482,7 @@ public class GuideMaster : MonoBehaviour
      
         print("json is write");
     }
+
     [ContextMenu("Add Conection")]
     public void AddConection()
     {
@@ -439,6 +500,7 @@ public class GuideMaster : MonoBehaviour
         gb.updateOfAll();
 
     }
+    
     [ContextMenu("Add Position")]
     public void AddPosition() {
         var oldroom = new List<Point>();
@@ -448,6 +510,7 @@ public class GuideMaster : MonoBehaviour
         GetRoomInfo().point = oldroom.ToArray();
         gb.updateOfAll();
     }
+    
     [ContextMenu("Add Room")]
     public void AddRoom()
     {
@@ -458,6 +521,7 @@ public class GuideMaster : MonoBehaviour
         GetBuildInfo().Rooms = oldroom.ToArray();
         gb.updateOfAll();
     }
+    
     [ContextMenu("Add flor & building")]
     public void AddFB()
     {
@@ -470,6 +534,7 @@ public class GuideMaster : MonoBehaviour
          */
         gb.updateOfAll();
     }
+    
     [ContextMenu("Add InfoTableImage")]
     public void AddInteractImage()
     {
@@ -481,6 +546,7 @@ public class GuideMaster : MonoBehaviour
         gb.updateOfAll();
         
     }
+    
     [ContextMenu("Add InfoTableVideo")]
     public void AddInteractVideo()
     {

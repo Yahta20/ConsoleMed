@@ -4,18 +4,25 @@ using UnityEngine;
 
 public class listOfPlaces : MonoBehaviour
 {
-    public RectTransform GuidesMap;
 
     RectTransform rt;
     bool isClose;
-    // Start is called before the first frame update
+    
+    public RectTransform GuidesMap;
+    
     void Awake()
     {
         rt = GetComponent<RectTransform>();
         isClose = false;
     }
 
-    // Update is called once per frame
+    private void Start()
+    {
+    
+    }
+
+    
+
     void LateUpdate()
     {
         if (isClose)
@@ -33,22 +40,20 @@ public class listOfPlaces : MonoBehaviour
                 );
         }
 
-
-
-        if (GuidesMap.sizeDelta.x != rt.sizeDelta.x &
-            GuidesMap.sizeDelta.y + rt.sizeDelta.y != MCUI.Instance.getCanvasSize().y
-            ) {
-            rt.sizeDelta = new Vector2
-                (GuidesMap.sizeDelta.x,   MCUI.Instance.getCanvasSize().y- GuidesMap.sizeDelta.y);
-            rt.anchoredPosition = new Vector2(0,-GuidesMap.sizeDelta.y);
-        }
+        var y = rt.sizeDelta.y != MCUI.Instance.getCanvasSize().y - GuidesMap.sizeDelta.y ?
+            MCUI.Instance.getCanvasSize().y - GuidesMap.sizeDelta.y:
+            rt.sizeDelta.y;
+        var x = GuidesMap.sizeDelta.x != rt.sizeDelta.x ?
+            GuidesMap.sizeDelta.x:
+            rt.sizeDelta.x;
+        rt.sizeDelta = new Vector2(x, y);
         rt.anchoredPosition = new Vector2(GuidesMap.sizeDelta.x + GuidesMap.anchoredPosition.x - rt.sizeDelta.x,
             rt.anchoredPosition.y);
-
     }
 
     public void changeVisible()
     {
         isClose = isClose ? false : true;
     }
+
 }

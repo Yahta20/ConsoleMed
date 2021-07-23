@@ -8,10 +8,24 @@ public class guideInput : MonoBehaviour
     private Camera cam;
     public MapObjBeh mob;
 
-    [SerializeField]
+    //[SerializeField]
+    float minView = 2;
+    float minZoom = 2;
+
     float speedView = 2;
     float speedZoom = 2;
     float FOV;
+
+    [Space]
+    public ControlPanelBeh viev;
+    public ControlPanelBeh zoom;
+    /**
+     
+
+    public delegate float ViewChange();
+    
+    public delegate float ViewZoom();
+     */
 
 
 
@@ -27,11 +41,11 @@ public class guideInput : MonoBehaviour
     }
 
     public void setViewSpeed(float t) {
-        speedView = t;
-    }
+        speedView = t* minView;
+    }                 
     public void setZoomSpeed(float t)
     {
-        speedZoom = t;
+        speedZoom = t* minZoom;
     }
     
 
@@ -55,4 +69,12 @@ public class guideInput : MonoBehaviour
 
         cam.fieldOfView = FOV;
     }
+
+
+    private void LateUpdate()
+    {
+        setViewSpeed(viev.getSliderValue());
+        setZoomSpeed(zoom.getSliderValue());
+    }
+
 }

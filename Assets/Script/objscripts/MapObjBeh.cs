@@ -29,15 +29,12 @@ public class MapObjBeh : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
         var gop     = pt.gameObject;
         parentRT    = gop.GetComponent<RectTransform>();
     }
-
-
-
     void Start()
     {
         var scale = parentRT.sizeDelta.x / curerentRT.sizeDelta.x;
         curerentRT.sizeDelta *= scale;
-        //print($"{curerentRT.sizeDelta}-{scale}-{parentRT.sizeDelta}");
         CleearChildObj();
+        //print($"{curerentRT.sizeDelta}-{scale}-{parentRT.sizeDelta}");
     }
 
     public void setGM(GuideMaster _gm)
@@ -164,11 +161,9 @@ public class MapObjBeh : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        
-
             positPres = Input.mousePosition;
     }
-
+    
     void MouseDrag() {
         var positPresNew = Input.mousePosition;
         var medx = positPres.x - positPresNew.x;
@@ -186,7 +181,7 @@ public class MapObjBeh : MonoBehaviour, IPointerEnterHandler, IPointerDownHandle
         {
         MouseDrag();
         }
-     }
+    }
 
     public bool isOnPoint() {
         return mouseOn;

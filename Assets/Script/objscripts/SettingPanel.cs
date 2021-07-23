@@ -8,7 +8,7 @@ public class SettingPanel : MonoBehaviour
     RectTransform rt;
     bool isClose;
     public guideInput gInput;
-
+    
 
 
 

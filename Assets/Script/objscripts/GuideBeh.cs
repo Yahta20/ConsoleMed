@@ -15,7 +15,7 @@ public class GuideBeh : MonoBehaviour
     public GuideMaster gm;
     public GuideMapBeh gMapbeh;
     public UniversalScreenBeh usBeh;
-    public AssetLoader iLoader;
+    //public AssetLoader iLoader;
 
     public List<GameObject> Points2Draw;
     public List<GameObject> IntObj;
