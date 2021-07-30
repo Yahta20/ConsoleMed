@@ -40,6 +40,6 @@ SpriteAtlas:
   m_PackedSpriteNamesToIndex:
   - pointPlace
   - point
-  - Main_3
+  - Main
   m_Tag: TileMap
   m_IsVariant: 0

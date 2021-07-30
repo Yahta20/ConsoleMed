@@ -91,6 +91,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slid: {fileID: 4896309760061558953}
   nameOfParametr: {fileID: 9147789350361953742}
+  SLRT: {fileID: 4896309760061558952}
 --- !u!1 &4896309758894279584
 GameObject:
   m_ObjectHideFlags: 0

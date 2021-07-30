@@ -32,12 +32,12 @@ public class GuideMapBeh : MonoBehaviour
 
     void Awake()
     {
-        //currentMap = JsonUtility.FromJson<Map>(jsonInstruction.text);
         pointsInRoom = new List<Image>();
         rt = GetComponent<RectTransform>();
+        
+        //currentMap = JsonUtility.FromJson<Map>(jsonInstruction.text);
         //var p    = MCUI.Instance.getCanvasSize()*0.32f;
         //new Vector2(p.x,p.y);
-        
         isClose = false;
         currentPlace = atlasMap.GetSprite("pointPlace");
         otherPlace   = atlasMap.GetSprite("point");
@@ -110,9 +110,9 @@ public class GuideMapBeh : MonoBehaviour
 
         pointOnFloar = 0;
         mapObj.CleearChildObj();
-        if (atlasMap.GetSprite($"{args[0]}_{args[1]}")!=null)
+        if (atlasMap.GetSprite($"{args[0]}")!=null)//_{args[1]}
         {
-             mapObj.SetMapBackground(atlasMap.GetSprite($"{args[0]}_{args[1]}"));
+             mapObj.SetMapBackground(atlasMap.GetSprite($"{args[0]}"));//"{args[0]}_{args[1]}"
         }
 
         for (int i = 0; i < build.Rooms.Length; i++)

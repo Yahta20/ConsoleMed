@@ -7,7 +7,7 @@ public class ControlPanelBeh : MonoBehaviour
 {
     public Slider slid;
     public Text nameOfParametr;
-    
+    public RectTransform SLRT;
 
     RectTransform rt;
     RectTransform parentRT;
@@ -26,6 +26,12 @@ public class ControlPanelBeh : MonoBehaviour
     {
         rt.sizeDelta = new Vector2(parentRT.sizeDelta.x * 0.95f, parentRT.sizeDelta.y * 0.10f);
         rt.anchoredPosition = new Vector2(0, -(ChildNumber)*(rt.sizeDelta.y *1.02f));
+        nameOfParametr.rectTransform.sizeDelta =
+            new Vector2(rt.sizeDelta.x * 0.95f, rt.sizeDelta.y * 0.50f);
+        SLRT.sizeDelta =
+        new Vector2(rt.sizeDelta.x * 0.95f, rt.sizeDelta.y * 0.38f);
+
+
         if (ChildNumber!= rt.GetSiblingIndex())
         {
             ChildNumber = rt.GetSiblingIndex();

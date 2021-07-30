@@ -465,6 +465,7 @@ public class GuideMaster : MonoBehaviour
         p.conects = NConect.ToArray();
     }
 
+
     [ContextMenu("Write To Json")]
     public void JsonWrite() {
         var njson = JsonUtility.ToJson(currentBuid,true);

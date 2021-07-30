@@ -48,8 +48,8 @@ public class scrollOfPlaces : MonoBehaviour
         MasterGuide = FindObjectOfType<GuideMaster>();
         EraseChild();
         mListOfPlaces();
-
     }
+
 
     private void EraseChild()
     {
@@ -69,7 +69,6 @@ public class scrollOfPlaces : MonoBehaviour
             {
                 var buildflor = MasterGuide.currentBuid.getFloorInBuildByName(item, int.Parse(floar));
                 var roomz = buildflor.getAllRooms();
-
                 foreach (var room in roomz)
                 {
                     var plases = buildflor.getRoomByName(room).getAllPoint();
@@ -86,10 +85,11 @@ public class scrollOfPlaces : MonoBehaviour
 
                     }
                 }
-
             }
         }
     }
+
+
     void Update()
     {
         ChildNumber = rt.GetSiblingIndex();

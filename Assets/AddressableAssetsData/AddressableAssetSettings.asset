@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AddressableAssetSettings
   m_EditorClassIdentifier: 
   m_DefaultGroup: 80c9233699ae0ee41acbaa949ace034a
-  m_OptimizeCatalogSize: 0
+  m_OptimizeCatalogSize: 1
   m_BuildRemoteCatalog: 1
   m_BundleLocalCatalog: 0
   m_DisableCatalogUpdateOnStart: 0
@@ -29,12 +29,13 @@ MonoBehaviour:
   m_GroupAssets:
   - {fileID: 11400000, guid: 298962f0e2d83b2458ce46fc73ce8262, type: 2}
   - {fileID: 11400000, guid: 3b0f5aaa6bf471b4d9a993b7194c63e0, type: 2}
-  - {fileID: 11400000, guid: 140891e3c441e2546a9f35a65e8c5be4, type: 2}
-  - {fileID: 11400000, guid: 9cc3a11c64389fa4199a1a9f1f71efc0, type: 2}
   - {fileID: 11400000, guid: 8c0119678dc2e08459e9fe2ee94ca8ab, type: 2}
   - {fileID: 11400000, guid: 31fdeb8ae07dc294cadbff297318072e, type: 2}
   - {fileID: 11400000, guid: b2d326745d62edf4b8d4c1bc0ca4a031, type: 2}
   - {fileID: 11400000, guid: bec7812debca59f46b1211f8b58c9811, type: 2}
+  - {fileID: 11400000, guid: b07967838573a9a48a4182bfe5471269, type: 2}
+  - {fileID: 11400000, guid: 63ff797c94c614a469a13dda951fa57f, type: 2}
+  - {fileID: 11400000, guid: f2db16450c2df044aa3a5f4a893d9690, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -56,6 +57,20 @@ MonoBehaviour:
         m_Value: ServerData/[BuildTarget]
       - m_Id: 1846958c836fae34f91f4d1d225efc6c
         m_Value: http://localhost/[BuildTarget]
+    - m_InheritedParent: 
+      m_Id: e77abd33c2385174eb13013d8f3a0253
+      m_ProfileName: local
+      m_Values:
+      - m_Id: 32733d3d5223fef4eb90d084e22ce6ae
+        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+      - m_Id: f5f22dc659d43114c80046a69093d2eb
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+      - m_Id: 813a699f83162eb4d96e881378f4f6bb
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_Id: f90df668102613b4da387f52cc3d130b
+        m_Value: C:/Winginx/home/webgl.gm/public_html/Assets/[BuildTarget]
+      - m_Id: 1846958c836fae34f91f4d1d225efc6c
+        m_Value: http://webgl.gm/Assets/[BuildTarget]
     m_ProfileEntryNames:
     - m_Id: 32733d3d5223fef4eb90d084e22ce6ae
       m_Name: BuildTarget
