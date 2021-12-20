@@ -58,12 +58,7 @@ public class GuideBeh : MonoBehaviour
         }
 
         var point = gm.GetPointInfo();
-        /*
-        currentBuid
-        .getFloorInBuildByName(CurrentBuild, CurrentFloor)
-        .getRoomByName(CurrentRoom)
-        .getPointByName(CurrentPos);
-         */
+        
 
         if (RenderSettings.skybox.name == point.skyBox)
         {
@@ -79,9 +74,7 @@ public class GuideBeh : MonoBehaviour
                 updateEmbient();
             }
         }
-        //if((RenderSettings.skybox.name != point.skyBox) & iLoader.isComleat) {
-        //    RenderSettings.skybox = iLoader.trying;
-        //}
+        
         if (point.GetInteractivCount() == IntObj.Count & !InteraktiveErect)
         {
             InteraktiveErect = true;
@@ -120,12 +113,7 @@ public class GuideBeh : MonoBehaviour
 
     private void spawnInteraction()
     {
-            /*
-            currentBuid
-            .getFloorInBuildByName(CurrentBuild, CurrentFloor)
-            .getRoomByName(CurrentRoom)
-            .getPointByName(CurrentPos);
-             */
+           
         var point = gm.GetPointInfo();
         var cheker = new Dictionary<string,bool>();
 
@@ -175,12 +163,10 @@ public class GuideBeh : MonoBehaviour
         }
 
         Points2Draw = new List<GameObject>();
-        //var build = currentBuid.getFloorInBuildByName(CurrentBuild, CurrentFloor);
-        //var point = build.getRoomByName(CurrentRoom)
-        //                 .getPointByName(CurrentPos);
-
-        //iLoader.LoadMap(point.skyBox);
+       
         var point = gm.GetPointInfo();
+
+        //print($"{point.skyBox}");
         Consoleum.DeveloperConsole.Instance.ParseInput($"sky {point.skyBox}");
 
         usBeh.SetState(StateOfLoadScreen.Loading);

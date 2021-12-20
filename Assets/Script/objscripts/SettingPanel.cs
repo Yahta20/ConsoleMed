@@ -27,17 +27,9 @@ public class SettingPanel : MonoBehaviour
 
     void LateUpdate()
     {
-            rt.sizeDelta = new Vector2(MCUI.Instance.getCanvasSize().x * 0.16f,
-            MCUI.Instance.getCanvasSize().y);
-        //if (
-        //    rt.sizeDelta.x != MCUI.Instance.getCanvasSize().x * 0.16f&
-        //    rt.sizeDelta.y != MCUI.Instance.getCanvasSize().y
-        //    )
-        //{
-        //}
-
-            //rt.anchoredPosition = Vector2.zero;
-
+        rt.sizeDelta = new Vector2(MCUI.Instance.getCanvasSize().x * 0.16f,
+        MCUI.Instance.getCanvasSize().y);
+        
         positionInSpace();
     }
 

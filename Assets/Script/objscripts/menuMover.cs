@@ -9,7 +9,7 @@ public class menuMover : MonoBehaviour, IPointerDownHandler
     public RectTransform onGuide;
     public RectTransform self;
     public GuideMapBeh guideBeh;
-
+    public float size;
 
     // Start is called before the first frame update
     void Awake()
@@ -31,7 +31,7 @@ public class menuMover : MonoBehaviour, IPointerDownHandler
     void LateUpdate()
     {
         positionControl();
-
+        sizeManager();
     }
 
     private void positionControl()
@@ -51,6 +51,17 @@ public class menuMover : MonoBehaviour, IPointerDownHandler
     
     }
 
+    private void sizeManager()
+    {
+        if (MCUI.Instance.getCanvasSize().y * size != self.sizeDelta.y
+            )
+        {
+            self.sizeDelta = new Vector3(MCUI.Instance.getCanvasSize().y * size,
+                MCUI.Instance.getCanvasSize().y * size);
+        }
 
+
+
+    }
 
 }

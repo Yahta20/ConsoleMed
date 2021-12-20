@@ -47,34 +47,51 @@ public class guideInput : MonoBehaviour
     {
         speedZoom = t* minZoom;
     }
-    
+
 
     void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.Mouse1))
+        if ( Input.touchCount ==1)
         {
-            posit += new Vector2(-speedView * Input.GetAxis("Mouse Y"), speedView * Input.GetAxis("Mouse X"));
-            transform.eulerAngles = posit;
-        }//Mouse ScrollWheel
-        if (Input.GetAxis("Mouse ScrollWheel") !=0 & !mob.isOnPoint())
-        {
-            
-            FOV += Input.GetAxis("Mouse ScrollWheel") * speedZoom;
-            
-            FOV = FOV > 60 ? 60 : FOV;
-
-            FOV = FOV < 25 ? 25 : FOV;
-        
+            Touch touch = Input.GetTouch(0);
+            Vector2 pos = touch.position;
+            if (touch.phase == TouchPhase.Moved)
+            {
+                pos.x = (pos.x - (float)Screen.width / 2.0f) / (float)Screen.width / 2.0f; 
+                pos.y = (pos.y - (float)Screen.height / 2.0f) / (float)Screen.height / 2.0f;
+            }
+            posit += new Vector2(-pos.x, pos.y);
         }
 
+
+        if (Input.GetKey(KeyCode.Mouse1))
+        {
+            posit += new Vector2(-speedView * Input.GetAxis("Mouse Y"), 
+                                speedView * Input.GetAxis("Mouse X"));
+        }
+        //Mouse ScrollWheel
+
+        if (Input.GetAxis("Mouse ScrollWheel") !=0 & !mob.isOnPoint())
+        {
+            FOV += Input.GetAxis("Mouse ScrollWheel") * speedZoom;
+        }
+        
+        FOV = FOV > 60 ? 60 : FOV;
+        FOV = FOV < 25 ? 25 : FOV;
+        transform.eulerAngles = posit;
         cam.fieldOfView = FOV;
     }
 
+    public void changeView(Vector2 v) {
+        posit += v * speedView;
+    }
+    public void changeFOV(float v) {
+        FOV += v * speedZoom;
+    }
 
     private void LateUpdate()
     {
         setViewSpeed(viev.getSliderValue());
         setZoomSpeed(zoom.getSliderValue());
     }
-
 }

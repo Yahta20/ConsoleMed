@@ -34,22 +34,6 @@ public class guidMasterEdt : Editor
         EditorGUILayout.LabelField($"Zdanie\t\t {GB.CurrentBuild}\t Etag\t\t {GB.CurrentFloor}");
         EditorGUILayout.LabelField($"Comnata\t {GB.CurrentRoom}\t Positciya\t {GB.CurrentPos }");
 
-        //if (GB.currentBuid.Building.Length >0) {
-        //    foreach (var item in GB.currentBuid.Building)
-        //    {
-        //        EditorGUILayout.BeginVertical("box");
-        //        EditorGUILayout.EndVertical();
-        //        item.Name = EditorGUILayout.TextField("Name of build", item.Name);
-        //        item.Floor = EditorGUILayout.IntField("Nunber of build", item.Floor);
-        //    }
-        //}
-
-        //for (int i = 0; i < variats.Length; i++)
-        //{
-        //}
-
-        
-
         OptionsButton();
 
 
@@ -68,13 +52,13 @@ public class guidMasterEdt : Editor
 
 
               
-               GB.AddConection();
+               GB.AddInteractImage();
             }
             if (GUILayout.Button("Add InfoTableMovi", GUILayout.Height(30)))
             {
 
 
-               GB.AddPosition();
+               GB.AddInteractVideo();
             }
 
             EditorGUILayout.BeginHorizontal("box");
@@ -121,7 +105,16 @@ public class guidMasterEdt : Editor
             {
                 GB.JsonWrite();
             }
-
+            if (GUILayout.Button("Move", GUILayout.Height(30)))
+            {
+                GB.Moving(new string[4] { 
+                    GB.CurrentBuild,
+                    GB.CurrentFloor.ToString(),
+                    GB.CurrentRoom,
+                    GB.CurrentPos
+                }
+                    );
+            }
             EditorGUILayout.EndHorizontal();
             EditorGUILayout.EndVertical();
         }

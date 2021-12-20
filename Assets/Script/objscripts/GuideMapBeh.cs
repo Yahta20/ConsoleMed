@@ -27,7 +27,8 @@ public class GuideMapBeh : MonoBehaviour
     public string[] position;
     bool isClose;
     private RectTransform rt;
-
+    [Space]
+    public float size;
     public int pointOnFloar;
 
     void Awake()
@@ -46,13 +47,13 @@ public class GuideMapBeh : MonoBehaviour
     }
     void Start()
     {
-        rt.sizeDelta = MCUI.Instance.getCanvasSize() * 0.32f;
+        rt.sizeDelta = MCUI.Instance.getCanvasSize() * size;
         updateMap();
     }
     private void LateUpdate()
     {
-        if (rt.sizeDelta != MCUI.Instance.getCanvasSize() * 0.32f) {
-            rt.sizeDelta = MCUI.Instance.getCanvasSize() * 0.32f;
+        if (rt.sizeDelta != MCUI.Instance.getCanvasSize() * size) {
+            rt.sizeDelta = MCUI.Instance.getCanvasSize() * size;
         }
         positionInSpace();
     }

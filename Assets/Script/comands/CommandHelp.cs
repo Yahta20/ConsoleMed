@@ -29,9 +29,9 @@ namespace Consoleum
                 var n = item.Value.Command;
                 var d = item.Value.Description;
                 DeveloperConsole.Instance.AddMessageToConsole($"{n}<{d}");
-
             }
         }
+
 
         public static CommandHelp CreateCommand()
         {

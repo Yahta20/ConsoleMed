@@ -35,10 +35,12 @@ SpriteAtlas:
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: c1442e364a05966489030fc2b9b1b20c, type: 3}
+  - {fileID: 21300000, guid: 709a4ec9f7b53e642a1c6882ef2b5ca4, type: 3}
   - {fileID: 21300000, guid: 002e5ccee1ea4764f8d5bf0551b09952, type: 3}
   - {fileID: 21300000, guid: 891f3b9f5505ccb40ae467046ec7208a, type: 3}
   m_PackedSpriteNamesToIndex:
   - pointPlace
+  - Dvor
   - point
   - Main
   m_Tag: TileMap

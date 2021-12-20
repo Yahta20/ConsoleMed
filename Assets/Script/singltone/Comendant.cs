@@ -82,7 +82,10 @@ public class Comendant : MonoBehaviour
 
         return ls;
     }
-
+    /// <summary>
+    /// Print name of All Obj on Scene 
+    /// </summary>
+    /// <returns></returns>
     public string[] getOOSNames() {
         ObjectOnScene = RollCall();
         string[] sr = new string[ObjectOnScene.Count];

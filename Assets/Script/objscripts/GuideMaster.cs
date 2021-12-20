@@ -27,18 +27,30 @@ public class Interactiv
 
     public string link;
 
+
     public Vector3 getPos()
     {
+        if (pos.Length == 0)
+        {
+            return Vector3.one;
+        }
         return new Vector3(pos[0], pos[1], pos[2]);
     }
-
     public Vector3 getScl()
     {
+        if (scl.Length == 0)
+        {
+            return Vector3.one;
+        }
         return new Vector3(scl[0], scl[1], scl[2]);
     }
 
     public Quaternion getRot()
     {
+        if (rot.Length == 0)
+        {
+            return Quaternion.identity;
+        }
         return new Quaternion(rot[0], rot[1], rot[2], rot[3]);
     }
 
@@ -72,18 +84,21 @@ public class Conects
         pos = new float[3] {t.position.x, t.position.y, t.position.z };
     }
     
-    public Vector3 getPos()
-    {
-        
-        return new Vector3(pos[0], pos[1], pos[2]);
-    }
-
     public int Hierarchy()
     {
         return name.Length;
     }
 
 
+
+    public Vector3 getPos()
+    {
+        if (pos.Length == 0)
+        {
+            return Vector3.one;
+        }
+        return new Vector3(pos[0], pos[1], pos[2]);
+    }
     public Vector3 getScl()
     {
         if (scl.Length==0)
@@ -468,6 +483,7 @@ public class GuideMaster : MonoBehaviour
 
     [ContextMenu("Write To Json")]
     public void JsonWrite() {
+        SavePos();
         var njson = JsonUtility.ToJson(currentBuid,true);
         try
         {
@@ -487,6 +503,7 @@ public class GuideMaster : MonoBehaviour
     [ContextMenu("Add Conection")]
     public void AddConection()
     {
+        SavePos();
         var oldcon = new List<Conects>();
         foreach (var item in GetPointInfo().conects)
         {oldcon.Add(item);}
@@ -504,6 +521,7 @@ public class GuideMaster : MonoBehaviour
     
     [ContextMenu("Add Position")]
     public void AddPosition() {
+        SavePos();
         var oldroom = new List<Point>();
         foreach (var item in GetRoomInfo().point)
         {oldroom.Add(item);}
@@ -515,6 +533,7 @@ public class GuideMaster : MonoBehaviour
     [ContextMenu("Add Room")]
     public void AddRoom()
     {
+        SavePos();
         var oldroom = new List<rooms>();
         foreach (var item in GetBuildInfo().Rooms)
         { oldroom.Add(item); }
@@ -526,6 +545,7 @@ public class GuideMaster : MonoBehaviour
     [ContextMenu("Add flor & building")]
     public void AddFB()
     {
+        SavePos();
         var oldfb = new List<building>();
         foreach (var item in currentBuid.Building)
         { oldfb.Add(item); }
@@ -539,6 +559,7 @@ public class GuideMaster : MonoBehaviour
     [ContextMenu("Add InfoTableImage")]
     public void AddInteractImage()
     {
+        SavePos();
         var oldcon = new List<Interactiv>();
         foreach (var item in GetPointInfo().interactiv)
         { oldcon.Add(item);}
@@ -551,6 +572,7 @@ public class GuideMaster : MonoBehaviour
     [ContextMenu("Add InfoTableVideo")]
     public void AddInteractVideo()
     {
+        SavePos();
         var oldcon = new List<Interactiv>();
         foreach (var item in GetPointInfo().interactiv)
         { oldcon.Add(item); }

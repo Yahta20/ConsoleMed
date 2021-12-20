@@ -77,6 +77,7 @@ namespace Consoleum
             CommandSky.CreateCommand();
             CommandPlayOn.CreateCommand();
             CommandMCUI.CreateCommand();
+            CommandDisplay.CreateCommand();
             //ParseInput("play");
         }
 

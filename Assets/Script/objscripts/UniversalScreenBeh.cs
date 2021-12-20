@@ -11,13 +11,9 @@ public enum StateOfLoadScreen {
 
 public enum StateOfMoving
 {
-
     Image = 0,
     Movi = 1,
-
 }
-
-
 
 public class UniversalScreenBeh : MonoBehaviour
 {
@@ -28,31 +24,31 @@ public class UniversalScreenBeh : MonoBehaviour
 
     public Image    Loadimg;
     public Text     LoadText;
+    public CloseImage    Close;
+
     public VideoPlayerBeh curentPlayer;
 
     // [SerializeField]
     public bool ImageVisible;
 
+
+
     private void Awake()
     {
-        //curentImage = GetComponent<Image>();
         currState = StateOfLoadScreen.Loading;
         currMoviState = StateOfMoving.Image;
     }
-    
-
     void Start()
     {
-        
+        Close = GetComponentInChildren<CloseImage>();
+        Close.SetManager(this);
     }
-
     void Update()
     {
         setLastChild();
         
         switch (currState)
         {
-
             case StateOfLoadScreen.Loading:
                 LoadingState();
                 break;
@@ -62,9 +58,7 @@ public class UniversalScreenBeh : MonoBehaviour
             case StateOfLoadScreen.Look:
                 LookState();
             break;
-
         }
-
     }
 
     private void LookState()
@@ -84,24 +78,15 @@ public class UniversalScreenBeh : MonoBehaviour
         switch (currMoviState)
         {
             case StateOfMoving.Image:
+
                 break;
             case StateOfMoving.Movi:
-                //if (!curentPlayer.isPlaing())
-                //{
-                //    curentImage.sprite = null;
-                //    currState = StateOfLoadScreen.Look;
-                //    curentPlayer.StopVideo();
-                //}
+                
                 break;
         }
-                
-
-
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            curentImage.sprite = null;
-            currState = StateOfLoadScreen.Look;
-            curentPlayer.StopVideo();
+            closeWindow();
         }
 
 
@@ -110,10 +95,7 @@ public class UniversalScreenBeh : MonoBehaviour
 
         curentImage.color = new Color
             (curentImage.color.r, curentImage.color.g, curentImage.color.b, alpha);
-
     }
-        
-
     private void LoadingState()
     {
         var alpha = curentImage.color.a >= 255 ? 255 : curentImage.color.a + Time.deltaTime;
@@ -124,7 +106,7 @@ public class UniversalScreenBeh : MonoBehaviour
         LoadText.color = new Color
             (LoadText.color.r, LoadText.color.g, LoadText.color.b, alpha);
     }
-    
+     
     private void setLastChild()
     {
         if (currState != StateOfLoadScreen.Look)
@@ -168,6 +150,12 @@ public class UniversalScreenBeh : MonoBehaviour
 
     public void SetMovingState(StateOfMoving s) {
         currMoviState = s;
+    }
+
+    public void closeWindow() {
+        curentImage.sprite = null;
+        currState = StateOfLoadScreen.Look;
+        curentPlayer.StopVideo();
     }
 
 

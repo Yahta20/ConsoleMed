@@ -10,6 +10,7 @@ public class listMover : MonoBehaviour, IPointerDownHandler
     public RectTransform onGuide;
     public RectTransform self;
     public listOfPlaces guideBeh;
+    public float size;
 
     void Awake()
     {
@@ -28,22 +29,31 @@ public class listMover : MonoBehaviour, IPointerDownHandler
     void LateUpdate()
     {
         positionControl();
-
+        sizeManager();
     }
     private void positionControl()
     {
         self.anchoredPosition = new Vector2(anchor.sizeDelta.x + anchor.anchoredPosition.x-self.sizeDelta.x,
             -anchor.sizeDelta.y);
-        /*
-        if (guideBeh.State())
-        {
-         
-        }
-        */
+        
     }
     public void OnPointerDown(PointerEventData eventData)
     {
         guideBeh.changeVisible();
 
     }
+
+    private void sizeManager()
+    {
+        if (MCUI.Instance.getCanvasSize().y * size != self.sizeDelta.y
+            )
+        {
+            self.sizeDelta = new Vector3(MCUI.Instance.getCanvasSize().y * size,
+                MCUI.Instance.getCanvasSize().y * size);
+        }
+
+
+
+    }
+
 }
